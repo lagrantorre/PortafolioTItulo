@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <definitions 
+ xmlns="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="login" targetNamespace="http://wspack/" xmlns:tns="http://wspack/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" 
+ >
+
+    <message name="login"/>
+    <message name="loginResponse"/>
+    <portType name="login">
+        <operation name="login">
+            <input message="tns:login"/>
+            <output message="tns:loginResponse"/>
+        </operation>
+    </portType>
+    <binding name="loginPortBinding" type="tns:login">
+        <operation name="login">
+            <input/>
+            <output/>
+        </operation>
+    </binding>
+    <service name="login">
+        <port name="loginPort" binding="tns:loginPortBinding"/>
+    </service>
+</definitions>
