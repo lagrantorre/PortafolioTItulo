@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://wspack/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="wsFrutos" targetNamespace="http://wspack/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/wsFrutos/wsFrutos?xsd=1" namespace="http://wspack/" />
+    </xsd:schema>
+  </types>
+  <message name="RecuperarContrasena">
+    <part name="parameters" element="tns:RecuperarContrasena" />
+  </message>
+  <message name="RecuperarContrasenaResponse">
+    <part name="parameters" element="tns:RecuperarContrasenaResponse" />
+  </message>
+  <message name="Login">
+    <part name="parameters" element="tns:Login" />
+  </message>
+  <message name="LoginResponse">
+    <part name="parameters" element="tns:LoginResponse" />
+  </message>
+  <message name="getTipoUsuarioByTipo">
+    <part name="parameters" element="tns:getTipoUsuarioByTipo" />
+  </message>
+  <message name="getTipoUsuarioByTipoResponse">
+    <part name="parameters" element="tns:getTipoUsuarioByTipoResponse" />
+  </message>
+  <message name="getUsuariosByTipo">
+    <part name="parameters" element="tns:getUsuariosByTipo" />
+  </message>
+  <message name="getUsuariosByTipoResponse">
+    <part name="parameters" element="tns:getUsuariosByTipoResponse" />
+  </message>
+  <message name="getProdByTipo">
+    <part name="parameters" element="tns:getProdByTipo" />
+  </message>
+  <message name="getProdByTipoResponse">
+    <part name="parameters" element="tns:getProdByTipoResponse" />
+  </message>
+  <message name="getUsuarios">
+    <part name="parameters" element="tns:getUsuarios" />
+  </message>
+  <message name="getUsuariosResponse">
+    <part name="parameters" element="tns:getUsuariosResponse" />
+  </message>
+  <message name="getTipoProd">
+    <part name="parameters" element="tns:getTipoProd" />
+  </message>
+  <message name="getTipoProdResponse">
+    <part name="parameters" element="tns:getTipoProdResponse" />
+  </message>
+  <message name="ListarVentasByVendedor">
+    <part name="parameters" element="tns:ListarVentasByVendedor" />
+  </message>
+  <message name="ListarVentasByVendedorResponse">
+    <part name="parameters" element="tns:ListarVentasByVendedorResponse" />
+  </message>
+  <portType name="wsFrutos">
+    <operation name="RecuperarContrasena">
+      <input wsam:Action="http://wspack/wsFrutos/RecuperarContrasenaRequest" message="tns:RecuperarContrasena" />
+      <output wsam:Action="http://wspack/wsFrutos/RecuperarContrasenaResponse" message="tns:RecuperarContrasenaResponse" />
+    </operation>
+    <operation name="Login">
+      <input wsam:Action="http://wspack/wsFrutos/LoginRequest" message="tns:Login" />
+      <output wsam:Action="http://wspack/wsFrutos/LoginResponse" message="tns:LoginResponse" />
+    </operation>
+    <operation name="getTipoUsuarioByTipo">
+      <input wsam:Action="http://wspack/wsFrutos/getTipoUsuarioByTipoRequest" message="tns:getTipoUsuarioByTipo" />
+      <output wsam:Action="http://wspack/wsFrutos/getTipoUsuarioByTipoResponse" message="tns:getTipoUsuarioByTipoResponse" />
+    </operation>
+    <operation name="getUsuariosByTipo">
+      <input wsam:Action="http://wspack/wsFrutos/getUsuariosByTipoRequest" message="tns:getUsuariosByTipo" />
+      <output wsam:Action="http://wspack/wsFrutos/getUsuariosByTipoResponse" message="tns:getUsuariosByTipoResponse" />
+    </operation>
+    <operation name="getProdByTipo">
+      <input wsam:Action="http://wspack/wsFrutos/getProdByTipoRequest" message="tns:getProdByTipo" />
+      <output wsam:Action="http://wspack/wsFrutos/getProdByTipoResponse" message="tns:getProdByTipoResponse" />
+    </operation>
+    <operation name="getUsuarios">
+      <input wsam:Action="http://wspack/wsFrutos/getUsuariosRequest" message="tns:getUsuarios" />
+      <output wsam:Action="http://wspack/wsFrutos/getUsuariosResponse" message="tns:getUsuariosResponse" />
+    </operation>
+    <operation name="getTipoProd">
+      <input wsam:Action="http://wspack/wsFrutos/getTipoProdRequest" message="tns:getTipoProd" />
+      <output wsam:Action="http://wspack/wsFrutos/getTipoProdResponse" message="tns:getTipoProdResponse" />
+    </operation>
+    <operation name="ListarVentasByVendedor">
+      <input wsam:Action="http://wspack/wsFrutos/ListarVentasByVendedorRequest" message="tns:ListarVentasByVendedor" />
+      <output wsam:Action="http://wspack/wsFrutos/ListarVentasByVendedorResponse" message="tns:ListarVentasByVendedorResponse" />
+    </operation>
+  </portType>
+  <binding name="wsFrutosPortBinding" type="tns:wsFrutos">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="RecuperarContrasena">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Login">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getTipoUsuarioByTipo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getUsuariosByTipo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getProdByTipo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getUsuarios">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getTipoProd">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListarVentasByVendedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="wsFrutos">
+    <port name="wsFrutosPort" binding="tns:wsFrutosPortBinding">
+      <soap:address location="http://localhost:8080/wsFrutos/wsFrutos" />
+    </port>
+  </service>
+</definitions>
