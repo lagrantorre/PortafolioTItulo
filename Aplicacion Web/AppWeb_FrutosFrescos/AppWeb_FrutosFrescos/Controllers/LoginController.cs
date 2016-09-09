@@ -1,4 +1,7 @@
-﻿using System;
+﻿using AppWeb_FrutosFrescos.Models;
+using AppWeb_FrutosFrescos.wsFrutos;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -27,7 +30,15 @@ namespace AppWeb_FrutosFrescos.Controllers
 
             var wea = data;
 
-            if (wea.User == "Felipe" && wea.Pass == "123")
+            Usuario dataUser;
+
+            wsFrutosClient ws = new wsFrutosClient();
+            
+                dataUser = JsonConvert.DeserializeObject<Usuario>(ws.Login(Int32.Parse(data.User), data.Pass));
+                
+            
+
+            if (dataUser != null)
             {
                 return RedirectToAction("Index", "Home");
             }

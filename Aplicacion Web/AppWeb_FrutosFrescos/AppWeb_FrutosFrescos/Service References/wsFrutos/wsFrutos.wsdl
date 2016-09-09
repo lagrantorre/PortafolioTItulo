@@ -11,17 +11,17 @@
   <message name="LoginResponse">
     <part name="parameters" element="tns:LoginResponse" />
   </message>
+  <message name="ListarVentasByVendedor">
+    <part name="parameters" element="tns:ListarVentasByVendedor" />
+  </message>
+  <message name="ListarVentasByVendedorResponse">
+    <part name="parameters" element="tns:ListarVentasByVendedorResponse" />
+  </message>
   <message name="RecuperarContrasena">
     <part name="parameters" element="tns:RecuperarContrasena" />
   </message>
   <message name="RecuperarContrasenaResponse">
     <part name="parameters" element="tns:RecuperarContrasenaResponse" />
-  </message>
-  <message name="getTipoUsuarioByTipo">
-    <part name="parameters" element="tns:getTipoUsuarioByTipo" />
-  </message>
-  <message name="getTipoUsuarioByTipoResponse">
-    <part name="parameters" element="tns:getTipoUsuarioByTipoResponse" />
   </message>
   <message name="getUsuariosByTipo">
     <part name="parameters" element="tns:getUsuariosByTipo" />
@@ -29,23 +29,11 @@
   <message name="getUsuariosByTipoResponse">
     <part name="parameters" element="tns:getUsuariosByTipoResponse" />
   </message>
-  <message name="ListarVentasByVendedor">
-    <part name="parameters" element="tns:ListarVentasByVendedor" />
+  <message name="getTipoUsuarioByTipo">
+    <part name="parameters" element="tns:getTipoUsuarioByTipo" />
   </message>
-  <message name="ListarVentasByVendedorResponse">
-    <part name="parameters" element="tns:ListarVentasByVendedorResponse" />
-  </message>
-  <message name="getTipoProd">
-    <part name="parameters" element="tns:getTipoProd" />
-  </message>
-  <message name="getTipoProdResponse">
-    <part name="parameters" element="tns:getTipoProdResponse" />
-  </message>
-  <message name="getProdByTipo">
-    <part name="parameters" element="tns:getProdByTipo" />
-  </message>
-  <message name="getProdByTipoResponse">
-    <part name="parameters" element="tns:getProdByTipoResponse" />
+  <message name="getTipoUsuarioByTipoResponse">
+    <part name="parameters" element="tns:getTipoUsuarioByTipoResponse" />
   </message>
   <message name="getUsuarios">
     <part name="parameters" element="tns:getUsuarios" />
@@ -53,38 +41,50 @@
   <message name="getUsuariosResponse">
     <part name="parameters" element="tns:getUsuariosResponse" />
   </message>
+  <message name="getProdByTipo">
+    <part name="parameters" element="tns:getProdByTipo" />
+  </message>
+  <message name="getProdByTipoResponse">
+    <part name="parameters" element="tns:getProdByTipoResponse" />
+  </message>
+  <message name="getTipoProd">
+    <part name="parameters" element="tns:getTipoProd" />
+  </message>
+  <message name="getTipoProdResponse">
+    <part name="parameters" element="tns:getTipoProdResponse" />
+  </message>
   <portType name="wsFrutos">
     <operation name="Login">
       <input wsam:Action="http://wspack/wsFrutos/LoginRequest" message="tns:Login" />
       <output wsam:Action="http://wspack/wsFrutos/LoginResponse" message="tns:LoginResponse" />
     </operation>
+    <operation name="ListarVentasByVendedor">
+      <input wsam:Action="http://wspack/wsFrutos/ListarVentasByVendedorRequest" message="tns:ListarVentasByVendedor" />
+      <output wsam:Action="http://wspack/wsFrutos/ListarVentasByVendedorResponse" message="tns:ListarVentasByVendedorResponse" />
+    </operation>
     <operation name="RecuperarContrasena">
       <input wsam:Action="http://wspack/wsFrutos/RecuperarContrasenaRequest" message="tns:RecuperarContrasena" />
       <output wsam:Action="http://wspack/wsFrutos/RecuperarContrasenaResponse" message="tns:RecuperarContrasenaResponse" />
-    </operation>
-    <operation name="getTipoUsuarioByTipo">
-      <input wsam:Action="http://wspack/wsFrutos/getTipoUsuarioByTipoRequest" message="tns:getTipoUsuarioByTipo" />
-      <output wsam:Action="http://wspack/wsFrutos/getTipoUsuarioByTipoResponse" message="tns:getTipoUsuarioByTipoResponse" />
     </operation>
     <operation name="getUsuariosByTipo">
       <input wsam:Action="http://wspack/wsFrutos/getUsuariosByTipoRequest" message="tns:getUsuariosByTipo" />
       <output wsam:Action="http://wspack/wsFrutos/getUsuariosByTipoResponse" message="tns:getUsuariosByTipoResponse" />
     </operation>
-    <operation name="ListarVentasByVendedor">
-      <input wsam:Action="http://wspack/wsFrutos/ListarVentasByVendedorRequest" message="tns:ListarVentasByVendedor" />
-      <output wsam:Action="http://wspack/wsFrutos/ListarVentasByVendedorResponse" message="tns:ListarVentasByVendedorResponse" />
+    <operation name="getTipoUsuarioByTipo">
+      <input wsam:Action="http://wspack/wsFrutos/getTipoUsuarioByTipoRequest" message="tns:getTipoUsuarioByTipo" />
+      <output wsam:Action="http://wspack/wsFrutos/getTipoUsuarioByTipoResponse" message="tns:getTipoUsuarioByTipoResponse" />
     </operation>
-    <operation name="getTipoProd">
-      <input wsam:Action="http://wspack/wsFrutos/getTipoProdRequest" message="tns:getTipoProd" />
-      <output wsam:Action="http://wspack/wsFrutos/getTipoProdResponse" message="tns:getTipoProdResponse" />
+    <operation name="getUsuarios">
+      <input wsam:Action="http://wspack/wsFrutos/getUsuariosRequest" message="tns:getUsuarios" />
+      <output wsam:Action="http://wspack/wsFrutos/getUsuariosResponse" message="tns:getUsuariosResponse" />
     </operation>
     <operation name="getProdByTipo">
       <input wsam:Action="http://wspack/wsFrutos/getProdByTipoRequest" message="tns:getProdByTipo" />
       <output wsam:Action="http://wspack/wsFrutos/getProdByTipoResponse" message="tns:getProdByTipoResponse" />
     </operation>
-    <operation name="getUsuarios">
-      <input wsam:Action="http://wspack/wsFrutos/getUsuariosRequest" message="tns:getUsuarios" />
-      <output wsam:Action="http://wspack/wsFrutos/getUsuariosResponse" message="tns:getUsuariosResponse" />
+    <operation name="getTipoProd">
+      <input wsam:Action="http://wspack/wsFrutos/getTipoProdRequest" message="tns:getTipoProd" />
+      <output wsam:Action="http://wspack/wsFrutos/getTipoProdResponse" message="tns:getTipoProdResponse" />
     </operation>
   </portType>
   <binding name="wsFrutosPortBinding" type="tns:wsFrutos">
@@ -98,7 +98,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="RecuperarContrasena">
+    <operation name="ListarVentasByVendedor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -107,7 +107,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="getTipoUsuarioByTipo">
+    <operation name="RecuperarContrasena">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -125,7 +125,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ListarVentasByVendedor">
+    <operation name="getTipoUsuarioByTipo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -134,7 +134,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="getTipoProd">
+    <operation name="getUsuarios">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -152,7 +152,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="getUsuarios">
+    <operation name="getTipoProd">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

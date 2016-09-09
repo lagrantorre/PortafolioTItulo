@@ -4,6 +4,8 @@
 --   tipo:      Oracle Database 11g
 
 
+connect system
+exec dbms_xdb.sethttpport(9090)
 
 
 DROP TABLE bodega CASCADE CONSTRAINTS ;
