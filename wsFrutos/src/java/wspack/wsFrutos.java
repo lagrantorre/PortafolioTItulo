@@ -37,7 +37,7 @@ public class wsFrutos {
     @WebMethod(operationName = "Login")
     public String login(@WebParam(name = "Rut") int rut, @WebParam(name = "Password") String pass) {
         Gson gson;
-        Usuario dto = new daoLogin().validar(rut, Cript.encriptar(pass));
+        Usuario dto = new daoLogin().validar(rut, (pass));
         if (!dto.isVigente()){
             return "";
         }else{
@@ -46,27 +46,67 @@ public class wsFrutos {
         }
     }
 
-    /**
-     * Web service operation
-     * @return 
-     */
+    
     @WebMethod(operationName = "getTipoProd")
     public String getTipoProd() {
         Gson gson = new Gson();
         ArrayList<TipoProd> lista = new daoTipoProd().listarTipoProd();
         return gson.toJson(lista);
     }
+    @WebMethod(operationName = "getTipoProdById")
+    public String getTipoProdById(@WebParam(name = "idTipoProducto")int idTipoProd) {
+        Gson gson = new Gson();
+        String asd = new daoTipoProd().getTipoProdById(idTipoProd).toString();
+        return gson.toJson(asd);
+    }
+    @WebMethod(operationName = "updTipoProd")
+    public boolean updTipoProd(@WebParam(name = "nombre")String nombre, @WebParam(name = "idTipoProducto")int idTipoProd) {
+       return new daoTipoProd().updTipoProd(nombre, idTipoProd);
+    }
+    @WebMethod(operationName = "insTipoProd")
+    public boolean insTipoProd(@WebParam(name = "nombre")String nombre) {
+        return new daoTipoProd().insTipoProd(nombre);
+    }
+    @WebMethod(operationName = "delTipoProd")
+    public boolean delTipoProd(@WebParam(name = "id")int id) {
+        return new daoTipoProd().delTipoProd(id);
+    }
     
-    /**
-     * Web service operation
-     * @param tipoProd
-     * @return 
-     */
     @WebMethod(operationName = "getProdByTipo")
     public String getProdByTipo(@WebParam(name = "tipoProducto")int tipoProd) {
         Gson gson = new Gson();
         ArrayList<Producto> lista = new daoProducto().listarProdByTipo(tipoProd);
         return gson.toJson(lista);
+    }
+    @WebMethod(operationName = "getProdByUsu")
+    public String getProdByUsu(@WebParam(name = "rut")int rut) {
+        Gson gson = new Gson();
+        ArrayList<Producto> lista = new daoProducto().getProdByUsu(rut);
+        return gson.toJson(lista);
+    }
+    @WebMethod(operationName = "listarProducto")
+    public String getProdByRut() {
+        Gson gson = new Gson();
+        ArrayList<Producto> lista = new daoProducto().listarProducto();
+        return gson.toJson(lista);
+    }
+    @WebMethod(operationName = "getProdById")
+    public String getProdByRut(@WebParam(name = "id")int id) {
+        Gson gson = new Gson();
+        Producto asd = new daoProducto().getProdById(id);
+        return gson.toJson(asd);
+    }
+    @WebMethod(operationName = "updProd")
+    public boolean updProd(@WebParam(name = "id")  int id, @WebParam(name = "nombre") String nombre,@WebParam(name = "tipo")  int tipo) {
+       return new daoProducto().updProd(id, nombre, tipo);
+    }
+    @WebMethod(operationName = "insProd")
+    public boolean insProd(@WebParam(name = "id")  int id, @WebParam(name = "nombre") String nombre,@WebParam(name = "tipo")  int tipo) {
+       return new daoProducto().insProd(id, nombre, tipo);
+    }
+    @WebMethod(operationName = "delProd")
+    public boolean delProd(@WebParam(name = "id")int id) {
+        return new daoProducto().delProd(id);
     }
     
     /**
@@ -91,6 +131,25 @@ public class wsFrutos {
         ArrayList<Usuario> lista = new daoUsuario().ListarUsuario(tipoUsuario);
         return gson.toJson(lista);
     }
+    @WebMethod(operationName = "getUsuarioByRut")
+    public String getUsuarioByRut(@WebParam(name = "rut")int rut) {
+        Gson gson = new Gson();
+        Usuario asd = new daoUsuario().getUsuarioByRut(rut);
+        return gson.toJson(asd);
+    }
+    @WebMethod(operationName = "updUsuario")
+    public boolean updUsuario(@WebParam(name = "rut") int rut,@WebParam(name = "dv") char dv,@WebParam(name = "nombre") String nombre, @WebParam(name = "email") String email, @WebParam(name = "getoData") String geoData, @WebParam(name = "geoTipo") String geoTipo, @WebParam(name = "pass") String pass, @WebParam(name = "img") String img,@WebParam(name = "bool")  boolean vigente,@WebParam(name = "tipo")  int tipo) {
+       return new daoUsuario().updUsuario(rut, dv, nombre, email, geoData, geoTipo, pass, img, vigente, tipo);
+    }
+    @WebMethod(operationName = "insUsuario")
+    public boolean insUsuario(@WebParam(name = "rut") int rut,@WebParam(name = "dv") char dv,@WebParam(name = "nombre") String nombre, @WebParam(name = "email") String email, @WebParam(name = "getoData") String geoData, @WebParam(name = "geoTipo") String geoTipo, @WebParam(name = "pass") String pass, @WebParam(name = "img") String img,@WebParam(name = "bool")  boolean vigente,@WebParam(name = "tipo")  int tipo) {
+       return new daoUsuario().insUsuario(rut, dv, nombre, email, geoData, geoTipo, pass, img, vigente, tipo);
+    }
+    @WebMethod(operationName = "delUsuario")
+    public boolean delUsuario(@WebParam(name = "rut")int rut) {
+        return new daoUsuario().delUsuario(rut);
+    }
+    
     
     /**
      * Web service operation
@@ -124,6 +183,13 @@ public class wsFrutos {
     public String ListarVentasByVendedor(@WebParam(name = "Rut") int rut) {
         Gson gson = new Gson();
         ArrayList<Usuario> lista = new daoUsuario().ListarUsuario(rut);
+        return gson.toJson(lista);
+    }
+    
+    @WebMethod(operationName = "ListarTipoUsuario")
+    public String ListarTipoUsuario() {
+        Gson gson = new Gson();
+        ArrayList<TipoUsuario> lista = new daoTipoUsuario().listarTipoUsuario();
         return gson.toJson(lista);
     }
 }

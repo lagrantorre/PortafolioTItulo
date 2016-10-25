@@ -29,7 +29,7 @@ public class Cript {
 		byte[] keyBytes = Arrays.copyOf(digestOfPassword, 24);
 
 		SecretKey key = new SecretKeySpec(keyBytes, "DESede");
-		Cipher cipher = Cipher.getInstance("DESede");
+		Cipher cipher = Cipher.getInstance("m");
 		cipher.init(Cipher.ENCRYPT_MODE, key);
 
 		byte[] plainTextBytes = texto.getBytes("utf-8");

@@ -64,3 +64,4 @@ E:\Mis documentos\OneDrive\Duoc\Ing semestre4\Portafolio\Desarrollo Versionado\A
 E:\Mis documentos\OneDrive\Duoc\Ing semestre4\Portafolio\Desarrollo Versionado\Aplicacion Web\AppWeb_FrutosFrescos\AppWeb_FrutosFrescos\obj\Debug\AppWeb_FrutosFrescos.csprojResolveAssemblyReference.cache
 E:\Mis documentos\OneDrive\Duoc\Ing semestre4\Portafolio\Desarrollo Versionado\Aplicacion Web\AppWeb_FrutosFrescos\AppWeb_FrutosFrescos\obj\Debug\AppWeb_FrutosFrescos.dll
 E:\Mis documentos\OneDrive\Duoc\Ing semestre4\Portafolio\Desarrollo Versionado\Aplicacion Web\AppWeb_FrutosFrescos\AppWeb_FrutosFrescos\obj\Debug\AppWeb_FrutosFrescos.pdb
+E:\Mis documentos\OneDrive\Duoc\Ing semestre4\Portafolio\Desarrollo Versionado\Aplicacion Web\AppWeb_FrutosFrescos\AppWeb_FrutosFrescos\bin\Jmelosegui.Mvc.GoogleMap.dll

@@ -1,120 +1,55 @@
-﻿
-<section id="slider">
-    <!--slider-->
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div id="slider-carousel" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#slider-carousel" data-slide-to="1"></li>
-                        <li data-target="#slider-carousel" data-slide-to="2"></li>
-                    </ol>
+﻿<div class="col-sm-9 padding-right">
+    
+    <h3>Productores</h3>
+    <select>
+        <option>Nombre 1</option>
+        <option>Nombre 2</option>
+        <option>Nombre 3</option>
+    </select>
 
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <div class="col-sm-6">
-                                <h1><span>E</span>-SHOPPER</h1>
-                                <h2>Free E-Commerce Template</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                <button type="button" class="btn btn-default get">Get it now</button>
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="images/home/girl1.jpg" class="girl img-responsive" alt="" />
-                                <img src="images/home/pricing.png" class="pricing" alt="" />
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="col-sm-6">
-                                <h1><span>E</span>-SHOPPER</h1>
-                                <h2>100% Responsive Design</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                <button type="button" class="btn btn-default get">Get it now</button>
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="images/home/girl2.jpg" class="girl img-responsive" alt="" />
-                                <img src="images/home/pricing.png" class="pricing" alt="" />
-                            </div>
-                        </div>
+    <select>
+        <option>Fruta</option>
+        <option>Hortaliza</option>
+        <option>Nombre 3</option>
+    </select>
 
-                        <div class="item">
-                            <div class="col-sm-6">
-                                <h1><span>E</span>-SHOPPER</h1>
-                                <h2>Free Ecommerce Template</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                <button type="button" class="btn btn-default get">Get it now</button>
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="images/home/girl3.jpg" class="girl img-responsive" alt="" />
-                                <img src="images/home/pricing.png" class="pricing" alt="" />
-                            </div>
-                        </div>
+    <div id="map" style="height:400px; width:100%"></div>
+    <script>
 
-                    </div>
+        var locations = [
+       { lat: -33.4454986, lng: -70.6563166 },
+       { lat: -33.4444595, lng: -70.6454554 }
+        ]
 
-                    <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
-                        <i class="fa fa-angle-left"></i>
-                    </a>
-                    <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-                </div>
 
-            </div>
-        </div>
-    </div>
-</section><!--/slider-->
+      function initMap() {
+          var uluru = { lat: -33.4454986, lng: -70.6563166 };
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: uluru
+        });
 
-<section>
-    <div class="product-image-wrapper">
-        <div class="single-products">
-            <div class="productinfo text-center">
-                <img src="images/home/recommend1.jpg" alt="" />
-                <h2>$56</h2>
-                <p>Easy Polo Black Edition</p>
-                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-            </div>
+        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-        </div>
-    </div>
-    </div>
-    <div class="col-sm-4">
-        <div class="product-image-wrapper">
-            <div class="single-products">
-                <div class="productinfo text-center">
-                    <img src="images/home/recommend2.jpg" alt="" />
-                    <h2>$56</h2>
-                    <p>Easy Polo Black Edition</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                </div>
+        var markers = locations.map(function (location, i) {
+            return new google.maps.Marker({
+                position: location,
+                label: labels[i % labels.length]
+            });
+        });
 
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-4">
-        <div class="product-image-wrapper">
-            <div class="single-products">
-                <div class="productinfo text-center">
-                    <img src="images/home/recommend3.jpg" alt="" />
-                    <h2>$56</h2>
-                    <p>Easy Polo Black Edition</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                </div>
+        var markerCluster = new MarkerClusterer(map, markers,
+          {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
-        <i class="fa fa-angle-left"></i>
-    </a>
-    <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
-        <i class="fa fa-angle-right"></i>
-    </a>
-    </div>
-    </div><!--/recommended_items-->
-    </div>
-    </div>
-    </div>
-</section>
+
+        //var marker = new google.maps.Marker({
+        //  position: uluru,
+        //  map: map
+        //});
+      }
+    </script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcVi-tXgBUCUmbdt6RI-Rw__U9QCfP220&callback=initMap">
+    </script>
+
+</div>

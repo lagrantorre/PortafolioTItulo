@@ -11,6 +11,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import sql.Conexion;
 
 /**
@@ -39,5 +40,29 @@ public class daoTipoUsuario {
             System.out.println("Error al buscar "+z.getMessage());
         }
         return dto;
+    }//fin metodo LISTAR todos los tipos
+    
+    public ArrayList<TipoUsuario> listarTipoUsuario()
+    {
+        ArrayList<TipoUsuario> lista= new ArrayList<>();
+        TipoUsuario dto = new TipoUsuario();
+        try{
+            Connection conexion = Conexion.getConexion();
+            String query = "select * from tipo_usuario";
+            PreparedStatement buscar=conexion.prepareStatement(query);
+            ResultSet rs = buscar.executeQuery();
+            while(rs.next()){
+                dto = new TipoUsuario();
+                dto.setId(rs.getInt("tip_id"));
+                dto.setNombre(rs.getString("tip_nombre"));
+                lista.add(dto);
+            }
+            conexion.close();
+        }catch(SQLException w){
+            System.out.println("Error SQL al buscar "+w.getMessage());
+        }catch(Exception z){
+            System.out.println("Error al buscar "+z.getMessage());
+        }
+        return lista;
     }//fin metodo LISTAR todos los tipos
 }

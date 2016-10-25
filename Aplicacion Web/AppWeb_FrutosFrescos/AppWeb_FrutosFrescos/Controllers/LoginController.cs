@@ -48,6 +48,12 @@ namespace AppWeb_FrutosFrescos.Controllers
                 return RedirectToAction("Index", "Login", new { error = "Usuario no existe o la contraseña es incorrecta" });
             }
         }
+
+        [HttpPost]
+        public ActionResult CrearCuenta(Usuario user)
+        {
+            return RedirectToAction("Index", "Home");
+        }
     }
 
 

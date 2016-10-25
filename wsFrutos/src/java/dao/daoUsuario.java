@@ -38,7 +38,7 @@ public class daoUsuario {
                 dto.setGeoData(rs.getString("us_geo_data"));
                 dto.setGeoTipo(rs.getString("us_geo_tipo"));
                 dto.setVigente(rs.getBoolean("us_vigente"));
-                dto.setPass(Cript.desencriptar(rs.getString("us_pass")));
+                dto.setPass((rs.getString("us_pass")));
                 dto.setImg(rs.getString("us_img"));
                 dto.setTipo(rs.getInt("tipo_usuario_tip_id"));
                 lista.add(dto);
@@ -115,5 +115,91 @@ public class daoUsuario {
             System.out.println("Error al buscar "+z.getMessage());
         }
         return dto;
+    }
+    
+    public boolean updUsuario(int rut,char dv,String nombre, String email, String geoData, String geoTipo, String pass, String img, boolean vigente, int tipo)
+    {
+        boolean asd = true;
+            try{
+            Connection conexion = Conexion.getConexion();
+            String query="update usuario set US_RUT = ?,US_DV,US_NOMBRE= ?,US_EMAIL= ?,US_GEO_DATA= ?,US_GEO_TIPO= ?,US_PASS,US_VIGENTE= ?,TIPO_USUARIO_TIP_ID= ? where us_rut = ?;";
+            PreparedStatement update = 
+            conexion.prepareStatement(query);
+            update.setInt(1, rut);
+            update.setString(2, String.valueOf(dv));
+            update.setString(3, nombre);
+            update.setString(4, email);
+            update.setString(5, geoData);
+            update.setString(6, geoTipo);
+            update.setString(7, pass);
+            update.setString(8, img);
+            update.setBoolean(9, vigente);
+            update.setInt(10, tipo);
+            update.execute();
+            update.close();
+            conexion.close();
+            }catch(SQLException s){
+                System.out.println("Problema SQL al actualizar "+
+                        s.getMessage());
+                asd = false;
+            }catch(Exception e){
+                System.out.println("Problemas al actualizar "+
+                        e.getMessage());
+                asd = false;
+            }return asd;
+    }
+    public boolean insUsuario(int rut,char dv,String nombre, String email, String geoData, String geoTipo, String pass, String img, boolean vigente, int tipo)
+    {
+        boolean asd = true;
+            try{
+            Connection conexion = Conexion.getConexion();
+            String query="insert into usuario values (?,?,?,?,?;?,?;?,?,?);";
+            PreparedStatement update = 
+            conexion.prepareStatement(query);
+            update.setInt(1, rut);
+            update.setString(2, String.valueOf(dv));
+            update.setString(3, nombre);
+            update.setString(4, email);
+            update.setString(5, geoData);
+            update.setString(6, geoTipo);
+            update.setString(7, pass);
+            update.setString(8, img);
+            update.setBoolean(9, vigente);
+            update.setInt(10, tipo);
+            update.execute();
+            update.close();
+            conexion.close();
+            }catch(SQLException s){
+                System.out.println("Problema SQL al insertar "+
+                        s.getMessage());
+                asd = false;
+            }catch(Exception e){
+                System.out.println("Problemas al insertar "+
+                        e.getMessage());
+                asd = false;
+            }return asd;
+    }
+    
+    public boolean delUsuario(int rut)
+    {
+        boolean asd = true;
+        try{
+            Connection conexion = Conexion.getConexion();
+            String query="delete from usuario where us_rut = ?;";
+            PreparedStatement update = 
+            conexion.prepareStatement(query);
+            update.setInt(1, rut);
+            update.execute();
+            update.close();
+            conexion.close();
+        }catch(SQLException s){
+                System.out.println("Problema SQL al insertar "+
+                        s.getMessage());
+                asd = false;
+            }catch(Exception e){
+                System.out.println("Problemas al insertar "+
+                        e.getMessage());
+                asd = false;
+            }return asd;
     }
 }
