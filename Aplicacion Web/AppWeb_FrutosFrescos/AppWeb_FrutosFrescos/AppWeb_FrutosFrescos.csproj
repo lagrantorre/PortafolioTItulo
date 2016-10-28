@@ -117,6 +117,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CarritoController.cs" />
     <Compile Include="Controllers\CuentaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -125,6 +126,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Bodega.cs" />
+    <Compile Include="Models\Carrito.cs" />
     <Compile Include="Models\Producto.cs" />
     <Compile Include="Models\Tipo_Prod.cs" />
     <Compile Include="Models\Usuario.cs" />
@@ -183,6 +185,51 @@
     <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.RecuperarContrasenaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.delProdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.delTipoProdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.delUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.getProdByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.getProdByUsuResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.getUsuarioByRutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.insProdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.insTipoProdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.insUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.listarProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.ListarTipoUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.updProdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.updTipoProdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.updUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\wsFrutos\configuration91.svcinfo" />
     <None Include="Service References\wsFrutos\configuration.svcinfo" />
     <None Include="Service References\wsFrutos\Reference.svcmap">
@@ -212,6 +259,8 @@
     </None>
     <Content Include="Views\Login\CrearCuenta.cshtml" />
     <Content Include="Views\Producto\Index.cshtml" />
+    <Content Include="Views\Producto\Detalle.cshtml" />
+    <Content Include="Views\Carrito\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

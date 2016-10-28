@@ -1,32 +1,78 @@
 ﻿<div class="col-sm-9 padding-right">
     
     <h3>Productores</h3>
-    <select>
-        <option>Nombre 1</option>
-        <option>Nombre 2</option>
-        <option>Nombre 3</option>
-    </select>
+    <select id="usuarios" class="selectFiltro"></select>
 
-    <select>
-        <option>Fruta</option>
-        <option>Hortaliza</option>
-        <option>Nombre 3</option>
+    <select id="tipoProd" class="selectFiltro">
+        <option value="0">- Tipo Producto -</option>
+        <option value="1">Fruta</option>
+        <option value="2">Hortaliza</option>
     </select>
 
     <div id="map" style="height:400px; width:100%"></div>
-    <script>
 
-        var locations = [
-       { lat: -33.4454986, lng: -70.6563166 },
-       { lat: -33.4444595, lng: -70.6454554 }
-        ]
+    
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous"></script>
+
+<script>
+
+    var userInfo = @Html.Raw(Json.Encode(ViewBag.lstUsr));
 
 
-      function initMap() {
-          var uluru = { lat: -33.4454986, lng: -70.6563166 };
+    var resultado =@Html.Raw(Json.Encode(ViewBag.resultado));
+
+
+    var locations = [];
+
+    $.each(resultado, function(k,v){
+
+        if(v.geoData != null){
+            var geo = v.geoData.split('|');
+            locations.push({ lat: Number(geo[0]), lng: Number(geo[1]) });
+        }
+
+    });
+
+    $(document).ready(function(){
+
+
+
+
+
+        $("#usuarios").html('<option value="0">- Usuario -</option>');
+
+        $.each(userInfo, function(k,v){
+            $("#usuarios").append('<option value='+v.rut+'>'+v.nombre+'</option>');
+        });
+
+        $(".selectFiltro").change(function(){
+
+
+            var usr = $( "#usuarios option:selected" ).val();
+            var tipo = $( "#tipoProd option:selected" ).val();
+            window.location.href = '/?idUsr='+usr+'&tipoProd='+tipo;
+
+        });
+
+
+    });
+
+
+
+
+
+
+
+
+    function initMap() {
+        var uluru = { lat: -33.4454986, lng: -70.6563166 };
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
-          center: uluru
+            zoom: 12,
+            center: uluru
         });
 
         var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -46,10 +92,8 @@
         //  position: uluru,
         //  map: map
         //});
-      }
-    </script>
-    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcVi-tXgBUCUmbdt6RI-Rw__U9QCfP220&callback=initMap">
-    </script>
-
-</div>
+    }
+</script>
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcVi-tXgBUCUmbdt6RI-Rw__U9QCfP220&callback=initMap">
+</script>

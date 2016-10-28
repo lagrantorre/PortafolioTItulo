@@ -1,21 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://wspack/" targetNamespace="http://wspack/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ListarTipoUsuario" type="tns:ListarTipoUsuario" />
+  <xs:element name="ListarTipoUsuarioResponse" type="tns:ListarTipoUsuarioResponse" />
   <xs:element name="ListarVentasByVendedor" type="tns:ListarVentasByVendedor" />
   <xs:element name="ListarVentasByVendedorResponse" type="tns:ListarVentasByVendedorResponse" />
   <xs:element name="Login" type="tns:Login" />
   <xs:element name="LoginResponse" type="tns:LoginResponse" />
   <xs:element name="RecuperarContrasena" type="tns:RecuperarContrasena" />
   <xs:element name="RecuperarContrasenaResponse" type="tns:RecuperarContrasenaResponse" />
+  <xs:element name="delProd" type="tns:delProd" />
+  <xs:element name="delProdResponse" type="tns:delProdResponse" />
+  <xs:element name="delTipoProd" type="tns:delTipoProd" />
+  <xs:element name="delTipoProdResponse" type="tns:delTipoProdResponse" />
+  <xs:element name="delUsuario" type="tns:delUsuario" />
+  <xs:element name="delUsuarioResponse" type="tns:delUsuarioResponse" />
+  <xs:element name="getProdById" type="tns:getProdById" />
+  <xs:element name="getProdByIdResponse" type="tns:getProdByIdResponse" />
   <xs:element name="getProdByTipo" type="tns:getProdByTipo" />
   <xs:element name="getProdByTipoResponse" type="tns:getProdByTipoResponse" />
+  <xs:element name="getProdByUsu" type="tns:getProdByUsu" />
+  <xs:element name="getProdByUsuResponse" type="tns:getProdByUsuResponse" />
   <xs:element name="getTipoProd" type="tns:getTipoProd" />
+  <xs:element name="getTipoProdById" type="tns:getTipoProdById" />
+  <xs:element name="getTipoProdByIdResponse" type="tns:getTipoProdByIdResponse" />
   <xs:element name="getTipoProdResponse" type="tns:getTipoProdResponse" />
   <xs:element name="getTipoUsuarioByTipo" type="tns:getTipoUsuarioByTipo" />
   <xs:element name="getTipoUsuarioByTipoResponse" type="tns:getTipoUsuarioByTipoResponse" />
+  <xs:element name="getUsuarioByRut" type="tns:getUsuarioByRut" />
+  <xs:element name="getUsuarioByRutResponse" type="tns:getUsuarioByRutResponse" />
   <xs:element name="getUsuarios" type="tns:getUsuarios" />
   <xs:element name="getUsuariosByTipo" type="tns:getUsuariosByTipo" />
   <xs:element name="getUsuariosByTipoResponse" type="tns:getUsuariosByTipoResponse" />
   <xs:element name="getUsuariosResponse" type="tns:getUsuariosResponse" />
+  <xs:element name="insProd" type="tns:insProd" />
+  <xs:element name="insProdResponse" type="tns:insProdResponse" />
+  <xs:element name="insTipoProd" type="tns:insTipoProd" />
+  <xs:element name="insTipoProdResponse" type="tns:insTipoProdResponse" />
+  <xs:element name="insUsuario" type="tns:insUsuario" />
+  <xs:element name="insUsuarioResponse" type="tns:insUsuarioResponse" />
+  <xs:element name="listarProducto" nillable="true" type="tns:getProdById" />
+  <xs:element name="listarProductoResponse" nillable="true" type="tns:getProdByIdResponse" />
+  <xs:element name="updProd" type="tns:updProd" />
+  <xs:element name="updProdResponse" type="tns:updProdResponse" />
+  <xs:element name="updTipoProd" type="tns:updTipoProd" />
+  <xs:element name="updTipoProdResponse" type="tns:updTipoProdResponse" />
+  <xs:element name="updUsuario" type="tns:updUsuario" />
+  <xs:element name="updUsuarioResponse" type="tns:updUsuarioResponse" />
+  <xs:complexType name="delUsuario">
+    <xs:sequence>
+      <xs:element name="rut" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="delUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updProd">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="tipo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updProdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insUsuario">
+    <xs:sequence>
+      <xs:element name="rut" type="xs:int" />
+      <xs:element name="dv" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="getoData" type="xs:string" />
+      <xs:element minOccurs="0" name="geoTipo" type="xs:string" />
+      <xs:element minOccurs="0" name="pass" type="xs:string" />
+      <xs:element minOccurs="0" name="img" type="xs:string" />
+      <xs:element name="bool" type="xs:boolean" />
+      <xs:element name="tipo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProdById">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProdByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insProd">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="tipo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insProdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUsuarios">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getUsuariosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="delTipoProd">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="delTipoProdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarTipoUsuario">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListarTipoUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUsuarioByRut">
+    <xs:sequence>
+      <xs:element name="rut" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUsuarioByRutResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insTipoProd">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insTipoProdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getTipoProd">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getTipoProdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="Login">
     <xs:sequence>
       <xs:element name="Rut" type="xs:int" />
@@ -23,6 +170,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="LoginResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getTipoProdById">
+    <xs:sequence>
+      <xs:element name="idTipoProducto" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getTipoProdByIdResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
@@ -37,20 +194,32 @@
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="getUsuarios">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="getUsuariosResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="getTipoUsuarioByTipo">
     <xs:sequence>
       <xs:element name="tipoUsuario" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="getTipoUsuarioByTipoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProdByTipo">
+    <xs:sequence>
+      <xs:element name="tipoProducto" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProdByTipoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProdByUsu">
+    <xs:sequence>
+      <xs:element name="rut" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProdByUsuResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
@@ -65,14 +234,25 @@
       <xs:element name="return" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="getProdByTipo">
+  <xs:complexType name="delProd">
     <xs:sequence>
-      <xs:element name="tipoProducto" type="xs:int" />
+      <xs:element name="id" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="getProdByTipoResponse">
+  <xs:complexType name="delProdResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updTipoProd">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="idTipoProducto" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updTipoProdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ListarVentasByVendedor">
@@ -85,12 +265,23 @@
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="getTipoProd">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="getTipoProdResponse">
+  <xs:complexType name="updUsuario">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
+      <xs:element name="rut" type="xs:int" />
+      <xs:element name="dv" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="getoData" type="xs:string" />
+      <xs:element minOccurs="0" name="geoTipo" type="xs:string" />
+      <xs:element minOccurs="0" name="pass" type="xs:string" />
+      <xs:element minOccurs="0" name="img" type="xs:string" />
+      <xs:element name="bool" type="xs:boolean" />
+      <xs:element name="tipo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

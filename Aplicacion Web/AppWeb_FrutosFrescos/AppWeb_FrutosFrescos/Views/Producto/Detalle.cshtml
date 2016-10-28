@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "Detalle";
+}
+
+<div class="col-sm-9 padding-right">
+    <h2>Detalle</h2>
+
+    <table id="tabla-productos">
+        <thead>
+            <tr>
+
+                <th>Nombre producto</th>
+                <th>Cantidad</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+
+</div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js"
+            integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+            crossorigin="anonymous"></script>
+
+    <script>
+        var lstProducto = @Html.Raw(Json.Encode(ViewBag.lstProductos));
+        var idProductor = @Html.Raw(ViewBag.idProductor);
+
+        $(document).ready(function () {
+            cargaTabla();
+
+        });
+
+        function cargaTabla(){
+
+            $("#tabla-productos tbody").html("");
+
+            $.each(lstProducto, function(k,v){
+
+                var kilos = 22;
+                var fila = "<tr class='fila-producto' id-producto='"+ v.id+"'><td>"+v.nombre +"</td><td>"+ kilos +"</td><td><label>Cantidad</label><input type='text' name='cantidad' />  <a><span class='btn-comprar btn btn-default'>Carrito</span></a></td></tr>";
+
+                $("#tabla-productos tbody").append(fila);
+
+            });
+
+            $(".btn-comprar").on('click', function(){
+                var fila = $(this).parents("tr");
+
+                $.post( "/Producto/Detalle/?idProductor="+idProductor, { idProductor: idProductor, cantidad: fila.find("input").first().val(), idProducto: fila.attr("id-producto") }, function(data){
+                
+                    window.location.reload();
+                    
+                
+                });
+            });
+        }
+
+        function cargaCarrito(){
+           
+
+
+
+        }
+
+    </script>
+
