@@ -144,7 +144,7 @@ public class daoProducto {
         boolean asd = true;
         try{
             Connection conexion = Conexion.getConexion();
-            String query = "insert into producto values (?,?,?);";
+            String query = "insert into producto values (?,?,?)";
             PreparedStatement upd=conexion.prepareStatement(query);
             upd.setInt(1, id);
             upd.setString(2, nombre);
@@ -170,13 +170,13 @@ public class daoProducto {
         try{
             Connection conexion = Conexion.getConexion();
             String query = "select a.pr_id, " +
-            "a.pr_nombre," +
-            "a.tipo_prod_tip_id" +
-            "from producto a, stock b , bodega c, usuario d" +
-            "where" +
-            "a.pr_id = b.producto_pr_id and" +
-            "b.bodega_bod_id = c.bod_id and" +
-            "c.usuario_us_rut = d.us_rut and" +
+            "a.pr_nombre, " +
+            "a.tipo_prod_tip_id " +
+            "from producto a, stock b , bodega c, usuario d " +
+            "where " +
+            "a.pr_id = b.producto_pr_id and " +
+            "b.bodega_bod_id = c.bod_id and " +
+            "c.usuario_us_rut = d.us_rut and " +
             "d.us_rut = ?";
             PreparedStatement buscar=conexion.prepareStatement(query);
             buscar.setInt(1, rut);
