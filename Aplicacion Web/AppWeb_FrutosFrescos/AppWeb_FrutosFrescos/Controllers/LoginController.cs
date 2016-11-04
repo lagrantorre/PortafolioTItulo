@@ -40,6 +40,8 @@ namespace AppWeb_FrutosFrescos.Controllers
 
             if (dataUser != null)
             {
+                Session["usuario"] = dataUser;                
+
                 return RedirectToAction("Index", "Home");
             }
             else
