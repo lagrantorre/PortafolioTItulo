@@ -5,9 +5,9 @@
         <group>
             <file>file:/C:/Users/Robert/Documents/NetBeansProjects/wsFrutos/src/java/wspack/wsFrutos.java</file>
             <file>file:/C:/Users/Robert/Documents/NetBeansProjects/wsFrutos/src/java/dao/daoTipoProd.java</file>
+            <file>file:/C:/Users/Robert/Documents/NetBeansProjects/wsFrutos/src/java/dao/daoStock.java</file>
             <file>file:/C:/Users/Robert/Documents/NetBeansProjects/wsFrutos/src/java/dao/daoProducto.java</file>
             <file>file:/C:/Users/Robert/Documents/NetBeansProjects/wsFrutos/src/java/dao/daoUsuario.java</file>
-            <file>file:/C:/Users/Robert/Documents/NetBeansProjects/wsFrutos/src/java/dao/daoTipoUsuario.java</file>
         </group>
     </open-files>
 </project-private>
