@@ -114,21 +114,25 @@
         <!--form-->
         <div class="container">
             <div class="row">
-
+                <div>
+                    @if (ViewBag.Success != "")
+                    {
+                        <span style="color:green; font-weight: bolder">@ViewBag.Success</span>
+                    }
+                    @if (ViewBag.Error != "")
+                    {
+                        <span style="color:red; font-weight: bolder">@ViewBag.Error</span>
+                    }
+                </div>
                 <div class="col-sm-4 col-sm-offset-1">
                     <div class="login-form">
                         <!--login form-->
                         <h2>Ingrese con su cuenta</h2>
-                        @if (ViewBag.Error != "") { 
-                            <span style="color:red; font-weight: bolder" >@ViewBag.Error</span>
-                        }
+                       
                         <form action="/Login/Ingreso" method="post">
-                            <input type="text" placeholder="Nombre" name="User" />
-                            <input type="pass" placeholder="Correo electrónico" name="Pass" />
-                            <span>
-                                <input type="checkbox" class="checkbox">
-                                Recordarme en este navegador
-                            </span>
+                            <input type="text" placeholder="Rut" name="User" />
+                            <input type="password" placeholder="Contraseña" name="Pass" />
+                         
                             <button type="submit" class="btn btn-default">Ingresar</button>
                         </form>
                     </div><!--/login form-->
@@ -140,10 +144,14 @@
                     <div class="signup-form">
                         <!--sign up form-->
                         <h2>Registre una nueva cuenta</h2>
-                        <form action="#">
-                            <input type="text" placeholder="Nombre" />
-                            <input type="email" placeholder="Correo electrónico" />
-                            <input type="password" placeholder="Contraseña" />
+                       
+                        <form action="/Login/CrearCuenta" method="post">
+                            <input type="text" placeholder="Rut" name="User" />
+                            <input type="text" placeholder="dv" name="Dv" />
+                            <input type="text" placeholder="Nombre" name="Nombre" />
+                            <input type="email" placeholder="Correo Electrónico" name="Email" />
+                            <input type="password" placeholder="Contraseña" name="Pass" />
+
                             <button type="submit" class="btn btn-default">Crear</button>
                         </form>
                     </div><!--/sign up form-->

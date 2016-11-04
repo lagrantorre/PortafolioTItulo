@@ -24,19 +24,30 @@ namespace AppWeb_FrutosFrescos.Controllers
             return View();
         }
 
+        public ActionResult Salir()
+        {
+            Session.Abandon();
+            
+            return View("Index");
+        }
+
         [HttpPost]
         public ActionResult Ingreso(DataUser data)
         {
 
-            var wea = data;
-
+        
             Usuario dataUser;
 
             wsFrutosClient ws = new wsFrutosClient();
-            
+
+            try
+            {
                 dataUser = JsonConvert.DeserializeObject<Usuario>(ws.Login(Int32.Parse(data.User), data.Pass));
-                
-            
+            }
+            catch (Exception)
+            {
+                dataUser = null;
+            }
 
             if (dataUser != null)
             {
@@ -46,15 +57,33 @@ namespace AppWeb_FrutosFrescos.Controllers
             }
             else
             {
-               
-                return RedirectToAction("Index", "Login", new { error = "Usuario no existe o la contraseña es incorrecta" });
+                ViewBag.Error = "Usuario no existe o la contraseña es incorrecta";
+                return View("Index");                
             }
         }
 
         [HttpPost]
-        public ActionResult CrearCuenta(Usuario user)
+        public ActionResult CrearCuenta(DataUser data)
         {
-            return RedirectToAction("Index", "Home");
+
+
+            wsFrutosClient ws = new wsFrutosClient();
+
+            bool result = ws.insUsuario(Int32.Parse(data.User), ushort.Parse(data.Dv), data.Nombre, data.Email, " ", " ", data.Pass, " ", true, 1);
+
+            if (result)
+            {
+                ViewBag.Success = "Cuenta creada exitosamente, por favor ingrese.";
+                return View("Index");
+
+            }
+            else
+            {
+                ViewBag.Error = "Cuenta no creada, por favor intente denuevo.";
+                return View("Index");
+            }
+
+          
         }
     }
 
@@ -63,5 +92,8 @@ namespace AppWeb_FrutosFrescos.Controllers
     {
         public string User { get; set; }
         public string Pass { get; set; }
+        public string Dv { get; set; }
+        public string Nombre { get; set; }
+        public string Email { get; set; }        
     }
 }
