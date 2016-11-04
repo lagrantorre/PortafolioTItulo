@@ -75,7 +75,7 @@ public class daoTipoProd {
         boolean asd = true;
         try{
         Connection conexion = Conexion.getConexion();
-        String query="update tipo_prod set tip_nombre = ? where tip_id = ?;";
+        String query="update tipo_prod set tip_nombre = ? where tip_id = ?";
         PreparedStatement update = 
         conexion.prepareStatement(query);
         update.setString(1, nombre);
@@ -99,7 +99,7 @@ public class daoTipoProd {
         boolean asd = true;
         try{
         Connection conexion = Conexion.getConexion();
-        String query="insert into tipo_prod values ((select max (tip_id) +1 from tipo_prod), ?);";
+        String query="insert into tipo_prod values (?)";
         PreparedStatement insert = 
         conexion.prepareStatement(query);
         insert.setString(1, nombre);

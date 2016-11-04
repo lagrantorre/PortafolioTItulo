@@ -131,6 +131,12 @@ public class wsFrutos {
         ArrayList<Usuario> lista = new daoUsuario().ListarUsuario(tipoUsuario);
         return gson.toJson(lista);
     }
+    @WebMethod(operationName = "getUsuariosByTipoProd")
+    public String getUsuariosByTipoProd(@WebParam(name = "tipoProducto")int tipoProd) {
+        Gson gson = new Gson();
+        ArrayList<Usuario> lista = new daoUsuario().getUsuarioByTipoProd(tipoProd);
+        return gson.toJson(lista);
+    }
     @WebMethod(operationName = "getUsuarioByRut")
     public String getUsuarioByRut(@WebParam(name = "rut")int rut) {
         Gson gson = new Gson();

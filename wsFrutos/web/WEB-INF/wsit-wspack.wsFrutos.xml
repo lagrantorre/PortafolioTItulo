@@ -15,6 +15,8 @@
     <message name="getUsuariosResponse"/>
     <message name="getUsuariosByTipo"/>
     <message name="getUsuariosByTipoResponse"/>
+    <message name="getUsuariosByTipoProd"/>
+    <message name="getUsuariosByTipoProdResponse"/>
     <portType name="wsFrutos">
         <operation name="Login">
             <input message="tns:Login"/>
@@ -36,6 +38,10 @@
             <input message="tns:getUsuariosByTipo"/>
             <output message="tns:getUsuariosByTipoResponse"/>
         </operation>
+        <operation name="getUsuariosByTipoProd">
+            <input message="tns:getUsuariosByTipoProd"/>
+            <output message="tns:getUsuariosByTipoProdResponse"/>
+        </operation>
     </portType>
     <binding name="wsFrutosPortBinding" type="tns:wsFrutos">
         <operation name="Login">
@@ -55,6 +61,10 @@
             <output/>
         </operation>
         <operation name="getUsuariosByTipo">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getUsuariosByTipoProd">
             <input/>
             <output/>
         </operation>
