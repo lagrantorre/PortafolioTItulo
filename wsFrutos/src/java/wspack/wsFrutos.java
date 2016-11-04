@@ -8,6 +8,7 @@ package wspack;
 import com.google.gson.Gson;
 import dao.daoLogin;
 import dao.daoProducto;
+import dao.daoStock;
 import dao.daoTipoProd;
 import dao.daoTipoUsuario;
 import dao.daoUsuario;
@@ -101,8 +102,8 @@ public class wsFrutos {
        return new daoProducto().updProd(id, nombre, tipo);
     }
     @WebMethod(operationName = "insProd")
-    public boolean insProd(@WebParam(name = "id")  int id, @WebParam(name = "nombre") String nombre,@WebParam(name = "tipo")  int tipo) {
-       return new daoProducto().insProd(id, nombre, tipo);
+    public boolean insProd(@WebParam(name = "nombre") String nombre, @WebParam(name = "tipo")  int tipo) {
+       return new daoProducto().insProd(nombre, tipo);
     }
     @WebMethod(operationName = "delProd")
     public boolean delProd(@WebParam(name = "id")int id) {
@@ -147,9 +148,22 @@ public class wsFrutos {
     public boolean updUsuario(@WebParam(name = "rut") int rut,@WebParam(name = "dv") char dv,@WebParam(name = "nombre") String nombre, @WebParam(name = "email") String email, @WebParam(name = "getoData") String geoData, @WebParam(name = "geoTipo") String geoTipo, @WebParam(name = "pass") String pass, @WebParam(name = "img") String img,@WebParam(name = "bool")  boolean vigente,@WebParam(name = "tipo")  int tipo) {
        return new daoUsuario().updUsuario(rut, dv, nombre, email, geoData, geoTipo, pass, img, vigente, tipo);
     }
+
     @WebMethod(operationName = "insUsuario")
-    public boolean insUsuario(@WebParam(name = "rut") int rut,@WebParam(name = "dv") char dv,@WebParam(name = "nombre") String nombre, @WebParam(name = "email") String email, @WebParam(name = "getoData") String geoData, @WebParam(name = "geoTipo") String geoTipo, @WebParam(name = "pass") String pass, @WebParam(name = "img") String img,@WebParam(name = "bool")  boolean vigente,@WebParam(name = "tipo")  int tipo) {
-       return new daoUsuario().insUsuario(rut, dv, nombre, email, geoData, geoTipo, pass, img, vigente, tipo);
+    public boolean insUsuario(@WebParam(name = "rut") int rut,@WebParam(name = "dv") String dv,@WebParam(name = "nombre") String nombre, @WebParam(name = "email") String email, @WebParam(name = "getoData") String geoData, @WebParam(name = "geoTipo") String geoTipo, @WebParam(name = "pass") String pass, @WebParam(name = "img") String img,@WebParam(name = "bool")  boolean vigente,@WebParam(name = "tipo")  int tipo) {
+       return new daoUsuario().insUsuario(rut, dv.charAt(0), nombre, email, geoData, geoTipo, pass, img, vigente, tipo);
+    }
+    @WebMethod(operationName = "insStock")
+    public boolean insStock(@WebParam(name = "Kilos") int kilos, @WebParam(name = "Precio")  int precio, @WebParam(name = "idProducto")  int idProd, @WebParam(name = "RutUsu")  int rutUsu) {
+       return new daoStock().insStock(kilos, precio,idProd,rutUsu);
+    }
+    @WebMethod(operationName = "updStock")
+    public boolean updStock(@WebParam(name = "Kilos") int kilos, @WebParam(name = "Precio")  int precio, @WebParam(name = "idStock")  int idStock) {
+       return new daoStock().updStock(kilos, precio,idStock);
+    }
+    @WebMethod(operationName = "delStock")
+    public boolean delStock(@WebParam(name = "idStock")  int idStock) {
+       return new daoStock().delStock(idStock);
     }
     @WebMethod(operationName = "delUsuario")
     public boolean delUsuario(@WebParam(name = "rut")int rut) {

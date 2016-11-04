@@ -99,7 +99,7 @@ public class daoTipoProd {
         boolean asd = true;
         try{
         Connection conexion = Conexion.getConexion();
-        String query="insert into tipo_prod values (?)";
+        String query="insert into tipo_prod values (tipprod_seq.nextval,?)";
         PreparedStatement insert = 
         conexion.prepareStatement(query);
         insert.setString(1, nombre);

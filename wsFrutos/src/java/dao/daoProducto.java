@@ -139,25 +139,24 @@ public class daoProducto {
         return asd;
     }//
     
-    public boolean insProd(int id, String nombre, int tipo)
+    public boolean insProd( String nombre, int tipo)
     {
         boolean asd = true;
         try{
             Connection conexion = Conexion.getConexion();
-            String query = "insert into producto values (?,?,?)";
+            String query = "insert into producto values (prod_seq.nextval,?,?)";
             PreparedStatement upd=conexion.prepareStatement(query);
-            upd.setInt(1, id);
-            upd.setString(2, nombre);
-            upd.setInt(3, tipo);
+            upd.setString(1, nombre);
+            upd.setInt(2, tipo);
             upd.execute();
             upd.close();
             conexion.close();
             
         }catch(SQLException w){
-            System.out.println("Error SQL al buscar "+w.getMessage());
+            System.out.println("Error SQL al insertar "+w.getMessage());
             asd=false;
         }catch(Exception z){
-            System.out.println("Error al buscar "+z.getMessage());
+            System.out.println("Error al insertar "+z.getMessage());
             asd = false;
         }
         return asd;
@@ -196,4 +195,6 @@ public class daoProducto {
         }
         return lista;
     }//fin metodo LISTAR por tipo
+
+    
 }
