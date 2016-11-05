@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Feria_Desktop.Model
 {
-    public class TipoProductoClass
+    public class ProductoClass
     {
-        public int tip_id { get; set; }
-        public string tip_nombre { get; set; }
+        public int pr_id { get; set; }
+        public string pr_nombre { get; set; }
+        public int tipo_prod_tip_id { get; set; }
     }
 }

@@ -22,6 +22,7 @@ namespace Feria_Desktop.View.Comun
         public Login()
         {
             InitializeComponent();
+            txb_usuario.Focus();
         }
 
         private void btn_entrar_Click(object sender, RoutedEventArgs e)
@@ -29,7 +30,7 @@ namespace Feria_Desktop.View.Comun
             MainWindow inicio = new MainWindow();
             if (txb_usuario.Text.Length == 0)
             {
-                blq_error.Text = "Debe ingresar un email";
+                blq_error.Text = "Debe ingresar un usuario";
                 txb_usuario.Focus();
             }
             else
@@ -42,17 +43,16 @@ namespace Feria_Desktop.View.Comun
                 string usuario = txb_usuario.Text;
                 string password = txb_password.Password;
 
-                ///Llamada a servicio de login
-                wsFrutos.wsFrutosClient consumWS = new wsFrutos.wsFrutosClient();
+               /* Llamada a servicio de login
+                * wsTaller.TallerWSClient consumWS = new wsTaller.TallerWSClient();
                 string returnString;
-                returnString = consumWS.Login(Int32.Parse(usuario), password);
+                returnString = consumWS.loginUsuario(usuario, password);*/
+                string returnString = "1";
 
-
-                if (!returnString.Equals(""))
+                if (!returnString.Equals("0"))
                 {
                     //string username = "usuario prueba";
-                    //inicio. TextBlockName.Text = "Bienvenido " + usuario;//Texto de bienvenida.
-                    Console.WriteLine(returnString);
+                    // inicio. TextBlockName.Text = "Bienvenido " + usuario;//Texto de bienvenida.
                     inicio.Show();
                     Close();
                 }

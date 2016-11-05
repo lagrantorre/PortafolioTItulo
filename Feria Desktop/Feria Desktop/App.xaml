@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="View/Comun/Login.xaml">
     <Application.Resources>
-         
+
+        <BitmapImage x:Key="ImagenFondo" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="C:\Users\P1tu\Desktop\Portafolio 2016\Feria Desktop\Feria Desktop\Img\Fondo.jpg"/>
+
     </Application.Resources>
 </Application>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Feria_Desktop.ViewModel
 {
-    class ProductoVM
+    public class ProductoVM
     {
     }
 }

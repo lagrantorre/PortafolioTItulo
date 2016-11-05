@@ -9,7 +9,7 @@ using System.Windows;
 namespace Feria_Desktop
 {
     /// <summary>
-    /// Lógica de interacción para App.xaml weA WEA
+    /// Lógica de interacción para App.xaml
     /// </summary>
     public partial class App : Application
     {

@@ -33,11 +33,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>conejoo_AnK_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Feria_Desktop.App</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,6 +59,44 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\TipoProductoClass.cs" />
+    <Compile Include="View\Comun\Inicio.xaml.cs">
+      <DependentUpon>Inicio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Mantenedor\Bodega.xaml.cs">
+      <DependentUpon>Bodega.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Mantenedor\vEditarTipoUsuario.xaml.cs">
+      <DependentUpon>vEditarTipoUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Mantenedor\TipoProducto.xaml.cs">
+      <DependentUpon>TipoProducto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Mantenedor\TipoUsuario.xaml.cs">
+      <DependentUpon>TipoUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Mantenedor\vEditarBodega.xaml.cs">
+      <DependentUpon>vEditarBodega.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Mantenedor\vEditarTipoProducto.xaml.cs">
+      <DependentUpon>vEditarTipoProducto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Producto\ListadoProductos.xaml.cs">
+      <DependentUpon>ListadoProductos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Producto\vEditarProducto.xaml.cs">
+      <DependentUpon>vEditarProducto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Usuario\ListadoUsuarios.xaml.cs">
+      <DependentUpon>ListadoUsuarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Usuario\vEditarUsuario.xaml.cs">
+      <DependentUpon>vEditarUsuario.xaml</DependentUpon>
+    </Compile>
+    <Page Include="View\Comun\Inicio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Comun\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -67,11 +109,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Service References\wsFrutos\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="ViewModel\BodegaVM.cs" />
     <Compile Include="ViewModel\ProductoVM.cs" />
     <Compile Include="ViewModel\TipoUsuarioVM.cs" />
@@ -83,6 +120,46 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\Mantenedor\Bodega.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Mantenedor\vEditarTipoUsuario.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Mantenedor\TipoProducto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Mantenedor\TipoUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Mantenedor\vEditarBodega.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Mantenedor\vEditarTipoProducto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Producto\ListadoProductos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Producto\vEditarProducto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Usuario\ListadoUsuarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Usuario\vEditarUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\BodegaClass.cs" />
@@ -111,60 +188,12 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="Service References\wsFrutos\Feria_Desktop.wsFrutos.getProdByTipoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\wsFrutos\Feria_Desktop.wsFrutos.getTipoProdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\wsFrutos\Feria_Desktop.wsFrutos.getTipoUsuarioByTipoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\wsFrutos\Feria_Desktop.wsFrutos.getUsuariosByTipoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\wsFrutos\Feria_Desktop.wsFrutos.getUsuariosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\wsFrutos\Feria_Desktop.wsFrutos.ListarVentasByVendedorResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\wsFrutos\Feria_Desktop.wsFrutos.LoginResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\wsFrutos\Feria_Desktop.wsFrutos.RecuperarContrasenaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\wsFrutos\wsFrutos.wsdl" />
-    <None Include="Service References\wsFrutos\wsFrutos.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="View\Mantenedor\" />
-    <Folder Include="View\Producto\" />
-    <Folder Include="View\Usuario\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\wsFrutos\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\wsFrutos\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\wsFrutos\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\wsFrutos\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
+    <Resource Include="conejoo_AnK_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

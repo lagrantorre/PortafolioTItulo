@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Feria_Desktop.View.Comun;
+using Feria_Desktop.View.Mantenedor;
+using Feria_Desktop.View.Producto;
+using Feria_Desktop.View.Usuario;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +27,36 @@ namespace Feria_Desktop
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnInicio_Click(object sender, RoutedEventArgs e)
+        {
+            FramePrincipal.Navigate(new Inicio());
+        }
+
+        private void btnProductos_Click(object sender, RoutedEventArgs e)
+        {
+            FramePrincipal.Navigate(new ListadoProductos());
+        }
+
+        private void btnUsuarios_Click(object sender, RoutedEventArgs e)
+        {
+            FramePrincipal.Navigate(new ListadoUsuarios());
+        }
+
+        private void btnManTipoProd_Click(object sender, RoutedEventArgs e)
+        {
+            FramePrincipal.Navigate(new TipoProducto());
+        }
+
+        private void btnManTipoUsu_Click(object sender, RoutedEventArgs e)
+        {
+            FramePrincipal.Navigate(new TipoUsuario());
+        }
+
+        private void btnManBodega_Click(object sender, RoutedEventArgs e)
+        {
+            FramePrincipal.Navigate(new Bodega());
         }
     }
 }

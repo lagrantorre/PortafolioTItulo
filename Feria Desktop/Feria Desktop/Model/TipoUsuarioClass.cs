@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Feria_Desktop.Model
 {
-    class TipoUsuarioClass
+    public class TipoUsuarioClass
     {
+        public int tip_id { get; set; }
+        public int tip_nombre { get; set; }
     }
 }
