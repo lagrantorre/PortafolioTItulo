@@ -14,6 +14,7 @@ import dao.daoTipoUsuario;
 import dao.daoUsuario;
 import util.Cript;
 import dto.Producto;
+import dto.Stock;
 import dto.TipoProd;
 import dto.TipoUsuario;
 import dto.Usuario;
@@ -152,6 +153,12 @@ public class wsFrutos {
     @WebMethod(operationName = "insUsuario")
     public boolean insUsuario(@WebParam(name = "rut") int rut,@WebParam(name = "dv") String dv,@WebParam(name = "nombre") String nombre, @WebParam(name = "email") String email, @WebParam(name = "getoData") String geoData, @WebParam(name = "geoTipo") String geoTipo, @WebParam(name = "pass") String pass, @WebParam(name = "img") String img,@WebParam(name = "bool")  boolean vigente,@WebParam(name = "tipo")  int tipo) {
        return new daoUsuario().insUsuario(rut, dv.charAt(0), nombre, email, geoData, geoTipo, pass, img, vigente, tipo);
+    }
+    @WebMethod(operationName = "getStockByUsu")
+    public String getStockByUsu(@WebParam(name = "Rut") int rut) {
+        Gson gson = new Gson();
+        ArrayList<Stock> lista = new daoStock().getStockByUsu(rut);
+        return gson.toJson(lista);
     }
     @WebMethod(operationName = "insStock")
     public boolean insStock(@WebParam(name = "Kilos") int kilos, @WebParam(name = "Precio")  int precio, @WebParam(name = "idProducto")  int idProd, @WebParam(name = "RutUsu")  int rutUsu) {

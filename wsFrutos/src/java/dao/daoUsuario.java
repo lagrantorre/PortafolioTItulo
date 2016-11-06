@@ -184,7 +184,7 @@ public class daoUsuario {
         boolean asd = true;
         try{
             Connection conexion = Conexion.getConexion();
-            String query="delete from usuario where us_rut = ?;";
+            String query="delete from usuario where us_rut = ?";
             PreparedStatement update = 
             conexion.prepareStatement(query);
             update.setInt(1, rut);

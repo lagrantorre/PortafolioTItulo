@@ -122,7 +122,7 @@ public class daoTipoProd {
         boolean asd = true;
         try{
         Connection conexion = Conexion.getConexion();
-        String query="delete from tipo_prod where tip_id = ?;";
+        String query="delete from tipo_prod where tip_id = ?";
         PreparedStatement insert = 
         conexion.prepareStatement(query);
         insert.setInt(1, id);
