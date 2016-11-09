@@ -14,8 +14,14 @@ public class Venta {
     private int total; 
     private int rutVende;
     private int rutCompra;
+    private int estado;
 
     public Venta() {
+    }
+
+    @Override
+    public String toString() {
+        return "Venta{" + "id=" + id + ", total=" + total + ", rutVende=" + rutVende + ", rutCompra=" + rutCompra + ", estado=" + estado + '}';
     }
 
     public int getId() {
@@ -49,6 +55,14 @@ public class Venta {
     public void setRutCompra(int rutCompra) {
         this.rutCompra = rutCompra;
     }
-    
+
+    public int getEstado() {
+        return estado;
+    }
+
+    public void setEstado(int estado) {
+        this.estado = estado;
+    }
+
     
 }

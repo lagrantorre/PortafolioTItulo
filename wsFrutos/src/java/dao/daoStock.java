@@ -116,4 +116,41 @@ public class daoStock {
         }
         return lista;
     }
+    /**
+    public ArrayList<Stock> getStockByUsu(int rut)
+    {
+        ArrayList<Stock> lista= new ArrayList<>();
+        Stock dto;
+        try{
+            Connection conexion = Conexion.getConexion();
+            String query = "select b.st_id, " +
+            "b.st_kilos, " +
+            "b.st_precio " +
+            "b.producto_pr_id " +
+            "b.bodega_bod_id " +
+            "from  stock b , bodega c, usuario d " +
+            "where " +
+            "b.bodega_bod_id = c.bod_id and " +
+            "c.usuario_us_rut = d.us_rut and " +
+            "d.us_rut = ?";
+            PreparedStatement buscar=conexion.prepareStatement(query);
+            buscar.setInt(1, rut);
+            ResultSet rs = buscar.executeQuery();
+            while(rs.next()){
+                dto = new Stock();
+                dto.setId(rs.getInt("st_id"));
+                dto.setKilos(rs.getInt("st_kilos"));
+                dto.setPrecio(rs.getInt("st_precio"));
+                dto.setPr_id(rs.getInt("producto_pr_id"));
+                dto.setBod_id(rs.getInt("bodega_bod_id"));
+                lista.add(dto);
+            }
+            conexion.close();
+        }catch(SQLException w){
+            System.out.println("Error SQL al buscar "+w.getMessage());
+        }catch(Exception z){
+            System.out.println("Error al buscar "+z.getMessage());
+        }
+        return lista;
+    }//fin metodo LISTAR por tipo **/
 }

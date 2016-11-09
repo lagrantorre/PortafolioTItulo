@@ -6,18 +6,22 @@
 package wspack;
 
 import com.google.gson.Gson;
+import dao.daoDetalle;
 import dao.daoLogin;
 import dao.daoProducto;
 import dao.daoStock;
 import dao.daoTipoProd;
 import dao.daoTipoUsuario;
 import dao.daoUsuario;
+import dao.daoVenta;
+import dto.Detalle;
 import util.Cript;
 import dto.Producto;
 import dto.Stock;
 import dto.TipoProd;
 import dto.TipoUsuario;
 import dto.Usuario;
+import dto.Venta;
 import java.util.ArrayList;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
@@ -155,7 +159,7 @@ public class wsFrutos {
        return new daoUsuario().insUsuario(rut, dv.charAt(0), nombre, email, geoData, geoTipo, pass, img, vigente, tipo);
     }
     @WebMethod(operationName = "getStockByUsu")
-    public String getStockByUsu(@WebParam(name = "Rut") int rut) {
+    public String getStockByUsu(@WebParam(name = "Rut vendedor") int rut) {
         Gson gson = new Gson();
         ArrayList<Stock> lista = new daoStock().getStockByUsu(rut);
         return gson.toJson(lista);
@@ -201,6 +205,15 @@ public class wsFrutos {
         return recupera;
     }
     
+    
+    
+    @WebMethod(operationName = "ListarTipoUsuario")
+    public String ListarTipoUsuario() {
+        Gson gson = new Gson();
+        ArrayList<TipoUsuario> lista = new daoTipoUsuario().listarTipoUsuario();
+        return gson.toJson(lista);
+    }
+    
     /**
      * Web service operation
      * @param rut
@@ -209,14 +222,63 @@ public class wsFrutos {
     @WebMethod(operationName = "ListarVentasByVendedor")
     public String ListarVentasByVendedor(@WebParam(name = "Rut") int rut) {
         Gson gson = new Gson();
-        ArrayList<Usuario> lista = new daoUsuario().ListarUsuario(rut);
+        ArrayList<Venta> lista = new daoVenta().ListarVentasByVendedor(rut);
         return gson.toJson(lista);
     }
     
-    @WebMethod(operationName = "ListarTipoUsuario")
-    public String ListarTipoUsuario() {
+    @WebMethod(operationName = "ListarVentasByComprador")
+    public String ListarVentasByComprador(@WebParam(name = "Rut") int rut) {
         Gson gson = new Gson();
-        ArrayList<TipoUsuario> lista = new daoTipoUsuario().listarTipoUsuario();
+        ArrayList<Venta> lista = new daoVenta().ListarVentasByComprador(rut);
         return gson.toJson(lista);
+    }
+    @WebMethod(operationName = "getVentaById")
+    public String getVentaById(@WebParam(name = "id") int id) {
+        Gson gson = new Gson();
+        Venta asd = new daoVenta().getVentaById(id);
+        return gson.toJson(asd);
+    }
+    
+    @WebMethod(operationName = "insVenta")
+    public boolean insVenta(@WebParam(name = "Total")int total, @WebParam(name = "rutVende")int rutVende, @WebParam(name = "rutCompra")int rutCompra, @WebParam(name = "Estado")int estado) {
+        return new daoVenta().insVenta(total, rutVende, rutCompra, estado);
+    }
+    @WebMethod(operationName = "updVenta")
+    public boolean updVenta(@WebParam(name = "Id")int id, @WebParam(name = "Total")int total, @WebParam(name = "rutVende")int rutVende, @WebParam(name = "rutCompra")int rutCompra, @WebParam(name = "Estado")int estado) {
+        return new daoVenta().updVenta(id, total, rutVende, rutCompra, estado);
+    }
+    
+    @WebMethod(operationName = "delVenta")
+    public boolean delVenta(@WebParam(name = "Id")int id) {
+        return new daoVenta().delVenta(id);
+    }
+    
+    @WebMethod(operationName = "ListarDetalleByIdVenta")
+    public String ListarDetalleByIdVenta(@WebParam(name = "Id Venta") int id) {
+        Gson gson = new Gson();
+        ArrayList<Detalle> lista = new daoDetalle().ListarDetalleByIdVenta(id);
+        return gson.toJson(lista);
+    }
+    
+    @WebMethod(operationName = "getDetalleById")
+    public String getDetalleById(@WebParam(name = "Id detalle") int id) {
+        Gson gson = new Gson();
+        Detalle asd = new daoDetalle().getDetalleById(id);
+        return gson.toJson(asd);
+    }
+    
+    @WebMethod(operationName = "insDetalle")
+    public boolean insDetalle(@WebParam(name = "Cantidad")int cantidad, @WebParam(name = "Total")int total, @WebParam(name = "Id Stock")int stockId, @WebParam(name = "Id Venta")int ventaId) {
+        return new daoDetalle().insDetalle(cantidad, total, stockId, ventaId);
+    }
+    
+    @WebMethod(operationName = "updDetalle")
+    public boolean updDetalle(@WebParam(name = "id")int id, @WebParam(name = "Cantidad")int cantidad, @WebParam(name = "Total")int total, @WebParam(name = "Id Stock")int stockId, @WebParam(name = "Id Venta")int ventaId) {
+        return new daoDetalle().updDetalle(id,cantidad, total, stockId, ventaId);
+    }
+    
+    @WebMethod(operationName = "delDetalle")
+    public boolean delDetalle(@WebParam(name = "id")int id) {
+        return new daoDetalle().delDetalle(id);
     }
 }
