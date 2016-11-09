@@ -43,7 +43,8 @@ public class wsFrutos {
     @WebMethod(operationName = "Login")
     public String login(@WebParam(name = "Rut") int rut, @WebParam(name = "Password") String pass) {
         Gson gson;
-        Usuario dto = new daoLogin().validar(rut, (pass));
+        String pw = new Cript().encriptaEnMD5(pass);
+        Usuario dto = new daoLogin().validar(rut, (pw));
         if (!dto.isVigente()){
             return "";
         }else{
@@ -151,12 +152,14 @@ public class wsFrutos {
     }
     @WebMethod(operationName = "updUsuario")
     public boolean updUsuario(@WebParam(name = "rut") int rut,@WebParam(name = "dv") char dv,@WebParam(name = "nombre") String nombre, @WebParam(name = "email") String email, @WebParam(name = "getoData") String geoData, @WebParam(name = "geoTipo") String geoTipo, @WebParam(name = "pass") String pass, @WebParam(name = "img") String img,@WebParam(name = "bool")  boolean vigente,@WebParam(name = "tipo")  int tipo) {
-       return new daoUsuario().updUsuario(rut, dv, nombre, email, geoData, geoTipo, pass, img, vigente, tipo);
+       String pw = new Cript().encriptaEnMD5(pass);
+       return new daoUsuario().updUsuario(rut, dv, nombre, email, geoData, geoTipo, pw, img, vigente, tipo);
     }
 
     @WebMethod(operationName = "insUsuario")
     public boolean insUsuario(@WebParam(name = "rut") int rut,@WebParam(name = "dv") String dv,@WebParam(name = "nombre") String nombre, @WebParam(name = "email") String email, @WebParam(name = "getoData") String geoData, @WebParam(name = "geoTipo") String geoTipo, @WebParam(name = "pass") String pass, @WebParam(name = "img") String img,@WebParam(name = "bool")  boolean vigente,@WebParam(name = "tipo")  int tipo) {
-       return new daoUsuario().insUsuario(rut, dv.charAt(0), nombre, email, geoData, geoTipo, pass, img, vigente, tipo);
+        String pw = new Cript().encriptaEnMD5(pass);
+        return new daoUsuario().insUsuario(rut, dv.charAt(0), nombre, email, geoData, geoTipo, pw, img, vigente, tipo);
     }
     @WebMethod(operationName = "getStockByUsu")
     public String getStockByUsu(@WebParam(name = "Rut vendedor") int rut) {

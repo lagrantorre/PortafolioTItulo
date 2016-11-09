@@ -4,66 +4,50 @@
  * and open the template in the editor.
  */
 package util;
-
 import java.security.MessageDigest;
-import java.util.Arrays;
-import javax.crypto.Cipher;
-import javax.crypto.SecretKey;
-import javax.crypto.spec.SecretKeySpec;
-import org.apache.commons.codec.binary.Base64;
-
-/**
- *
- * @author Robert
- */
-public class Cript {
-    static private final String secretKey = "Todo@Nada";
+import java.security.NoSuchAlgorithmException;
+ 
+public class Cript
+{
+    private static final char[] CONSTS_HEX = { '0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f' };
+    public static String encriptaEnMD5(String stringAEncriptar)
+    {
+        try
+        {
+           MessageDigest msgd = MessageDigest.getInstance("MD5");
+           byte[] bytes = msgd.digest(stringAEncriptar.getBytes());
+           StringBuilder strbCadenaMD5 = new StringBuilder(2 * bytes.length);
+           for (int i = 0; i < bytes.length; i++)
+           {
+               int bajo = (int)(bytes[i] & 0x0f);
+               int alto = (int)((bytes[i] & 0xf0) >> 4);
+               strbCadenaMD5.append(CONSTS_HEX[alto]);
+               strbCadenaMD5.append(CONSTS_HEX[bajo]);
+           }
+           return strbCadenaMD5.toString();
+        } catch (NoSuchAlgorithmException e) {
+           return null;
+        }
+    }
     
-    public static String encriptar(String texto) {
-	String base64EncryptedString = "";
+    //Crear nueva contraseña
+    public static String NUMEROS = "0123456789";
+ 
+    public static String MAYUSCULAS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+ 
+    public static String MINUSCULAS = "abcdefghijklmnopqrstuvwxyz";
+ 
+    public static String psw = NUMEROS + MAYUSCULAS + MINUSCULAS;
+ 
 
-	try {
+    public static String createPassword(int length) {
+        String pswd = "";
 
-		MessageDigest md = MessageDigest.getInstance("MD5");
-		byte[] digestOfPassword = md.digest(secretKey.getBytes("utf-8"));
-		byte[] keyBytes = Arrays.copyOf(digestOfPassword, 24);
+        for (int i = 0; i < length; i++) {
+            pswd+=(psw.charAt((int)(Math.random() * psw.length())));
+        }
 
-		SecretKey key = new SecretKeySpec(keyBytes, "DESede");
-		Cipher cipher = Cipher.getInstance("m");
-		cipher.init(Cipher.ENCRYPT_MODE, key);
+    return pswd;
+    }
 
-		byte[] plainTextBytes = texto.getBytes("utf-8");
-		byte[] buf = cipher.doFinal(plainTextBytes);
-		byte[] base64Bytes = Base64.encodeBase64(buf);
-		base64EncryptedString = new String(base64Bytes);
-
-	} catch (Exception ex) {
-            return "";
-	}
-	return base64EncryptedString;
-}
-    public static String desencriptar(String textoEncriptado) throws Exception {
-
-	String base64EncryptedString = "";
-
-	try {
-		byte[] message = Base64.decodeBase64(textoEncriptado.getBytes("utf-8"));
-		MessageDigest md = MessageDigest.getInstance("MD5");
-		byte[] digestOfPassword = md.digest(secretKey.getBytes("utf-8"));
-		byte[] keyBytes = Arrays.copyOf(digestOfPassword, 24);
-		SecretKey key = new SecretKeySpec(keyBytes, "DESede");
-
-		Cipher decipher = Cipher.getInstance("DESede");
-		decipher.init(Cipher.DECRYPT_MODE, key);
-
-		byte[] plainText = decipher.doFinal(message);
-
-		base64EncryptedString = new String(plainText, "UTF-8");
-
-	} catch (Exception ex) {
-            System.out.println(ex.getMessage());
-            return "no";
-	}
-	return base64EncryptedString;
-}
 }

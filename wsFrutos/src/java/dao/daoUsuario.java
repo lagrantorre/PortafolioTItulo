@@ -72,7 +72,7 @@ public class daoUsuario {
                 dto.setGeoData(rs.getString("us_geo_data"));
                 dto.setGeoTipo(rs.getString("us_geo_tipo"));
                 dto.setVigente(rs.getBoolean("us_vigente"));
-                dto.setPass(Cript.desencriptar(rs.getString("us_pass")));
+                dto.setPass(rs.getString("us_pass"));
                 dto.setImg(rs.getString("us_img"));
                 dto.setTipo(rs.getInt("tipo_usuario_tip_id"));
                 lista.add(dto);
@@ -104,7 +104,7 @@ public class daoUsuario {
                 dto.setGeoData(rs.getString("us_geo_data"));
                 dto.setGeoTipo(rs.getString("us_geo_tipo"));
                 dto.setVigente(rs.getBoolean("us_vigente"));
-                dto.setPass(Cript.desencriptar(rs.getString("us_pass")));
+                dto.setPass(rs.getString("us_pass"));
                 dto.setImg(rs.getString("us_img"));
                 dto.setTipo(rs.getInt("tipo_usuario_tip_id"));
             }
@@ -134,6 +134,29 @@ public class daoUsuario {
             update.setString(6, img);
             update.setBoolean(7, vigente);
             update.setInt(8, tipo);
+            update.execute();
+            update.close();
+            conexion.close();
+            }catch(SQLException s){
+                System.out.println("Problema SQL al actualizar "+
+                        s.getMessage());
+                asd = false;
+            }catch(Exception e){
+                System.out.println("Problemas al actualizar "+
+                        e.getMessage());
+                asd = false;
+            }return asd;
+    }
+    public boolean updPass(int rut, String pass)
+    {
+        boolean asd = true;
+            try{
+            Connection conexion = Conexion.getConexion();
+            String query="update usuario set US_PASS = ? where us_rut = ?";
+            PreparedStatement update = 
+            conexion.prepareStatement(query);
+            update.setString(1, pass);
+            update.setInt(2, rut);
             update.execute();
             update.close();
             conexion.close();

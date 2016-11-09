@@ -43,7 +43,7 @@ public class MailTest {
     @Test
     public void testRecuperarMail() {
         System.out.println("recuperarMail");
-        int rut = 17069097;
+        int rut = 6;
         Mail instance = new Mail();
         boolean expResult = true;
         boolean result = instance.recuperarMail(rut);

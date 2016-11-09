@@ -25,13 +25,15 @@ public class Mail {
     public boolean recuperarMail(int rut) {
         Usuario dto = new daoUsuario().getUsuarioByRut(rut);
         if(dto.getEmail()!=null){
+            String newpwd = new Cript().createPassword(9);
+            new daoUsuario().updPass(rut, Cript.encriptaEnMD5(newpwd));
             this.miCorreo = "feriafrutosfrescos@gmail.com";
             this.miContraseña = "feriafrutos";
             this.mailReceptor = dto.getEmail();
             this.asunto = "Recuperación de contraseña";
             this.cuerpo = "Estimado: "+dto.getNombre()+"\n\n"+
                     "Según consta en nuestros registros ha solicitado la recuperación de su contraseña en nuestro sistema\n\n"+
-                    "Su actual contraseña es la siguiente: "+dto.getPass()+"\n\n"+
+                    "Se ha generado la siguiente contraseña provisoria: "+newpwd+"\n\n"+
                     "Por favor ingrese directamente su contraseña en el sistema e intente nuevamente. \n\n"+
                     "Equipo Feria Frutos Frescos";
             Properties props = new Properties();//propiedades a agragar
