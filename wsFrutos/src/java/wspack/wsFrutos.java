@@ -7,6 +7,7 @@ package wspack;
 
 import com.google.gson.Gson;
 import dao.daoDetalle;
+import dao.daoEsp;
 import dao.daoLogin;
 import dao.daoProducto;
 import dao.daoStock;
@@ -21,6 +22,7 @@ import dto.Stock;
 import dto.TipoProd;
 import dto.TipoUsuario;
 import dto.Usuario;
+import dto.UsuarioProd;
 import dto.Venta;
 import java.util.ArrayList;
 import javax.jws.WebService;
@@ -208,8 +210,6 @@ public class wsFrutos {
         return recupera;
     }
     
-    
-    
     @WebMethod(operationName = "ListarTipoUsuario")
     public String ListarTipoUsuario() {
         Gson gson = new Gson();
@@ -283,5 +283,12 @@ public class wsFrutos {
     @WebMethod(operationName = "delDetalle")
     public boolean delDetalle(@WebParam(name = "id")int id) {
         return new daoDetalle().delDetalle(id);
+    }
+    
+    @WebMethod(operationName = "getProductoUsuario")
+    public String getProductoUsuario(@WebParam(name = "Rutproductor") int rut) {
+        Gson gson = new Gson();
+        UsuarioProd asd = new daoEsp().listar(rut);
+        return gson.toJson(asd);
     }
 }
