@@ -5,6 +5,7 @@
  */
 package wspack;
 
+
 import com.google.gson.Gson;
 import dao.daoDetalle;
 import dao.daoEsp;
@@ -29,14 +30,13 @@ import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import util.Mail;
-
 /**
  *
  * @author Robert
  */
 @WebService(serviceName = "wsFrutos")
 public class wsFrutos {
-    /**
+/**
      * Login
      * 
      * @param rut rut del usuario
@@ -57,7 +57,7 @@ public class wsFrutos {
     }
 
     /**
-     * Login
+     * Traer tipos de productos
      * 
      * @return Json con Array de los tipos de productos que hay en la bdd
      */
@@ -252,26 +252,26 @@ public class wsFrutos {
         return gson.toJson(asd);
     }
 
-    /**
-     * Actualizar usuario
-     * 
-     * @param rut rut del usuario a actualizar 
-     * @param dv dv a actualizar (no debiese actualizarse, de ser posible mantenerlo y dejarlo bloqueado)
-     * @param nombre nuevo dato
-     * @param email nuevo dato
-     * @param geoData nuevo dato
-     * @param geoTipo nuevo dato
-     * @param pass nuevo dato
-     * @param img nuevo dato
-     * @param vigente nuevo dato
-     * @param tipo nuevo dato
-     * @return true o false
-     */
-    @WebMethod(operationName = "updUsuario")
-    public boolean updUsuario(@WebParam(name = "rut") int rut,@WebParam(name = "dv") char dv,@WebParam(name = "nombre") String nombre, @WebParam(name = "email") String email, @WebParam(name = "getoData") String geoData, @WebParam(name = "geoTipo") String geoTipo, @WebParam(name = "pass") String pass, @WebParam(name = "img") String img,@WebParam(name = "bool")  boolean vigente,@WebParam(name = "tipo")  int tipo) {
-       String pw = new Cript().encriptaEnMD5(pass);
-       return new daoUsuario().updUsuario(rut, dv, nombre, email, geoData, geoTipo, pw, img, vigente, tipo);
-    }
+	/**
+	 * Actualizar usuario
+	 * 
+	 * @param rut rut del usuario a actualizar 
+	 * @param dv dv a actualizar (no debiese actualizarse, de ser posible mantenerlo y dejarlo bloqueado)
+	 * @param nombre nuevo dato
+	 * @param email nuevo dato
+	 * @param geoData nuevo dato
+	 * @param geoTipo nuevo dato
+	 * @param pass nuevo dato
+	 * @param img nuevo dato
+	 * @param vigente nuevo dato
+	 * @param tipo nuevo dato
+	 * @return true o false
+	 */
+	@WebMethod(operationName = "updUsuario")
+	public boolean updUsuario(@WebParam(name = "rut") int rut,@WebParam(name = "dv") char dv,@WebParam(name = "nombre") String nombre, @WebParam(name = "email") String email, @WebParam(name = "getoData") String geoData, @WebParam(name = "geoTipo") String geoTipo, @WebParam(name = "pass") String pass, @WebParam(name = "img") String img,@WebParam(name = "bool")  boolean vigente,@WebParam(name = "tipo")  int tipo) {
+	   String pw = new Cript().encriptaEnMD5(pass);
+	   return new daoUsuario().updUsuario(rut, dv, nombre, email, geoData, geoTipo, pw, img, vigente, tipo);
+	}
 
     /**
      * Insertar Usuario
@@ -301,7 +301,7 @@ public class wsFrutos {
      * @return Json con array de stock
      */
     @WebMethod(operationName = "getStockByUsu")
-    public String getStockByUsu(@WebParam(name = "Rut vendedor") int rut) {
+    public String getStockByUsu(@WebParam(name = "RutVendedor") int rut) {
         Gson gson = new Gson();
         ArrayList<Stock> lista = new daoStock().getStockByUsu(rut);
         return gson.toJson(lista);
@@ -462,110 +462,5 @@ public class wsFrutos {
     @WebMethod(operationName = "updVenta")
     public boolean updVenta(@WebParam(name = "Id")int id, @WebParam(name = "Total")int total, @WebParam(name = "rutVende")int rutVende, @WebParam(name = "rutCompra")int rutCompra, @WebParam(name = "Estado")int estado) {
         return new daoVenta().updVenta(id, total, rutVende, rutCompra, estado);
-    }
-    
-    /**
-     * Borrar venta
-     * 
-     * @param id id de la venta a borrar
-     * @return true o false
-     */
-    @WebMethod(operationName = "delVenta")
-    public boolean delVenta(@WebParam(name = "Id")int id) {
-        return new daoVenta().delVenta(id);
-    }
-    
-    /**
-     * Traer detalles por id de venta
-     *
-     * @param id id de venta a buscar
-     * @return Json con Array de detalles
-     */
-    @WebMethod(operationName = "ListarDetalleByIdVenta")
-    public String ListarDetalleByIdVenta(@WebParam(name = "Id Venta") int id) {
-        Gson gson = new Gson();
-        ArrayList<Detalle> lista = new daoDetalle().ListarDetalleByIdVenta(id);
-        return gson.toJson(lista);
-    }
-    
-    /**
-     * Traer detalle por id
-     *
-     * @param id id del detalle
-     * @return Json con detalle
-     */
-    @WebMethod(operationName = "getDetalleById")
-    public String getDetalleById(@WebParam(name = "Id detalle") int id) {
-        Gson gson = new Gson();
-        Detalle asd = new daoDetalle().getDetalleById(id);
-        return gson.toJson(asd);
-    }
-    
-    /**
-     * insertar nuevo detalle
-     *
-     * @param cantidad nuevo dato
-     * @param total nuevo dato
-     * @param stockId id del stock asociado
-     * @param ventaId id de la venta asociada
-     * @return true o false
-     */
-    @WebMethod(operationName = "insDetalle")
-    public boolean insDetalle(@WebParam(name = "Cantidad")int cantidad, @WebParam(name = "Total")int total, @WebParam(name = "Id Stock")int stockId, @WebParam(name = "Id Venta")int ventaId) {
-        return new daoDetalle().insDetalle(cantidad, total, stockId, ventaId);
-    }
-    
-    /**
-     * Actualizar detalle 
-     *
-     * @param id id del detalle a actualizar
-     * @param cantidad nuevo dato
-     * @param total nuevo dato
-     * @param stockId nuevo dato
-     * @param ventaId nuevo dato
-     * @return true o false
-     */
-    @WebMethod(operationName = "updDetalle")
-    public boolean updDetalle(@WebParam(name = "id")int id, @WebParam(name = "Cantidad")int cantidad, @WebParam(name = "Total")int total, @WebParam(name = "Id Stock")int stockId, @WebParam(name = "Id Venta")int ventaId) {
-        return new daoDetalle().updDetalle(id,cantidad, total, stockId, ventaId);
-    }
-    
-    /**
-     * Borrar detalle 
-     *
-     * @param id del detalle a borrar
-     * @return true o false
-     */
-    @WebMethod(operationName = "delDetalle")
-    public boolean delDetalle(@WebParam(name = "id")int id) {
-        return new daoDetalle().delDetalle(id);
-    }
-    
-    /**
-     * Traer datos de producto y vendedor / objetos especiales:
-     * UsuarioProd:
-     * private int rut;
-     * private String nombre; 
-     * private String geoData;
-     * private ArrayList<StockName> stock;
-     * 
-     * StockName:
-     * private int id;
-     * private int kilos;
-     * private int precios;
-     * private int prId;
-     * private int bodId;
-     * private String nomProd;
-     * private int tipoId;
-     * private String nomTipo;
-     * 
-     * @param rut Rut del vendedor
-     * @return Json con objeto UsuarioProd
-     */
-    @WebMethod(operationName = "getProductoUsuario")
-    public String getProductoUsuario(@WebParam(name = "Rutproductor") int rut) {
-        Gson gson = new Gson();
-        UsuarioProd asd = new daoEsp().listar(rut);
-        return gson.toJson(asd);
     }
 }
