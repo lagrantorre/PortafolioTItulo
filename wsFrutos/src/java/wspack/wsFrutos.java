@@ -306,6 +306,8 @@ public class wsFrutos {
         ArrayList<Stock> lista = new daoStock().getStockByUsu(rut);
         return gson.toJson(lista);
     }
+    
+
 
     /**
      * insertar Stock

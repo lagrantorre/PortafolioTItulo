@@ -15,6 +15,26 @@ public class Detalle {
     private int total; 
     private int stockId;
     private int ventaId;
+    private int prodId;
+    private String prodNombre;
+    
+    
+    public int getProdId() {
+        return prodId;
+    }
+
+    public void setProdId(int prodId) {
+        this.prodId = prodId;
+    }
+
+    public String getProdNombre() {
+        return prodNombre;
+    }
+
+    public void setProdNombre(String prodNombre) {
+        this.prodNombre = prodNombre;
+    }
+
 
     public Detalle() {
     }

@@ -140,4 +140,27 @@ public class wsFrutos2 {
         UsuarioProd asd = new daoEsp().listar(rut);
         return gson.toJson(asd);
     }
+    
+    
+    /**
+     * Traer stock por usuario
+     * 
+     * @param rut rut del vendedor
+     * @return Json con array de stock
+     */
+    @WebMethod(operationName = "getStockById")
+    public String getStockById(@WebParam(name = "IdStock") int id) {
+        Gson gson = new Gson();
+        ArrayList<Stock> lista = new daoStock().getStockById(id);
+        return gson.toJson(lista);
+    }    
+    
+    @WebMethod(operationName = "getStock")
+    public String getStock() {
+        Gson gson = new Gson();
+        ArrayList<Stock> lista = new daoStock().getStock();
+        return gson.toJson(lista);
+    }
 }
+
+    

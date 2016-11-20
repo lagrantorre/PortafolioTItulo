@@ -63,7 +63,7 @@ public class daoVenta {
                 dto.setTotal(rs.getInt("vn_total"));
                 dto.setRutVende(rs.getInt("usuario_rut_vende"));
                 dto.setRutCompra(rs.getInt("usuario_rut_compra"));
-                dto.setEstado(rs.getInt("estado"));
+                dto.setEstado(rs.getInt("vn_estado"));
                 lista.add(dto);
             }
             conexion.close();
@@ -104,7 +104,7 @@ public class daoVenta {
         boolean asd = true;
         try{
         Connection conexion = Conexion.getConexion();
-        String query="update venta set vn_total = ?, usuario_rut_vende = ?, usuario_rut_compra = ?, estado = ? where vn_id = ?";
+        String query="update venta set vn_total = ?, usuario_rut_vende = ?, usuario_rut_compra = ?, vn_estado = ? where vn_id = ?";
         PreparedStatement insert = 
         conexion.prepareStatement(query);
         insert.setInt(1, total);
@@ -163,7 +163,7 @@ public class daoVenta {
                 dto.setTotal(rs.getInt("vn_total"));
                 dto.setRutVende(rs.getInt("usuario_rut_vende"));
                 dto.setRutCompra(rs.getInt("usuario_rut_compra"));
-                dto.setEstado(rs.getInt("estado"));
+                dto.setEstado(rs.getInt("vn_estado"));
             }
             conexion.close();
         }catch(SQLException w){

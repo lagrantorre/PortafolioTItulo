@@ -116,6 +116,63 @@ public class daoStock {
         }
         return lista;
     }
+    
+    public ArrayList<Stock> getStock() {
+        ArrayList<Stock> lista= new ArrayList<>();
+        Stock dto;
+        try{
+            Connection conexion = Conexion.getConexion();
+            String query = "select a.st_id, a.st_kilos, a.st_precio, a.producto_pr_id, a.bodega_bod_id from stock a, bodega b "+
+                    " where a.bodega_bod_id = b.bod_id";
+            PreparedStatement buscar=conexion.prepareStatement(query);
+            //buscar.setInt(1, rut);
+            ResultSet rs = buscar.executeQuery();
+            while(rs.next()){
+                dto = new Stock();
+                dto.setId(rs.getInt("st_id"));
+                dto.setKilos(rs.getInt("st_kilos"));
+                dto.setPrecio(rs.getInt("st_precio"));
+                dto.setPr_id(rs.getInt("producto_pr_id"));
+                dto.setBod_id(rs.getInt("bodega_bod_id"));
+                lista.add(dto);
+            }
+            conexion.close();
+        }catch(SQLException w){
+            System.out.println("Error SQL al buscar "+w.getMessage());
+        }catch(Exception z){
+            System.out.println("Error al buscar "+z.getMessage());
+        }
+        return lista;
+    }
+    
+    public ArrayList<Stock> getStockById(int id) {
+        ArrayList<Stock> lista= new ArrayList<>();
+        Stock dto;
+        try{
+            Connection conexion = Conexion.getConexion();
+            String query = "select a.st_id, a.st_kilos, a.st_precio, a.producto_pr_id, a.bodega_bod_id from bodega b, stock a "+
+                    "JOIN producto pr ON a.producto_pr_id = pr.PR_ID " +
+                    " where a.bodega_bod_id = b.bod_id and a.st_id = ?";
+            PreparedStatement buscar=conexion.prepareStatement(query);
+            buscar.setInt(1, id);
+            ResultSet rs = buscar.executeQuery();
+            while(rs.next()){
+                dto = new Stock();
+                dto.setId(rs.getInt("st_id"));
+                dto.setKilos(rs.getInt("st_kilos"));
+                dto.setPrecio(rs.getInt("st_precio"));
+                dto.setPr_id(rs.getInt("producto_pr_id"));
+                dto.setBod_id(rs.getInt("bodega_bod_id"));
+                lista.add(dto);
+            }
+            conexion.close();
+        }catch(SQLException w){
+            System.out.println("Error SQL al buscar "+w.getMessage());
+        }catch(Exception z){
+            System.out.println("Error al buscar "+z.getMessage());
+        }
+        return lista;
+    }
     /**
     public ArrayList<Stock> getStockByUsu(int rut)
     {

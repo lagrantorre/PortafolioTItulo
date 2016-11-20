@@ -24,7 +24,14 @@ public class daoDetalle {
         Detalle dto;
         try{
             Connection conexion = Conexion.getConexion();
-            String query = "select * from detalle where venta_vn_id = ?";
+           // String query = "select * from detalle_venta where venta_vn_id = ?";
+            
+             String query = "select det.dt_id, det.dt_cantidad, det.dt_total, det.stock_st_id, det.venta_vn_id, st.producto_pr_id, pr.PR_NOMBRE  from detalle_venta det " +
+                    "JOIN stock st ON det.stock_st_id = st.st_id " +
+                    "JOIN producto pr ON st.producto_pr_id = pr.PR_ID " +
+                    "where venta_vn_id = ?";
+            
+            
             PreparedStatement buscar=conexion.prepareStatement(query);
             buscar.setInt(1, idVenta);
             ResultSet rs = buscar.executeQuery();
@@ -35,6 +42,8 @@ public class daoDetalle {
                 dto.setTotal(rs.getInt("dt_total"));
                 dto.setStockId(rs.getInt("stock_st_id"));
                 dto.setVentaId(rs.getInt("venta_vn_id"));
+                dto.setProdId(rs.getInt("producto_pr_id"));
+                dto.setProdNombre(rs.getString("pr_nombre"));
                 lista.add(dto);
             }
             conexion.close();
