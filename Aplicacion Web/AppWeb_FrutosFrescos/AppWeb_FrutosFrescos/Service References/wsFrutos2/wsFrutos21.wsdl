@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://wspack/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="wsFrutos2" targetNamespace="http://wspack/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:45796/wsFrutos/wsFrutos2?xsd=1" namespace="http://wspack/" />
+    </xsd:schema>
+  </types>
+  <message name="insDetalle">
+    <part name="parameters" element="tns:insDetalle" />
+  </message>
+  <message name="insDetalleResponse">
+    <part name="parameters" element="tns:insDetalleResponse" />
+  </message>
+  <message name="delVenta">
+    <part name="parameters" element="tns:delVenta" />
+  </message>
+  <message name="delVentaResponse">
+    <part name="parameters" element="tns:delVentaResponse" />
+  </message>
+  <message name="delDetalle">
+    <part name="parameters" element="tns:delDetalle" />
+  </message>
+  <message name="delDetalleResponse">
+    <part name="parameters" element="tns:delDetalleResponse" />
+  </message>
+  <message name="getDetalleById">
+    <part name="parameters" element="tns:getDetalleById" />
+  </message>
+  <message name="getDetalleByIdResponse">
+    <part name="parameters" element="tns:getDetalleByIdResponse" />
+  </message>
+  <message name="updDetalle">
+    <part name="parameters" element="tns:updDetalle" />
+  </message>
+  <message name="updDetalleResponse">
+    <part name="parameters" element="tns:updDetalleResponse" />
+  </message>
+  <message name="ListarDetalleByIdVenta">
+    <part name="parameters" element="tns:ListarDetalleByIdVenta" />
+  </message>
+  <message name="ListarDetalleByIdVentaResponse">
+    <part name="parameters" element="tns:ListarDetalleByIdVentaResponse" />
+  </message>
+  <message name="getProductoUsuario">
+    <part name="parameters" element="tns:getProductoUsuario" />
+  </message>
+  <message name="getProductoUsuarioResponse">
+    <part name="parameters" element="tns:getProductoUsuarioResponse" />
+  </message>
+  <message name="getStockById">
+    <part name="parameters" element="tns:getStockById" />
+  </message>
+  <message name="getStockByIdResponse">
+    <part name="parameters" element="tns:getStockByIdResponse" />
+  </message>
+  <message name="getStock">
+    <part name="parameters" element="tns:getStock" />
+  </message>
+  <message name="getStockResponse">
+    <part name="parameters" element="tns:getStockResponse" />
+  </message>
+  <portType name="wsFrutos2">
+    <operation name="insDetalle">
+      <input wsam:Action="http://wspack/wsFrutos2/insDetalleRequest" message="tns:insDetalle" />
+      <output wsam:Action="http://wspack/wsFrutos2/insDetalleResponse" message="tns:insDetalleResponse" />
+    </operation>
+    <operation name="delVenta">
+      <input wsam:Action="http://wspack/wsFrutos2/delVentaRequest" message="tns:delVenta" />
+      <output wsam:Action="http://wspack/wsFrutos2/delVentaResponse" message="tns:delVentaResponse" />
+    </operation>
+    <operation name="delDetalle">
+      <input wsam:Action="http://wspack/wsFrutos2/delDetalleRequest" message="tns:delDetalle" />
+      <output wsam:Action="http://wspack/wsFrutos2/delDetalleResponse" message="tns:delDetalleResponse" />
+    </operation>
+    <operation name="getDetalleById">
+      <input wsam:Action="http://wspack/wsFrutos2/getDetalleByIdRequest" message="tns:getDetalleById" />
+      <output wsam:Action="http://wspack/wsFrutos2/getDetalleByIdResponse" message="tns:getDetalleByIdResponse" />
+    </operation>
+    <operation name="updDetalle">
+      <input wsam:Action="http://wspack/wsFrutos2/updDetalleRequest" message="tns:updDetalle" />
+      <output wsam:Action="http://wspack/wsFrutos2/updDetalleResponse" message="tns:updDetalleResponse" />
+    </operation>
+    <operation name="ListarDetalleByIdVenta">
+      <input wsam:Action="http://wspack/wsFrutos2/ListarDetalleByIdVentaRequest" message="tns:ListarDetalleByIdVenta" />
+      <output wsam:Action="http://wspack/wsFrutos2/ListarDetalleByIdVentaResponse" message="tns:ListarDetalleByIdVentaResponse" />
+    </operation>
+    <operation name="getProductoUsuario">
+      <input wsam:Action="http://wspack/wsFrutos2/getProductoUsuarioRequest" message="tns:getProductoUsuario" />
+      <output wsam:Action="http://wspack/wsFrutos2/getProductoUsuarioResponse" message="tns:getProductoUsuarioResponse" />
+    </operation>
+    <operation name="getStockById">
+      <input wsam:Action="http://wspack/wsFrutos2/getStockByIdRequest" message="tns:getStockById" />
+      <output wsam:Action="http://wspack/wsFrutos2/getStockByIdResponse" message="tns:getStockByIdResponse" />
+    </operation>
+    <operation name="getStock">
+      <input wsam:Action="http://wspack/wsFrutos2/getStockRequest" message="tns:getStock" />
+      <output wsam:Action="http://wspack/wsFrutos2/getStockResponse" message="tns:getStockResponse" />
+    </operation>
+  </portType>
+  <binding name="wsFrutos2PortBinding" type="tns:wsFrutos2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insDetalle">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="delVenta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="delDetalle">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getDetalleById">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updDetalle">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListarDetalleByIdVenta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getProductoUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getStockById">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getStock">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="wsFrutos2">
+    <port name="wsFrutos2Port" binding="tns:wsFrutos2PortBinding">
+      <soap:address location="http://localhost:45796/wsFrutos/wsFrutos2" />
+    </port>
+  </service>
+</definitions>

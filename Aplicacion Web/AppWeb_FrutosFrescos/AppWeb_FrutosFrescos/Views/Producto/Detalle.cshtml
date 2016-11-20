@@ -4,15 +4,17 @@
 }
 
 <div class="col-sm-9 padding-right">
-    <h2>Detalle</h2>
+    <h2 class="title text-center">Detalle</h2>
 
-    <table id="tabla-productos">
+    <table class="table" id="tabla-productos">
         <thead>
             <tr>
 
-                <th>Nombre producto</th>
-                <th>Cantidad</th>
-                <th>Acciones</th>
+                <th width="30%">Nombre producto</th>
+                <th width="20%">Stock</th>
+                <th width="20%">Precio</th>
+                <th width="20%">Pedido</th>
+                <th width="30%">Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -33,44 +35,77 @@
 
     <script>
         var lstProducto = @Html.Raw(Json.Encode(ViewBag.lstProductos));
+        var carrito = @Html.Raw(Json.Encode(ViewBag.carrito));
         var idProductor = @Html.Raw(ViewBag.idProductor);
 
-        $(document).ready(function () {
-            cargaTabla();
+    $(document).ready(function () {
+        cargaTabla();
+    });
 
+    function cargaTabla(){
+
+        $("#tabla-productos tbody").html("");
+
+        $.each(lstProducto.stock, function(k,v){            
+            var fila = "<tr class='fila-producto' id-producto='"+ v.prId+"' id-stock='"+ v.id+"' precio='"+v.precios +"'><td>"+v.nomProd +"</td><td class='stock'>"+ v.kilos +"</td><td class='precio'>"+ v.precios +"</td><td><input type='text' class='text-cantidad' name='cantidad' /></td><td>  <a style='display:inline'><span class='btn-comprar btn btn-default'>Añadir al carrito</span></a></td></tr>";
+            
+            
+            $("#tabla-productos tbody").append(fila);
         });
 
-        function cargaTabla(){
+        $.each(carrito, function(k,v){       
+            
+            if(v.idProductor == idProductor){
+                $(".fila-producto[id-producto='"+v.idProducto+"'] .text-cantidad").val(v.cantidad)
+                    .attr("disabled", "disabled")
+                    .parents("tr").find("td").last().append("<span id-detalle='"+v.idDetalle +"' class='btn btn-default btn-eliminar'>Eliminar</span>");
+            }
+        });
 
-            $("#tabla-productos tbody").html("");
+        $(".btn-comprar").on('click', function(){
+            var fila = $(this).parents("tr");
+            var cantidad = parseInt(fila.find("input").first().val());
+            var precio = parseInt(fila.attr("precio"));
+            var idProd = fila.attr("id-producto");
+            var stockid = fila.attr("id-stock")
 
-            $.each(lstProducto, function(k,v){
+            var costo = cantidad * precio;
+            var data = { idProductor: idProductor, cantidad: cantidad, idProducto: idProd, stockid: stockid, costo: costo };
 
-                var kilos = 22;
-                var fila = "<tr class='fila-producto' id-producto='"+ v.id+"'><td>"+v.nombre +"</td><td>"+ kilos +"</td><td><label>Cantidad</label><input type='text' name='cantidad' />  <a><span class='btn-comprar btn btn-default'>Carrito</span></a></td></tr>";
-
-                $("#tabla-productos tbody").append(fila);
-
+            $.post( "/Producto/Detalle/?idProductor="+idProductor, data , function(data){
+                window.location.reload();
             });
+        });
 
-            $(".btn-comprar").on('click', function(){
-                var fila = $(this).parents("tr");
+        
+        $(".btn-eliminar").on('click', function(){
+            //var fila = $(this).parents("tr");
+            var idDet = $(this).attr("id-detalle");
 
-                $.post( "/Producto/Detalle/?idProductor="+idProductor, { idProductor: idProductor, cantidad: fila.find("input").first().val(), idProducto: fila.attr("id-producto") }, function(data){
-                
-                    window.location.reload();
-                    
-                
-                });
+            $.get( "/Producto/Eliminar", {idDeta : idDet}, function(data){
+                window.location.reload();
             });
-        }
+        });
 
-        function cargaCarrito(){
-           
+        //text-cantidad
+        $(".text-cantidad").on('blur', function(){
+            var stock = parseInt($(this).parents("tr").find(".stock").html());            
+            var valor = parseInt($(this).val());
+
+            if(stock < valor){
+                alert("Debe ingresar un valor igual o menor que el stock");
+                $(this).val("");
+            }
+
+        })
+    }
+
+    function cargaCarrito(){
 
 
 
-        }
+
+    }
 
     </script>
 

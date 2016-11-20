@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="969e3d92-b0e8-4e64-b211-33fcb8d47fa7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="64eeab04-8e1d-43a4-b5d3-e4ee90fc0b1a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/wsFrutos/wsFrutos?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:45796/wsFrutos/wsFrutos2?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="wsFrutos.wsdl" MetadataType="Wsdl" ID="095e1959-8472-4dec-b7ae-613c07741bea" SourceId="1" SourceUrl="http://localhost:8080/wsFrutos/wsFrutos?wsdl" />
-    <MetadataFile FileName="wsFrutos.xsd" MetadataType="Schema" ID="ddc59427-ca55-4556-8274-6dea245dccf2" SourceId="1" SourceUrl="http://localhost:8080/wsFrutos/wsFrutos?xsd=1" />
+    <MetadataFile FileName="wsFrutos21.xsd" MetadataType="Schema" ID="22f21d4d-18ec-4512-895c-38880b9688df" SourceId="1" SourceUrl="http://localhost:45796/wsFrutos/wsFrutos2?xsd=1" />
+    <MetadataFile FileName="wsFrutos21.wsdl" MetadataType="Wsdl" ID="6c1ae969-f247-41f6-8bbd-dcafb17d8989" SourceId="1" SourceUrl="http://localhost:45796/wsFrutos/wsFrutos2?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -71,7 +71,7 @@
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
                                 <li><a href="#"><i class="fa fa-user"></i> Cuenta</a></li>
-                                <li><a href="~/checkout.html"><i class="fa fa-crosshairs"></i> Pagar</a></li>
+                                
                                 @{
                                     int cantidad = 0;
                                     if (System.Web.HttpContext.Current.Session["carrito"] != null) { 
@@ -81,7 +81,7 @@
                                 }
 
 
-                                <li><a href="~/cart.html"><i class="fa fa-shopping-cart"></i> Carrito <span class="badge">@cantidad</span></a></li>
+                                <li><a href="/Carrito"><i class="fa fa-shopping-cart"></i> Carrito <span class="badge">@cantidad</span></a></li>
                                 <li><a href="/Login/Salir"><i class="fa fa-lock"></i> Salir</a></li>
                             </ul>
                         </div>

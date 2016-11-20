@@ -130,7 +130,13 @@
     <Compile Include="Models\Producto.cs" />
     <Compile Include="Models\Tipo_Prod.cs" />
     <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\Venta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\wsFrutos2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\wsFrutos\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -161,31 +167,43 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.getProdByTipoResponse.datasource">
+    <Content Include="Service References\wsFrutos2\AppWeb_FrutosFrescos.wsFrutos2.delDetalleResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.getTipoProdResponse.datasource">
+    <Content Include="Service References\wsFrutos2\AppWeb_FrutosFrescos.wsFrutos2.delVentaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoResponse.datasource">
+    <Content Include="Service References\wsFrutos2\AppWeb_FrutosFrescos.wsFrutos2.getDetalleByIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoResponse.datasource">
+    <Content Include="Service References\wsFrutos2\AppWeb_FrutosFrescos.wsFrutos2.getProductoUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.getUsuariosResponse.datasource">
+    <Content Include="Service References\wsFrutos2\AppWeb_FrutosFrescos.wsFrutos2.insDetalleResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorResponse.datasource">
+    <Content Include="Service References\wsFrutos2\AppWeb_FrutosFrescos.wsFrutos2.ListarDetalleByIdVentaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.LoginResponse.datasource">
+    <Content Include="Service References\wsFrutos2\AppWeb_FrutosFrescos.wsFrutos2.updDetalleResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.RecuperarContrasenaResponse.datasource">
+    <Content Include="Service References\wsFrutos2\AppWeb_FrutosFrescos.wsFrutos2.getStockByIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Service References\wsFrutos2\AppWeb_FrutosFrescos.wsFrutos2.getStockResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\wsFrutos2\configuration91.svcinfo" />
+    <None Include="Service References\wsFrutos2\configuration.svcinfo" />
+    <None Include="Service References\wsFrutos2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.delProdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.delStockResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.delTipoProdResponse.datasource">
@@ -197,16 +215,43 @@
     <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.getProdByIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.getProdByTipoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.getProdByUsuResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.getStockByUsuResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.getTipoProdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.getUsuarioByRutResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoProdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.getUsuariosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.getVentaByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.insProdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.insStockResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.insTipoProdResponse.datasource">
@@ -215,13 +260,31 @@
     <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.insUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.insVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.listarProductoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.ListarTipoUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.ListarVentasByCompradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.LoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.RecuperarContrasenaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.updProdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.updStockResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.updTipoProdResponse.datasource">
@@ -230,6 +293,13 @@
     <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.updUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Service References\wsFrutos\AppWeb_FrutosFrescos.wsFrutos.updVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\wsFrutos2\wsFrutos21.wsdl" />
+    <None Include="Service References\wsFrutos2\wsFrutos21.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\wsFrutos\configuration91.svcinfo" />
     <None Include="Service References\wsFrutos\configuration.svcinfo" />
     <None Include="Service References\wsFrutos\Reference.svcmap">
@@ -251,14 +321,14 @@
     <Content Include="Views\Shared\_Menu_Categoria.cshtml" />
     <Content Include="Views\Shared\_Menu_Superior.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
-    <None Include="Service References\wsFrutos\wsFrutos.wsdl" />
-    <None Include="Service References\wsFrutos\wsFrutos.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Views\Login\CrearCuenta.cshtml" />
     <Content Include="Views\Producto\Index.cshtml" />
     <Content Include="Views\Producto\Detalle.cshtml" />
     <Content Include="Views\Carrito\Index.cshtml" />
+    <None Include="Service References\wsFrutos\wsFrutos.wsdl" />
+    <None Include="Service References\wsFrutos\wsFrutos.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -279,6 +349,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\wsFrutos2\" />
     <WCFMetadataStorage Include="Service References\wsFrutos\" />
   </ItemGroup>
   <PropertyGroup>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://wspack/" targetNamespace="http://wspack/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ListarDetalleByIdVenta" type="tns:ListarDetalleByIdVenta" />
+  <xs:element name="ListarDetalleByIdVentaResponse" type="tns:ListarDetalleByIdVentaResponse" />
+  <xs:element name="delDetalle" type="tns:delDetalle" />
+  <xs:element name="delDetalleResponse" type="tns:delDetalleResponse" />
+  <xs:element name="delVenta" type="tns:delVenta" />
+  <xs:element name="delVentaResponse" type="tns:delVentaResponse" />
+  <xs:element name="getDetalleById" type="tns:getDetalleById" />
+  <xs:element name="getDetalleByIdResponse" type="tns:getDetalleByIdResponse" />
+  <xs:element name="getProductoUsuario" type="tns:getProductoUsuario" />
+  <xs:element name="getProductoUsuarioResponse" type="tns:getProductoUsuarioResponse" />
+  <xs:element name="getStock" type="tns:getStock" />
+  <xs:element name="getStockById" type="tns:getStockById" />
+  <xs:element name="getStockByIdResponse" type="tns:getStockByIdResponse" />
+  <xs:element name="getStockResponse" type="tns:getStockResponse" />
+  <xs:element name="insDetalle" type="tns:insDetalle" />
+  <xs:element name="insDetalleResponse" type="tns:insDetalleResponse" />
+  <xs:element name="updDetalle" type="tns:updDetalle" />
+  <xs:element name="updDetalleResponse" type="tns:updDetalleResponse" />
+  <xs:complexType name="delDetalle">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="delDetalleResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProductoUsuario">
+    <xs:sequence>
+      <xs:element name="Rutproductor" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProductoUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getStockById">
+    <xs:sequence>
+      <xs:element name="IdStock" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getStockByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getStock">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getStockResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarDetalleByIdVenta">
+    <xs:sequence>
+      <xs:element name="IdVenta" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarDetalleByIdVentaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insDetalle">
+    <xs:sequence>
+      <xs:element name="Cantidad" type="xs:int" />
+      <xs:element name="Total" type="xs:int" />
+      <xs:element name="IdStock" type="xs:int" />
+      <xs:element name="IdVenta" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insDetalleResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDetalleById">
+    <xs:sequence>
+      <xs:element name="IdDetalle" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDetalleByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updDetalle">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="Cantidad" type="xs:int" />
+      <xs:element name="Total" type="xs:int" />
+      <xs:element name="IdStock" type="xs:int" />
+      <xs:element name="IdVenta" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updDetalleResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="delVenta">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="delVentaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

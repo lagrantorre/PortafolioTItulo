@@ -22,28 +22,6 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
         [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/LoginRequest", ReplyAction="http://wspack/wsFrutos/LoginResponse")]
         System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.LoginResponse> LoginAsync(AppWeb_FrutosFrescos.wsFrutos.LoginRequest request);
         
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nombre del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/insUsuarioRequest", ReplyAction="http://wspack/wsFrutos/insUsuarioResponse")]
-        AppWeb_FrutosFrescos.wsFrutos.insUsuarioResponse insUsuario(AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/insUsuarioRequest", ReplyAction="http://wspack/wsFrutos/insUsuarioResponse")]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.insUsuarioResponse> insUsuarioAsync(AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nombre del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/updTipoProdRequest", ReplyAction="http://wspack/wsFrutos/updTipoProdResponse")]
-        AppWeb_FrutosFrescos.wsFrutos.updTipoProdResponse updTipoProd(AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/updTipoProdRequest", ReplyAction="http://wspack/wsFrutos/updTipoProdResponse")]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.updTipoProdResponse> updTipoProdAsync(AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el espacio de nombres de partes de mensaje () no coincide con el valor predeterminado (http://wspack/).
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/delUsuarioRequest", ReplyAction="http://wspack/wsFrutos/delUsuarioResponse")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        AppWeb_FrutosFrescos.wsFrutos.delUsuarioResponse delUsuario(AppWeb_FrutosFrescos.wsFrutos.delUsuarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/delUsuarioRequest", ReplyAction="http://wspack/wsFrutos/delUsuarioResponse")]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.delUsuarioResponse> delUsuarioAsync(AppWeb_FrutosFrescos.wsFrutos.delUsuarioRequest request);
-        
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getTipoProdRequest", ReplyAction="http://wspack/wsFrutos/getTipoProdResponse")]
         AppWeb_FrutosFrescos.wsFrutos.getTipoProdResponse getTipoProd(AppWeb_FrutosFrescos.wsFrutos.getTipoProdRequest request);
@@ -51,33 +29,12 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
         [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getTipoProdRequest", ReplyAction="http://wspack/wsFrutos/getTipoProdResponse")]
         System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getTipoProdResponse> getTipoProdAsync(AppWeb_FrutosFrescos.wsFrutos.getTipoProdRequest request);
         
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getProdByTipoRequest", ReplyAction="http://wspack/wsFrutos/getProdByTipoResponse")]
-        AppWeb_FrutosFrescos.wsFrutos.getProdByTipoResponse getProdByTipo(AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequest request);
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento dv del espacio de nombres  no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/insUsuarioRequest", ReplyAction="http://wspack/wsFrutos/insUsuarioResponse")]
+        AppWeb_FrutosFrescos.wsFrutos.insUsuarioResponse insUsuario(AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getProdByTipoRequest", ReplyAction="http://wspack/wsFrutos/getProdByTipoResponse")]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getProdByTipoResponse> getProdByTipoAsync(AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nombre del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/insTipoProdRequest", ReplyAction="http://wspack/wsFrutos/insTipoProdResponse")]
-        AppWeb_FrutosFrescos.wsFrutos.insTipoProdResponse insTipoProd(AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/insTipoProdRequest", ReplyAction="http://wspack/wsFrutos/insTipoProdResponse")]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.insTipoProdResponse> insTipoProdAsync(AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getProdByIdRequest", ReplyAction="http://wspack/wsFrutos/getProdByIdResponse")]
-        AppWeb_FrutosFrescos.wsFrutos.getProdByIdResponse getProdById(AppWeb_FrutosFrescos.wsFrutos.getProdByIdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getProdByIdRequest", ReplyAction="http://wspack/wsFrutos/getProdByIdResponse")]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getProdByIdResponse> getProdByIdAsync(AppWeb_FrutosFrescos.wsFrutos.getProdByIdRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/listarProductoRequest", ReplyAction="http://wspack/wsFrutos/listarProductoResponse")]
-        AppWeb_FrutosFrescos.wsFrutos.listarProductoResponse listarProducto(AppWeb_FrutosFrescos.wsFrutos.listarProductoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/listarProductoRequest", ReplyAction="http://wspack/wsFrutos/listarProductoResponse")]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.listarProductoResponse> listarProductoAsync(AppWeb_FrutosFrescos.wsFrutos.listarProductoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/insUsuarioRequest", ReplyAction="http://wspack/wsFrutos/insUsuarioResponse")]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.insUsuarioResponse> insUsuarioAsync(AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequest request);
         
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nombre del espacio de nombres  no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/insProdRequest", ReplyAction="http://wspack/wsFrutos/insProdResponse")]
@@ -93,12 +50,137 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
         [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/updUsuarioRequest", ReplyAction="http://wspack/wsFrutos/updUsuarioResponse")]
         System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.updUsuarioResponse> updUsuarioAsync(AppWeb_FrutosFrescos.wsFrutos.updUsuarioRequest request);
         
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el espacio de nombres de partes de mensaje () no coincide con el valor predeterminado (http://wspack/).
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/updStockRequest", ReplyAction="http://wspack/wsFrutos/updStockResponse")]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        AppWeb_FrutosFrescos.wsFrutos.updStockResponse updStock(AppWeb_FrutosFrescos.wsFrutos.updStockRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/updStockRequest", ReplyAction="http://wspack/wsFrutos/updStockResponse")]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.updStockResponse> updStockAsync(AppWeb_FrutosFrescos.wsFrutos.updStockRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getProdByIdRequest", ReplyAction="http://wspack/wsFrutos/getProdByIdResponse")]
+        AppWeb_FrutosFrescos.wsFrutos.getProdByIdResponse getProdById(AppWeb_FrutosFrescos.wsFrutos.getProdByIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getProdByIdRequest", ReplyAction="http://wspack/wsFrutos/getProdByIdResponse")]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getProdByIdResponse> getProdByIdAsync(AppWeb_FrutosFrescos.wsFrutos.getProdByIdRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/listarProductoRequest", ReplyAction="http://wspack/wsFrutos/listarProductoResponse")]
+        AppWeb_FrutosFrescos.wsFrutos.listarProductoResponse listarProducto(AppWeb_FrutosFrescos.wsFrutos.listarProductoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/listarProductoRequest", ReplyAction="http://wspack/wsFrutos/listarProductoResponse")]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.listarProductoResponse> listarProductoAsync(AppWeb_FrutosFrescos.wsFrutos.listarProductoRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getStockByUsuRequest", ReplyAction="http://wspack/wsFrutos/getStockByUsuResponse")]
+        AppWeb_FrutosFrescos.wsFrutos.getStockByUsuResponse getStockByUsu(AppWeb_FrutosFrescos.wsFrutos.getStockByUsuRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getStockByUsuRequest", ReplyAction="http://wspack/wsFrutos/getStockByUsuResponse")]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getStockByUsuResponse> getStockByUsuAsync(AppWeb_FrutosFrescos.wsFrutos.getStockByUsuRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el espacio de nombres de partes de mensaje () no coincide con el valor predeterminado (http://wspack/).
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/insVentaRequest", ReplyAction="http://wspack/wsFrutos/insVentaResponse")]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        AppWeb_FrutosFrescos.wsFrutos.insVentaResponse insVenta(AppWeb_FrutosFrescos.wsFrutos.insVentaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/insVentaRequest", ReplyAction="http://wspack/wsFrutos/insVentaResponse")]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.insVentaResponse> insVentaAsync(AppWeb_FrutosFrescos.wsFrutos.insVentaRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getProdByUsuRequest", ReplyAction="http://wspack/wsFrutos/getProdByUsuResponse")]
+        AppWeb_FrutosFrescos.wsFrutos.getProdByUsuResponse getProdByUsu(AppWeb_FrutosFrescos.wsFrutos.getProdByUsuRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getProdByUsuRequest", ReplyAction="http://wspack/wsFrutos/getProdByUsuResponse")]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getProdByUsuResponse> getProdByUsuAsync(AppWeb_FrutosFrescos.wsFrutos.getProdByUsuRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getUsuariosRequest", ReplyAction="http://wspack/wsFrutos/getUsuariosResponse")]
+        AppWeb_FrutosFrescos.wsFrutos.getUsuariosResponse getUsuarios(AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getUsuariosRequest", ReplyAction="http://wspack/wsFrutos/getUsuariosResponse")]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getUsuariosResponse> getUsuariosAsync(AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nombre del espacio de nombres  no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/updProdRequest", ReplyAction="http://wspack/wsFrutos/updProdResponse")]
+        AppWeb_FrutosFrescos.wsFrutos.updProdResponse updProd(AppWeb_FrutosFrescos.wsFrutos.updProdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/updProdRequest", ReplyAction="http://wspack/wsFrutos/updProdResponse")]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.updProdResponse> updProdAsync(AppWeb_FrutosFrescos.wsFrutos.updProdRequest request);
+        
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getTipoProdByIdRequest", ReplyAction="http://wspack/wsFrutos/getTipoProdByIdResponse")]
         AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdResponse getTipoProdById(AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getTipoProdByIdRequest", ReplyAction="http://wspack/wsFrutos/getTipoProdByIdResponse")]
         System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdResponse> getTipoProdByIdAsync(AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getProdByTipoRequest", ReplyAction="http://wspack/wsFrutos/getProdByTipoResponse")]
+        AppWeb_FrutosFrescos.wsFrutos.getProdByTipoResponse getProdByTipo(AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getProdByTipoRequest", ReplyAction="http://wspack/wsFrutos/getProdByTipoResponse")]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getProdByTipoResponse> getProdByTipoAsync(AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getUsuarioByRutRequest", ReplyAction="http://wspack/wsFrutos/getUsuarioByRutResponse")]
+        AppWeb_FrutosFrescos.wsFrutos.getUsuarioByRutResponse getUsuarioByRut(AppWeb_FrutosFrescos.wsFrutos.getUsuarioByRutRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getUsuarioByRutRequest", ReplyAction="http://wspack/wsFrutos/getUsuarioByRutResponse")]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getUsuarioByRutResponse> getUsuarioByRutAsync(AppWeb_FrutosFrescos.wsFrutos.getUsuarioByRutRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nombre del espacio de nombres  no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/updTipoProdRequest", ReplyAction="http://wspack/wsFrutos/updTipoProdResponse")]
+        AppWeb_FrutosFrescos.wsFrutos.updTipoProdResponse updTipoProd(AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/updTipoProdRequest", ReplyAction="http://wspack/wsFrutos/updTipoProdResponse")]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.updTipoProdResponse> updTipoProdAsync(AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el espacio de nombres de partes de mensaje () no coincide con el valor predeterminado (http://wspack/).
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/updVentaRequest", ReplyAction="http://wspack/wsFrutos/updVentaResponse")]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        AppWeb_FrutosFrescos.wsFrutos.updVentaResponse updVenta(AppWeb_FrutosFrescos.wsFrutos.updVentaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/updVentaRequest", ReplyAction="http://wspack/wsFrutos/updVentaResponse")]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.updVentaResponse> updVentaAsync(AppWeb_FrutosFrescos.wsFrutos.updVentaRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el espacio de nombres de partes de mensaje () no coincide con el valor predeterminado (http://wspack/).
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/delStockRequest", ReplyAction="http://wspack/wsFrutos/delStockResponse")]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        AppWeb_FrutosFrescos.wsFrutos.delStockResponse delStock(AppWeb_FrutosFrescos.wsFrutos.delStockRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/delStockRequest", ReplyAction="http://wspack/wsFrutos/delStockResponse")]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.delStockResponse> delStockAsync(AppWeb_FrutosFrescos.wsFrutos.delStockRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nombre del espacio de nombres  no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/insTipoProdRequest", ReplyAction="http://wspack/wsFrutos/insTipoProdResponse")]
+        AppWeb_FrutosFrescos.wsFrutos.insTipoProdResponse insTipoProd(AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/insTipoProdRequest", ReplyAction="http://wspack/wsFrutos/insTipoProdResponse")]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.insTipoProdResponse> insTipoProdAsync(AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getVentaByIdRequest", ReplyAction="http://wspack/wsFrutos/getVentaByIdResponse")]
+        AppWeb_FrutosFrescos.wsFrutos.getVentaByIdResponse getVentaById(AppWeb_FrutosFrescos.wsFrutos.getVentaByIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getVentaByIdRequest", ReplyAction="http://wspack/wsFrutos/getVentaByIdResponse")]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getVentaByIdResponse> getVentaByIdAsync(AppWeb_FrutosFrescos.wsFrutos.getVentaByIdRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el espacio de nombres de partes de mensaje () no coincide con el valor predeterminado (http://wspack/).
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/delTipoProdRequest", ReplyAction="http://wspack/wsFrutos/delTipoProdResponse")]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        AppWeb_FrutosFrescos.wsFrutos.delTipoProdResponse delTipoProd(AppWeb_FrutosFrescos.wsFrutos.delTipoProdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/delTipoProdRequest", ReplyAction="http://wspack/wsFrutos/delTipoProdResponse")]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.delTipoProdResponse> delTipoProdAsync(AppWeb_FrutosFrescos.wsFrutos.delTipoProdRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el espacio de nombres de partes de mensaje () no coincide con el valor predeterminado (http://wspack/).
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/insStockRequest", ReplyAction="http://wspack/wsFrutos/insStockResponse")]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        AppWeb_FrutosFrescos.wsFrutos.insStockResponse insStock(AppWeb_FrutosFrescos.wsFrutos.insStockRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/insStockRequest", ReplyAction="http://wspack/wsFrutos/insStockResponse")]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.insStockResponse> insStockAsync(AppWeb_FrutosFrescos.wsFrutos.insStockRequest request);
         
         // CODEGEN: Se está generando un contrato de mensaje, ya que el espacio de nombres de partes de mensaje () no coincide con el valor predeterminado (http://wspack/).
         [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/delProdRequest", ReplyAction="http://wspack/wsFrutos/delProdResponse")]
@@ -109,54 +191,12 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
         System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.delProdResponse> delProdAsync(AppWeb_FrutosFrescos.wsFrutos.delProdRequest request);
         
         // CODEGEN: Se está generando un contrato de mensaje, ya que el espacio de nombres de partes de mensaje () no coincide con el valor predeterminado (http://wspack/).
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/delTipoProdRequest", ReplyAction="http://wspack/wsFrutos/delTipoProdResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/delUsuarioRequest", ReplyAction="http://wspack/wsFrutos/delUsuarioResponse")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        AppWeb_FrutosFrescos.wsFrutos.delTipoProdResponse delTipoProd(AppWeb_FrutosFrescos.wsFrutos.delTipoProdRequest request);
+        AppWeb_FrutosFrescos.wsFrutos.delUsuarioResponse delUsuario(AppWeb_FrutosFrescos.wsFrutos.delUsuarioRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/delTipoProdRequest", ReplyAction="http://wspack/wsFrutos/delTipoProdResponse")]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.delTipoProdResponse> delTipoProdAsync(AppWeb_FrutosFrescos.wsFrutos.delTipoProdRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getUsuariosRequest", ReplyAction="http://wspack/wsFrutos/getUsuariosResponse")]
-        AppWeb_FrutosFrescos.wsFrutos.getUsuariosResponse getUsuarios(AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getUsuariosRequest", ReplyAction="http://wspack/wsFrutos/getUsuariosResponse")]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getUsuariosResponse> getUsuariosAsync(AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getProdByUsuRequest", ReplyAction="http://wspack/wsFrutos/getProdByUsuResponse")]
-        AppWeb_FrutosFrescos.wsFrutos.getProdByUsuResponse getProdByUsu(AppWeb_FrutosFrescos.wsFrutos.getProdByUsuRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getProdByUsuRequest", ReplyAction="http://wspack/wsFrutos/getProdByUsuResponse")]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getProdByUsuResponse> getProdByUsuAsync(AppWeb_FrutosFrescos.wsFrutos.getProdByUsuRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nombre del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/updProdRequest", ReplyAction="http://wspack/wsFrutos/updProdResponse")]
-        AppWeb_FrutosFrescos.wsFrutos.updProdResponse updProd(AppWeb_FrutosFrescos.wsFrutos.updProdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/updProdRequest", ReplyAction="http://wspack/wsFrutos/updProdResponse")]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.updProdResponse> updProdAsync(AppWeb_FrutosFrescos.wsFrutos.updProdRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getUsuarioByRutRequest", ReplyAction="http://wspack/wsFrutos/getUsuarioByRutResponse")]
-        AppWeb_FrutosFrescos.wsFrutos.getUsuarioByRutResponse getUsuarioByRut(AppWeb_FrutosFrescos.wsFrutos.getUsuarioByRutRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getUsuarioByRutRequest", ReplyAction="http://wspack/wsFrutos/getUsuarioByRutResponse")]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getUsuarioByRutResponse> getUsuarioByRutAsync(AppWeb_FrutosFrescos.wsFrutos.getUsuarioByRutRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getTipoUsuarioByTipoRequest", ReplyAction="http://wspack/wsFrutos/getTipoUsuarioByTipoResponse")]
-        AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoResponse getTipoUsuarioByTipo(AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getTipoUsuarioByTipoRequest", ReplyAction="http://wspack/wsFrutos/getTipoUsuarioByTipoResponse")]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoResponse> getTipoUsuarioByTipoAsync(AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/ListarVentasByVendedorRequest", ReplyAction="http://wspack/wsFrutos/ListarVentasByVendedorResponse")]
-        AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorResponse ListarVentasByVendedor(AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/ListarVentasByVendedorRequest", ReplyAction="http://wspack/wsFrutos/ListarVentasByVendedorResponse")]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorResponse> ListarVentasByVendedorAsync(AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/delUsuarioRequest", ReplyAction="http://wspack/wsFrutos/delUsuarioResponse")]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.delUsuarioResponse> delUsuarioAsync(AppWeb_FrutosFrescos.wsFrutos.delUsuarioRequest request);
         
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/ListarTipoUsuarioRequest", ReplyAction="http://wspack/wsFrutos/ListarTipoUsuarioResponse")]
@@ -166,11 +206,25 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
         System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.ListarTipoUsuarioResponse> ListarTipoUsuarioAsync(AppWeb_FrutosFrescos.wsFrutos.ListarTipoUsuarioRequest request);
         
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getUsuariosByTipoProdRequest", ReplyAction="http://wspack/wsFrutos/getUsuariosByTipoProdResponse")]
+        AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoProdResponse getUsuariosByTipoProd(AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoProdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getUsuariosByTipoProdRequest", ReplyAction="http://wspack/wsFrutos/getUsuariosByTipoProdResponse")]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoProdResponse> getUsuariosByTipoProdAsync(AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoProdRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getUsuariosByTipoRequest", ReplyAction="http://wspack/wsFrutos/getUsuariosByTipoResponse")]
         AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoResponse getUsuariosByTipo(AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getUsuariosByTipoRequest", ReplyAction="http://wspack/wsFrutos/getUsuariosByTipoResponse")]
         System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoResponse> getUsuariosByTipoAsync(AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getTipoUsuarioByTipoRequest", ReplyAction="http://wspack/wsFrutos/getTipoUsuarioByTipoResponse")]
+        AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoResponse getTipoUsuarioByTipo(AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/getTipoUsuarioByTipoRequest", ReplyAction="http://wspack/wsFrutos/getTipoUsuarioByTipoResponse")]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoResponse> getTipoUsuarioByTipoAsync(AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoRequest request);
         
         // CODEGEN: Se está generando un contrato de mensaje, ya que el espacio de nombres de partes de mensaje () no coincide con el valor predeterminado (http://wspack/).
         [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/RecuperarContrasenaRequest", ReplyAction="http://wspack/wsFrutos/RecuperarContrasenaResponse")]
@@ -179,6 +233,20 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/RecuperarContrasenaRequest", ReplyAction="http://wspack/wsFrutos/RecuperarContrasenaResponse")]
         System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.RecuperarContrasenaResponse> RecuperarContrasenaAsync(AppWeb_FrutosFrescos.wsFrutos.RecuperarContrasenaRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/ListarVentasByVendedorRequest", ReplyAction="http://wspack/wsFrutos/ListarVentasByVendedorResponse")]
+        AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorResponse ListarVentasByVendedor(AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/ListarVentasByVendedorRequest", ReplyAction="http://wspack/wsFrutos/ListarVentasByVendedorResponse")]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorResponse> ListarVentasByVendedorAsync(AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/ListarVentasByCompradorRequest", ReplyAction="http://wspack/wsFrutos/ListarVentasByCompradorResponse")]
+        AppWeb_FrutosFrescos.wsFrutos.ListarVentasByCompradorResponse ListarVentasByComprador(AppWeb_FrutosFrescos.wsFrutos.ListarVentasByCompradorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://wspack/wsFrutos/ListarVentasByCompradorRequest", ReplyAction="http://wspack/wsFrutos/ListarVentasByCompradorResponse")]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.ListarVentasByCompradorResponse> ListarVentasByCompradorAsync(AppWeb_FrutosFrescos.wsFrutos.ListarVentasByCompradorRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -257,216 +325,6 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class insUsuarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="insUsuario", Namespace="http://wspack/", Order=0)]
-        public AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequestBody Body;
-        
-        public insUsuarioRequest() {
-        }
-        
-        public insUsuarioRequest(AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class insUsuarioRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int rut;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public ushort dv;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string nombre;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string email;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public string getoData;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public string geoTipo;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
-        public string pass;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
-        public string img;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=8)]
-        public bool @bool;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=9)]
-        public int tipo;
-        
-        public insUsuarioRequestBody() {
-        }
-        
-        public insUsuarioRequestBody(int rut, ushort dv, string nombre, string email, string getoData, string geoTipo, string pass, string img, bool @bool, int tipo) {
-            this.rut = rut;
-            this.dv = dv;
-            this.nombre = nombre;
-            this.email = email;
-            this.getoData = getoData;
-            this.geoTipo = geoTipo;
-            this.pass = pass;
-            this.img = img;
-            this.@bool = @bool;
-            this.tipo = tipo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class insUsuarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="insUsuarioResponse", Namespace="http://wspack/", Order=0)]
-        public AppWeb_FrutosFrescos.wsFrutos.insUsuarioResponseBody Body;
-        
-        public insUsuarioResponse() {
-        }
-        
-        public insUsuarioResponse(AppWeb_FrutosFrescos.wsFrutos.insUsuarioResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class insUsuarioResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public bool @return;
-        
-        public insUsuarioResponseBody() {
-        }
-        
-        public insUsuarioResponseBody(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class updTipoProdRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="updTipoProd", Namespace="http://wspack/", Order=0)]
-        public AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequestBody Body;
-        
-        public updTipoProdRequest() {
-        }
-        
-        public updTipoProdRequest(AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class updTipoProdRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string nombre;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public int idTipoProducto;
-        
-        public updTipoProdRequestBody() {
-        }
-        
-        public updTipoProdRequestBody(string nombre, int idTipoProducto) {
-            this.nombre = nombre;
-            this.idTipoProducto = idTipoProducto;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class updTipoProdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="updTipoProdResponse", Namespace="http://wspack/", Order=0)]
-        public AppWeb_FrutosFrescos.wsFrutos.updTipoProdResponseBody Body;
-        
-        public updTipoProdResponse() {
-        }
-        
-        public updTipoProdResponse(AppWeb_FrutosFrescos.wsFrutos.updTipoProdResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class updTipoProdResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public bool @return;
-        
-        public updTipoProdResponseBody() {
-        }
-        
-        public updTipoProdResponseBody(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="delUsuario", WrapperNamespace="http://wspack/", IsWrapped=true)]
-    public partial class delUsuarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
-        public int rut;
-        
-        public delUsuarioRequest() {
-        }
-        
-        public delUsuarioRequest(int rut) {
-            this.rut = rut;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="delUsuarioResponse", WrapperNamespace="http://wspack/", IsWrapped=true)]
-    public partial class delUsuarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
-        public bool @return;
-        
-        public delUsuarioResponse() {
-        }
-        
-        public delUsuarioResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getTipoProdRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="getTipoProd", Namespace="http://wspack/", Order=0)]
@@ -528,15 +386,15 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class getProdByTipoRequest {
+    public partial class insUsuarioRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getProdByTipo", Namespace="http://wspack/", Order=0)]
-        public AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="insUsuario", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequestBody Body;
         
-        public getProdByTipoRequest() {
+        public insUsuarioRequest() {
         }
         
-        public getProdByTipoRequest(AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequestBody Body) {
+        public insUsuarioRequest(AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -545,84 +403,52 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class getProdByTipoRequestBody {
+    public partial class insUsuarioRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int tipoProducto;
+        public int rut;
         
-        public getProdByTipoRequestBody() {
-        }
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string dv;
         
-        public getProdByTipoRequestBody(int tipoProducto) {
-            this.tipoProducto = tipoProducto;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class getProdByTipoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getProdByTipoResponse", Namespace="http://wspack/", Order=0)]
-        public AppWeb_FrutosFrescos.wsFrutos.getProdByTipoResponseBody Body;
-        
-        public getProdByTipoResponse() {
-        }
-        
-        public getProdByTipoResponse(AppWeb_FrutosFrescos.wsFrutos.getProdByTipoResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class getProdByTipoResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string @return;
-        
-        public getProdByTipoResponseBody() {
-        }
-        
-        public getProdByTipoResponseBody(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class insTipoProdRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="insTipoProd", Namespace="http://wspack/", Order=0)]
-        public AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequestBody Body;
-        
-        public insTipoProdRequest() {
-        }
-        
-        public insTipoProdRequest(AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class insTipoProdRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
         public string nombre;
         
-        public insTipoProdRequestBody() {
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string email;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string getoData;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string geoTipo;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+        public string pass;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
+        public string img;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=8)]
+        public bool @bool;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=9)]
+        public int tipo;
+        
+        public insUsuarioRequestBody() {
         }
         
-        public insTipoProdRequestBody(string nombre) {
+        public insUsuarioRequestBody(int rut, string dv, string nombre, string email, string getoData, string geoTipo, string pass, string img, bool @bool, int tipo) {
+            this.rut = rut;
+            this.dv = dv;
             this.nombre = nombre;
+            this.email = email;
+            this.getoData = getoData;
+            this.geoTipo = geoTipo;
+            this.pass = pass;
+            this.img = img;
+            this.@bool = @bool;
+            this.tipo = tipo;
         }
     }
     
@@ -630,15 +456,15 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class insTipoProdResponse {
+    public partial class insUsuarioResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="insTipoProdResponse", Namespace="http://wspack/", Order=0)]
-        public AppWeb_FrutosFrescos.wsFrutos.insTipoProdResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="insUsuarioResponse", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.insUsuarioResponseBody Body;
         
-        public insTipoProdResponse() {
+        public insUsuarioResponse() {
         }
         
-        public insTipoProdResponse(AppWeb_FrutosFrescos.wsFrutos.insTipoProdResponseBody Body) {
+        public insUsuarioResponse(AppWeb_FrutosFrescos.wsFrutos.insUsuarioResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -647,151 +473,15 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class insTipoProdResponseBody {
+    public partial class insUsuarioResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
         public bool @return;
         
-        public insTipoProdResponseBody() {
+        public insUsuarioResponseBody() {
         }
         
-        public insTipoProdResponseBody(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class getProdByIdRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getProdById", Namespace="http://wspack/", Order=0)]
-        public AppWeb_FrutosFrescos.wsFrutos.getProdByIdRequestBody Body;
-        
-        public getProdByIdRequest() {
-        }
-        
-        public getProdByIdRequest(AppWeb_FrutosFrescos.wsFrutos.getProdByIdRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class getProdByIdRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int id;
-        
-        public getProdByIdRequestBody() {
-        }
-        
-        public getProdByIdRequestBody(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class getProdByIdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getProdByIdResponse", Namespace="http://wspack/", Order=0)]
-        public AppWeb_FrutosFrescos.wsFrutos.getProdByIdResponseBody Body;
-        
-        public getProdByIdResponse() {
-        }
-        
-        public getProdByIdResponse(AppWeb_FrutosFrescos.wsFrutos.getProdByIdResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class getProdByIdResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string @return;
-        
-        public getProdByIdResponseBody() {
-        }
-        
-        public getProdByIdResponseBody(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class listarProductoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="listarProducto", Namespace="http://wspack/", Order=0)]
-        public AppWeb_FrutosFrescos.wsFrutos.listarProductoRequestBody Body;
-        
-        public listarProductoRequest() {
-        }
-        
-        public listarProductoRequest(AppWeb_FrutosFrescos.wsFrutos.listarProductoRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class listarProductoRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int id;
-        
-        public listarProductoRequestBody() {
-        }
-        
-        public listarProductoRequestBody(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class listarProductoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="listarProductoResponse", Namespace="http://wspack/", Order=0)]
-        public AppWeb_FrutosFrescos.wsFrutos.listarProductoResponseBody Body;
-        
-        public listarProductoResponse() {
-        }
-        
-        public listarProductoResponse(AppWeb_FrutosFrescos.wsFrutos.listarProductoResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class listarProductoResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string @return;
-        
-        public listarProductoResponseBody() {
-        }
-        
-        public listarProductoResponseBody(string @return) {
+        public insUsuarioResponseBody(bool @return) {
             this.@return = @return;
         }
     }
@@ -819,20 +509,16 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
     [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
     public partial class insProdRequestBody {
         
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int id;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
         public string nombre;
         
-        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
         public int tipo;
         
         public insProdRequestBody() {
         }
         
-        public insProdRequestBody(int id, string nombre, int tipo) {
-            this.id = id;
+        public insProdRequestBody(string nombre, int tipo) {
             this.nombre = nombre;
             this.tipo = tipo;
         }
@@ -979,16 +665,58 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class getTipoProdByIdRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updStock", WrapperNamespace="http://wspack/", IsWrapped=true)]
+    public partial class updStockRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getTipoProdById", Namespace="http://wspack/", Order=0)]
-        public AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public int Kilos;
         
-        public getTipoProdByIdRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=1)]
+        public int Precio;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=2)]
+        public int idStock;
+        
+        public updStockRequest() {
         }
         
-        public getTipoProdByIdRequest(AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdRequestBody Body) {
+        public updStockRequest(int Kilos, int Precio, int idStock) {
+            this.Kilos = Kilos;
+            this.Precio = Precio;
+            this.idStock = idStock;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updStockResponse", WrapperNamespace="http://wspack/", IsWrapped=true)]
+    public partial class updStockResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public bool @return;
+        
+        public updStockResponse() {
+        }
+        
+        public updStockResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getProdByIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getProdById", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.getProdByIdRequestBody Body;
+        
+        public getProdByIdRequest() {
+        }
+        
+        public getProdByIdRequest(AppWeb_FrutosFrescos.wsFrutos.getProdByIdRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -997,16 +725,16 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class getTipoProdByIdRequestBody {
+    public partial class getProdByIdRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int idTipoProducto;
+        public int id;
         
-        public getTipoProdByIdRequestBody() {
+        public getProdByIdRequestBody() {
         }
         
-        public getTipoProdByIdRequestBody(int idTipoProducto) {
-            this.idTipoProducto = idTipoProducto;
+        public getProdByIdRequestBody(int id) {
+            this.id = id;
         }
     }
     
@@ -1014,15 +742,15 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class getTipoProdByIdResponse {
+    public partial class getProdByIdResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getTipoProdByIdResponse", Namespace="http://wspack/", Order=0)]
-        public AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getProdByIdResponse", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.getProdByIdResponseBody Body;
         
-        public getTipoProdByIdResponse() {
+        public getProdByIdResponse() {
         }
         
-        public getTipoProdByIdResponse(AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdResponseBody Body) {
+        public getProdByIdResponse(AppWeb_FrutosFrescos.wsFrutos.getProdByIdResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -1031,83 +759,15 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class getTipoProdByIdResponseBody {
+    public partial class getProdByIdResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
         public string @return;
         
-        public getTipoProdByIdResponseBody() {
+        public getProdByIdResponseBody() {
         }
         
-        public getTipoProdByIdResponseBody(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="delProd", WrapperNamespace="http://wspack/", IsWrapped=true)]
-    public partial class delProdRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
-        public int id;
-        
-        public delProdRequest() {
-        }
-        
-        public delProdRequest(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="delProdResponse", WrapperNamespace="http://wspack/", IsWrapped=true)]
-    public partial class delProdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
-        public bool @return;
-        
-        public delProdResponse() {
-        }
-        
-        public delProdResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="delTipoProd", WrapperNamespace="http://wspack/", IsWrapped=true)]
-    public partial class delTipoProdRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
-        public int id;
-        
-        public delTipoProdRequest() {
-        }
-        
-        public delTipoProdRequest(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="delTipoProdResponse", WrapperNamespace="http://wspack/", IsWrapped=true)]
-    public partial class delTipoProdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
-        public bool @return;
-        
-        public delTipoProdResponse() {
-        }
-        
-        public delTipoProdResponse(bool @return) {
+        public getProdByIdResponseBody(string @return) {
             this.@return = @return;
         }
     }
@@ -1116,42 +776,15 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class getUsuariosRequest {
+    public partial class listarProductoRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getUsuarios", Namespace="http://wspack/", Order=0)]
-        public AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="listarProducto", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.listarProductoRequestBody Body;
         
-        public getUsuariosRequest() {
+        public listarProductoRequest() {
         }
         
-        public getUsuariosRequest(AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class getUsuariosRequestBody {
-        
-        public getUsuariosRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class getUsuariosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getUsuariosResponse", Namespace="http://wspack/", Order=0)]
-        public AppWeb_FrutosFrescos.wsFrutos.getUsuariosResponseBody Body;
-        
-        public getUsuariosResponse() {
-        }
-        
-        public getUsuariosResponse(AppWeb_FrutosFrescos.wsFrutos.getUsuariosResponseBody Body) {
+        public listarProductoRequest(AppWeb_FrutosFrescos.wsFrutos.listarProductoRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -1160,15 +793,163 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class getUsuariosResponseBody {
+    public partial class listarProductoRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int id;
+        
+        public listarProductoRequestBody() {
+        }
+        
+        public listarProductoRequestBody(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class listarProductoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="listarProductoResponse", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.listarProductoResponseBody Body;
+        
+        public listarProductoResponse() {
+        }
+        
+        public listarProductoResponse(AppWeb_FrutosFrescos.wsFrutos.listarProductoResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class listarProductoResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
         public string @return;
         
-        public getUsuariosResponseBody() {
+        public listarProductoResponseBody() {
         }
         
-        public getUsuariosResponseBody(string @return) {
+        public listarProductoResponseBody(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getStockByUsuRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getStockByUsu", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.getStockByUsuRequestBody Body;
+        
+        public getStockByUsuRequest() {
+        }
+        
+        public getStockByUsuRequest(AppWeb_FrutosFrescos.wsFrutos.getStockByUsuRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class getStockByUsuRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int RutVendedor;
+        
+        public getStockByUsuRequestBody() {
+        }
+        
+        public getStockByUsuRequestBody(int RutVendedor) {
+            this.RutVendedor = RutVendedor;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getStockByUsuResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getStockByUsuResponse", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.getStockByUsuResponseBody Body;
+        
+        public getStockByUsuResponse() {
+        }
+        
+        public getStockByUsuResponse(AppWeb_FrutosFrescos.wsFrutos.getStockByUsuResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class getStockByUsuResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string @return;
+        
+        public getStockByUsuResponseBody() {
+        }
+        
+        public getStockByUsuResponseBody(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insVenta", WrapperNamespace="http://wspack/", IsWrapped=true)]
+    public partial class insVentaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public int Total;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=1)]
+        public int rutVende;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=2)]
+        public int rutCompra;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=3)]
+        public int Estado;
+        
+        public insVentaRequest() {
+        }
+        
+        public insVentaRequest(int Total, int rutVende, int rutCompra, int Estado) {
+            this.Total = Total;
+            this.rutVende = rutVende;
+            this.rutCompra = rutCompra;
+            this.Estado = Estado;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insVentaResponse", WrapperNamespace="http://wspack/", IsWrapped=true)]
+    public partial class insVentaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public bool @return;
+        
+        public insVentaResponse() {
+        }
+        
+        public insVentaResponse(bool @return) {
             this.@return = @return;
         }
     }
@@ -1237,6 +1018,67 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
         }
         
         public getProdByUsuResponseBody(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getUsuariosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getUsuarios", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequestBody Body;
+        
+        public getUsuariosRequest() {
+        }
+        
+        public getUsuariosRequest(AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class getUsuariosRequestBody {
+        
+        public getUsuariosRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getUsuariosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getUsuariosResponse", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.getUsuariosResponseBody Body;
+        
+        public getUsuariosResponse() {
+        }
+        
+        public getUsuariosResponse(AppWeb_FrutosFrescos.wsFrutos.getUsuariosResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class getUsuariosResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string @return;
+        
+        public getUsuariosResponseBody() {
+        }
+        
+        public getUsuariosResponseBody(string @return) {
             this.@return = @return;
         }
     }
@@ -1321,6 +1163,142 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getTipoProdByIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getTipoProdById", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdRequestBody Body;
+        
+        public getTipoProdByIdRequest() {
+        }
+        
+        public getTipoProdByIdRequest(AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class getTipoProdByIdRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int idTipoProducto;
+        
+        public getTipoProdByIdRequestBody() {
+        }
+        
+        public getTipoProdByIdRequestBody(int idTipoProducto) {
+            this.idTipoProducto = idTipoProducto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getTipoProdByIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getTipoProdByIdResponse", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdResponseBody Body;
+        
+        public getTipoProdByIdResponse() {
+        }
+        
+        public getTipoProdByIdResponse(AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class getTipoProdByIdResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string @return;
+        
+        public getTipoProdByIdResponseBody() {
+        }
+        
+        public getTipoProdByIdResponseBody(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getProdByTipoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getProdByTipo", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequestBody Body;
+        
+        public getProdByTipoRequest() {
+        }
+        
+        public getProdByTipoRequest(AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class getProdByTipoRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int tipoProducto;
+        
+        public getProdByTipoRequestBody() {
+        }
+        
+        public getProdByTipoRequestBody(int tipoProducto) {
+            this.tipoProducto = tipoProducto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getProdByTipoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getProdByTipoResponse", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.getProdByTipoResponseBody Body;
+        
+        public getProdByTipoResponse() {
+        }
+        
+        public getProdByTipoResponse(AppWeb_FrutosFrescos.wsFrutos.getProdByTipoResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class getProdByTipoResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string @return;
+        
+        public getProdByTipoResponseBody() {
+        }
+        
+        public getProdByTipoResponseBody(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getUsuarioByRutRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="getUsuarioByRut", Namespace="http://wspack/", Order=0)]
@@ -1389,6 +1367,643 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class updTipoProdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="updTipoProd", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequestBody Body;
+        
+        public updTipoProdRequest() {
+        }
+        
+        public updTipoProdRequest(AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class updTipoProdRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string nombre;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public int idTipoProducto;
+        
+        public updTipoProdRequestBody() {
+        }
+        
+        public updTipoProdRequestBody(string nombre, int idTipoProducto) {
+            this.nombre = nombre;
+            this.idTipoProducto = idTipoProducto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class updTipoProdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="updTipoProdResponse", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.updTipoProdResponseBody Body;
+        
+        public updTipoProdResponse() {
+        }
+        
+        public updTipoProdResponse(AppWeb_FrutosFrescos.wsFrutos.updTipoProdResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class updTipoProdResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool @return;
+        
+        public updTipoProdResponseBody() {
+        }
+        
+        public updTipoProdResponseBody(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updVenta", WrapperNamespace="http://wspack/", IsWrapped=true)]
+    public partial class updVentaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public int Id;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=1)]
+        public int Total;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=2)]
+        public int rutVende;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=3)]
+        public int rutCompra;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=4)]
+        public int Estado;
+        
+        public updVentaRequest() {
+        }
+        
+        public updVentaRequest(int Id, int Total, int rutVende, int rutCompra, int Estado) {
+            this.Id = Id;
+            this.Total = Total;
+            this.rutVende = rutVende;
+            this.rutCompra = rutCompra;
+            this.Estado = Estado;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updVentaResponse", WrapperNamespace="http://wspack/", IsWrapped=true)]
+    public partial class updVentaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public bool @return;
+        
+        public updVentaResponse() {
+        }
+        
+        public updVentaResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="delStock", WrapperNamespace="http://wspack/", IsWrapped=true)]
+    public partial class delStockRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public int idStock;
+        
+        public delStockRequest() {
+        }
+        
+        public delStockRequest(int idStock) {
+            this.idStock = idStock;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="delStockResponse", WrapperNamespace="http://wspack/", IsWrapped=true)]
+    public partial class delStockResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public bool @return;
+        
+        public delStockResponse() {
+        }
+        
+        public delStockResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class insTipoProdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="insTipoProd", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequestBody Body;
+        
+        public insTipoProdRequest() {
+        }
+        
+        public insTipoProdRequest(AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class insTipoProdRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string nombre;
+        
+        public insTipoProdRequestBody() {
+        }
+        
+        public insTipoProdRequestBody(string nombre) {
+            this.nombre = nombre;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class insTipoProdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="insTipoProdResponse", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.insTipoProdResponseBody Body;
+        
+        public insTipoProdResponse() {
+        }
+        
+        public insTipoProdResponse(AppWeb_FrutosFrescos.wsFrutos.insTipoProdResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class insTipoProdResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool @return;
+        
+        public insTipoProdResponseBody() {
+        }
+        
+        public insTipoProdResponseBody(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getVentaByIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getVentaById", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.getVentaByIdRequestBody Body;
+        
+        public getVentaByIdRequest() {
+        }
+        
+        public getVentaByIdRequest(AppWeb_FrutosFrescos.wsFrutos.getVentaByIdRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class getVentaByIdRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int id;
+        
+        public getVentaByIdRequestBody() {
+        }
+        
+        public getVentaByIdRequestBody(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getVentaByIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getVentaByIdResponse", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.getVentaByIdResponseBody Body;
+        
+        public getVentaByIdResponse() {
+        }
+        
+        public getVentaByIdResponse(AppWeb_FrutosFrescos.wsFrutos.getVentaByIdResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class getVentaByIdResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string @return;
+        
+        public getVentaByIdResponseBody() {
+        }
+        
+        public getVentaByIdResponseBody(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="delTipoProd", WrapperNamespace="http://wspack/", IsWrapped=true)]
+    public partial class delTipoProdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public int id;
+        
+        public delTipoProdRequest() {
+        }
+        
+        public delTipoProdRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="delTipoProdResponse", WrapperNamespace="http://wspack/", IsWrapped=true)]
+    public partial class delTipoProdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public bool @return;
+        
+        public delTipoProdResponse() {
+        }
+        
+        public delTipoProdResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insStock", WrapperNamespace="http://wspack/", IsWrapped=true)]
+    public partial class insStockRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public int Kilos;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=1)]
+        public int Precio;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=2)]
+        public int idProducto;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=3)]
+        public int RutUsu;
+        
+        public insStockRequest() {
+        }
+        
+        public insStockRequest(int Kilos, int Precio, int idProducto, int RutUsu) {
+            this.Kilos = Kilos;
+            this.Precio = Precio;
+            this.idProducto = idProducto;
+            this.RutUsu = RutUsu;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insStockResponse", WrapperNamespace="http://wspack/", IsWrapped=true)]
+    public partial class insStockResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public bool @return;
+        
+        public insStockResponse() {
+        }
+        
+        public insStockResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="delProd", WrapperNamespace="http://wspack/", IsWrapped=true)]
+    public partial class delProdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public int id;
+        
+        public delProdRequest() {
+        }
+        
+        public delProdRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="delProdResponse", WrapperNamespace="http://wspack/", IsWrapped=true)]
+    public partial class delProdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public bool @return;
+        
+        public delProdResponse() {
+        }
+        
+        public delProdResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="delUsuario", WrapperNamespace="http://wspack/", IsWrapped=true)]
+    public partial class delUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public int rut;
+        
+        public delUsuarioRequest() {
+        }
+        
+        public delUsuarioRequest(int rut) {
+            this.rut = rut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="delUsuarioResponse", WrapperNamespace="http://wspack/", IsWrapped=true)]
+    public partial class delUsuarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public bool @return;
+        
+        public delUsuarioResponse() {
+        }
+        
+        public delUsuarioResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ListarTipoUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ListarTipoUsuario", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.ListarTipoUsuarioRequestBody Body;
+        
+        public ListarTipoUsuarioRequest() {
+        }
+        
+        public ListarTipoUsuarioRequest(AppWeb_FrutosFrescos.wsFrutos.ListarTipoUsuarioRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class ListarTipoUsuarioRequestBody {
+        
+        public ListarTipoUsuarioRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ListarTipoUsuarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ListarTipoUsuarioResponse", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.ListarTipoUsuarioResponseBody Body;
+        
+        public ListarTipoUsuarioResponse() {
+        }
+        
+        public ListarTipoUsuarioResponse(AppWeb_FrutosFrescos.wsFrutos.ListarTipoUsuarioResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class ListarTipoUsuarioResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string @return;
+        
+        public ListarTipoUsuarioResponseBody() {
+        }
+        
+        public ListarTipoUsuarioResponseBody(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getUsuariosByTipoProdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getUsuariosByTipoProd", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoProdRequestBody Body;
+        
+        public getUsuariosByTipoProdRequest() {
+        }
+        
+        public getUsuariosByTipoProdRequest(AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoProdRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class getUsuariosByTipoProdRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int tipoProducto;
+        
+        public getUsuariosByTipoProdRequestBody() {
+        }
+        
+        public getUsuariosByTipoProdRequestBody(int tipoProducto) {
+            this.tipoProducto = tipoProducto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getUsuariosByTipoProdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getUsuariosByTipoProdResponse", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoProdResponseBody Body;
+        
+        public getUsuariosByTipoProdResponse() {
+        }
+        
+        public getUsuariosByTipoProdResponse(AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoProdResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class getUsuariosByTipoProdResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string @return;
+        
+        public getUsuariosByTipoProdResponseBody() {
+        }
+        
+        public getUsuariosByTipoProdResponseBody(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getUsuariosByTipoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getUsuariosByTipo", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoRequestBody Body;
+        
+        public getUsuariosByTipoRequest() {
+        }
+        
+        public getUsuariosByTipoRequest(AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class getUsuariosByTipoRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int tipoUsuario;
+        
+        public getUsuariosByTipoRequestBody() {
+        }
+        
+        public getUsuariosByTipoRequestBody(int tipoUsuario) {
+            this.tipoUsuario = tipoUsuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getUsuariosByTipoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getUsuariosByTipoResponse", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoResponseBody Body;
+        
+        public getUsuariosByTipoResponse() {
+        }
+        
+        public getUsuariosByTipoResponse(AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class getUsuariosByTipoResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string @return;
+        
+        public getUsuariosByTipoResponseBody() {
+        }
+        
+        public getUsuariosByTipoResponseBody(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getTipoUsuarioByTipoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="getTipoUsuarioByTipo", Namespace="http://wspack/", Order=0)]
@@ -1449,6 +2064,40 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
         }
         
         public getTipoUsuarioByTipoResponseBody(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RecuperarContrasena", WrapperNamespace="http://wspack/", IsWrapped=true)]
+    public partial class RecuperarContrasenaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public int Rut;
+        
+        public RecuperarContrasenaRequest() {
+        }
+        
+        public RecuperarContrasenaRequest(int Rut) {
+            this.Rut = Rut;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RecuperarContrasenaResponse", WrapperNamespace="http://wspack/", IsWrapped=true)]
+    public partial class RecuperarContrasenaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public bool @return;
+        
+        public RecuperarContrasenaResponse() {
+        }
+        
+        public RecuperarContrasenaResponse(bool @return) {
             this.@return = @return;
         }
     }
@@ -1525,42 +2174,15 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ListarTipoUsuarioRequest {
+    public partial class ListarVentasByCompradorRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ListarTipoUsuario", Namespace="http://wspack/", Order=0)]
-        public AppWeb_FrutosFrescos.wsFrutos.ListarTipoUsuarioRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ListarVentasByComprador", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.ListarVentasByCompradorRequestBody Body;
         
-        public ListarTipoUsuarioRequest() {
+        public ListarVentasByCompradorRequest() {
         }
         
-        public ListarTipoUsuarioRequest(AppWeb_FrutosFrescos.wsFrutos.ListarTipoUsuarioRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class ListarTipoUsuarioRequestBody {
-        
-        public ListarTipoUsuarioRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ListarTipoUsuarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ListarTipoUsuarioResponse", Namespace="http://wspack/", Order=0)]
-        public AppWeb_FrutosFrescos.wsFrutos.ListarTipoUsuarioResponseBody Body;
-        
-        public ListarTipoUsuarioResponse() {
-        }
-        
-        public ListarTipoUsuarioResponse(AppWeb_FrutosFrescos.wsFrutos.ListarTipoUsuarioResponseBody Body) {
+        public ListarVentasByCompradorRequest(AppWeb_FrutosFrescos.wsFrutos.ListarVentasByCompradorRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -1569,100 +2191,15 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class ListarTipoUsuarioResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string @return;
-        
-        public ListarTipoUsuarioResponseBody() {
-        }
-        
-        public ListarTipoUsuarioResponseBody(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class getUsuariosByTipoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getUsuariosByTipo", Namespace="http://wspack/", Order=0)]
-        public AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoRequestBody Body;
-        
-        public getUsuariosByTipoRequest() {
-        }
-        
-        public getUsuariosByTipoRequest(AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class getUsuariosByTipoRequestBody {
+    public partial class ListarVentasByCompradorRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int tipoUsuario;
-        
-        public getUsuariosByTipoRequestBody() {
-        }
-        
-        public getUsuariosByTipoRequestBody(int tipoUsuario) {
-            this.tipoUsuario = tipoUsuario;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class getUsuariosByTipoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getUsuariosByTipoResponse", Namespace="http://wspack/", Order=0)]
-        public AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoResponseBody Body;
-        
-        public getUsuariosByTipoResponse() {
-        }
-        
-        public getUsuariosByTipoResponse(AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class getUsuariosByTipoResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string @return;
-        
-        public getUsuariosByTipoResponseBody() {
-        }
-        
-        public getUsuariosByTipoResponseBody(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="RecuperarContrasena", WrapperNamespace="http://wspack/", IsWrapped=true)]
-    public partial class RecuperarContrasenaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
         public int Rut;
         
-        public RecuperarContrasenaRequest() {
+        public ListarVentasByCompradorRequestBody() {
         }
         
-        public RecuperarContrasenaRequest(int Rut) {
+        public ListarVentasByCompradorRequestBody(int Rut) {
             this.Rut = Rut;
         }
     }
@@ -1670,16 +2207,33 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="RecuperarContrasenaResponse", WrapperNamespace="http://wspack/", IsWrapped=true)]
-    public partial class RecuperarContrasenaResponse {
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ListarVentasByCompradorResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
-        public bool @return;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ListarVentasByCompradorResponse", Namespace="http://wspack/", Order=0)]
+        public AppWeb_FrutosFrescos.wsFrutos.ListarVentasByCompradorResponseBody Body;
         
-        public RecuperarContrasenaResponse() {
+        public ListarVentasByCompradorResponse() {
         }
         
-        public RecuperarContrasenaResponse(bool @return) {
+        public ListarVentasByCompradorResponse(AppWeb_FrutosFrescos.wsFrutos.ListarVentasByCompradorResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class ListarVentasByCompradorResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string @return;
+        
+        public ListarVentasByCompradorResponseBody() {
+        }
+        
+        public ListarVentasByCompradorResponseBody(string @return) {
             this.@return = @return;
         }
     }
@@ -1739,99 +2293,6 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AppWeb_FrutosFrescos.wsFrutos.insUsuarioResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.insUsuario(AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequest request) {
-            return base.Channel.insUsuario(request);
-        }
-        
-        public bool insUsuario(int rut, ushort dv, string nombre, string email, string getoData, string geoTipo, string pass, string img, bool @bool, int tipo) {
-            AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequest();
-            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequestBody();
-            inValue.Body.rut = rut;
-            inValue.Body.dv = dv;
-            inValue.Body.nombre = nombre;
-            inValue.Body.email = email;
-            inValue.Body.getoData = getoData;
-            inValue.Body.geoTipo = geoTipo;
-            inValue.Body.pass = pass;
-            inValue.Body.img = img;
-            inValue.Body.@bool = @bool;
-            inValue.Body.tipo = tipo;
-            AppWeb_FrutosFrescos.wsFrutos.insUsuarioResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).insUsuario(inValue);
-            return retVal.Body.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.insUsuarioResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.insUsuarioAsync(AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequest request) {
-            return base.Channel.insUsuarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.insUsuarioResponse> insUsuarioAsync(int rut, ushort dv, string nombre, string email, string getoData, string geoTipo, string pass, string img, bool @bool, int tipo) {
-            AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequest();
-            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequestBody();
-            inValue.Body.rut = rut;
-            inValue.Body.dv = dv;
-            inValue.Body.nombre = nombre;
-            inValue.Body.email = email;
-            inValue.Body.getoData = getoData;
-            inValue.Body.geoTipo = geoTipo;
-            inValue.Body.pass = pass;
-            inValue.Body.img = img;
-            inValue.Body.@bool = @bool;
-            inValue.Body.tipo = tipo;
-            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).insUsuarioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AppWeb_FrutosFrescos.wsFrutos.updTipoProdResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.updTipoProd(AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequest request) {
-            return base.Channel.updTipoProd(request);
-        }
-        
-        public bool updTipoProd(string nombre, int idTipoProducto) {
-            AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequest();
-            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequestBody();
-            inValue.Body.nombre = nombre;
-            inValue.Body.idTipoProducto = idTipoProducto;
-            AppWeb_FrutosFrescos.wsFrutos.updTipoProdResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).updTipoProd(inValue);
-            return retVal.Body.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.updTipoProdResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.updTipoProdAsync(AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequest request) {
-            return base.Channel.updTipoProdAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.updTipoProdResponse> updTipoProdAsync(string nombre, int idTipoProducto) {
-            AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequest();
-            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequestBody();
-            inValue.Body.nombre = nombre;
-            inValue.Body.idTipoProducto = idTipoProducto;
-            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).updTipoProdAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AppWeb_FrutosFrescos.wsFrutos.delUsuarioResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.delUsuario(AppWeb_FrutosFrescos.wsFrutos.delUsuarioRequest request) {
-            return base.Channel.delUsuario(request);
-        }
-        
-        public bool delUsuario(int rut) {
-            AppWeb_FrutosFrescos.wsFrutos.delUsuarioRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.delUsuarioRequest();
-            inValue.rut = rut;
-            AppWeb_FrutosFrescos.wsFrutos.delUsuarioResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).delUsuario(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.delUsuarioResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.delUsuarioAsync(AppWeb_FrutosFrescos.wsFrutos.delUsuarioRequest request) {
-            return base.Channel.delUsuarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.delUsuarioResponse> delUsuarioAsync(int rut) {
-            AppWeb_FrutosFrescos.wsFrutos.delUsuarioRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.delUsuarioRequest();
-            inValue.rut = rut;
-            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).delUsuarioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         AppWeb_FrutosFrescos.wsFrutos.getTipoProdResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getTipoProd(AppWeb_FrutosFrescos.wsFrutos.getTipoProdRequest request) {
             return base.Channel.getTipoProd(request);
         }
@@ -1855,53 +2316,143 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AppWeb_FrutosFrescos.wsFrutos.getProdByTipoResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getProdByTipo(AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequest request) {
-            return base.Channel.getProdByTipo(request);
+        AppWeb_FrutosFrescos.wsFrutos.insUsuarioResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.insUsuario(AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequest request) {
+            return base.Channel.insUsuario(request);
         }
         
-        public string getProdByTipo(int tipoProducto) {
-            AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequest();
-            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequestBody();
-            inValue.Body.tipoProducto = tipoProducto;
-            AppWeb_FrutosFrescos.wsFrutos.getProdByTipoResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).getProdByTipo(inValue);
+        public bool insUsuario(int rut, string dv, string nombre, string email, string getoData, string geoTipo, string pass, string img, bool @bool, int tipo) {
+            AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequestBody();
+            inValue.Body.rut = rut;
+            inValue.Body.dv = dv;
+            inValue.Body.nombre = nombre;
+            inValue.Body.email = email;
+            inValue.Body.getoData = getoData;
+            inValue.Body.geoTipo = geoTipo;
+            inValue.Body.pass = pass;
+            inValue.Body.img = img;
+            inValue.Body.@bool = @bool;
+            inValue.Body.tipo = tipo;
+            AppWeb_FrutosFrescos.wsFrutos.insUsuarioResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).insUsuario(inValue);
             return retVal.Body.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getProdByTipoResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getProdByTipoAsync(AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequest request) {
-            return base.Channel.getProdByTipoAsync(request);
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.insUsuarioResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.insUsuarioAsync(AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequest request) {
+            return base.Channel.insUsuarioAsync(request);
         }
         
-        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getProdByTipoResponse> getProdByTipoAsync(int tipoProducto) {
-            AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequest();
-            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequestBody();
-            inValue.Body.tipoProducto = tipoProducto;
-            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).getProdByTipoAsync(inValue);
+        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.insUsuarioResponse> insUsuarioAsync(int rut, string dv, string nombre, string email, string getoData, string geoTipo, string pass, string img, bool @bool, int tipo) {
+            AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.insUsuarioRequestBody();
+            inValue.Body.rut = rut;
+            inValue.Body.dv = dv;
+            inValue.Body.nombre = nombre;
+            inValue.Body.email = email;
+            inValue.Body.getoData = getoData;
+            inValue.Body.geoTipo = geoTipo;
+            inValue.Body.pass = pass;
+            inValue.Body.img = img;
+            inValue.Body.@bool = @bool;
+            inValue.Body.tipo = tipo;
+            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).insUsuarioAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AppWeb_FrutosFrescos.wsFrutos.insTipoProdResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.insTipoProd(AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequest request) {
-            return base.Channel.insTipoProd(request);
+        AppWeb_FrutosFrescos.wsFrutos.insProdResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.insProd(AppWeb_FrutosFrescos.wsFrutos.insProdRequest request) {
+            return base.Channel.insProd(request);
         }
         
-        public bool insTipoProd(string nombre) {
-            AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequest();
-            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequestBody();
+        public bool insProd(string nombre, int tipo) {
+            AppWeb_FrutosFrescos.wsFrutos.insProdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.insProdRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.insProdRequestBody();
             inValue.Body.nombre = nombre;
-            AppWeb_FrutosFrescos.wsFrutos.insTipoProdResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).insTipoProd(inValue);
+            inValue.Body.tipo = tipo;
+            AppWeb_FrutosFrescos.wsFrutos.insProdResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).insProd(inValue);
             return retVal.Body.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.insTipoProdResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.insTipoProdAsync(AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequest request) {
-            return base.Channel.insTipoProdAsync(request);
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.insProdResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.insProdAsync(AppWeb_FrutosFrescos.wsFrutos.insProdRequest request) {
+            return base.Channel.insProdAsync(request);
         }
         
-        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.insTipoProdResponse> insTipoProdAsync(string nombre) {
-            AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequest();
-            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequestBody();
+        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.insProdResponse> insProdAsync(string nombre, int tipo) {
+            AppWeb_FrutosFrescos.wsFrutos.insProdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.insProdRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.insProdRequestBody();
             inValue.Body.nombre = nombre;
-            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).insTipoProdAsync(inValue);
+            inValue.Body.tipo = tipo;
+            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).insProdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWeb_FrutosFrescos.wsFrutos.updUsuarioResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.updUsuario(AppWeb_FrutosFrescos.wsFrutos.updUsuarioRequest request) {
+            return base.Channel.updUsuario(request);
+        }
+        
+        public bool updUsuario(int rut, ushort dv, string nombre, string email, string getoData, string geoTipo, string pass, string img, bool @bool, int tipo) {
+            AppWeb_FrutosFrescos.wsFrutos.updUsuarioRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.updUsuarioRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.updUsuarioRequestBody();
+            inValue.Body.rut = rut;
+            inValue.Body.dv = dv;
+            inValue.Body.nombre = nombre;
+            inValue.Body.email = email;
+            inValue.Body.getoData = getoData;
+            inValue.Body.geoTipo = geoTipo;
+            inValue.Body.pass = pass;
+            inValue.Body.img = img;
+            inValue.Body.@bool = @bool;
+            inValue.Body.tipo = tipo;
+            AppWeb_FrutosFrescos.wsFrutos.updUsuarioResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).updUsuario(inValue);
+            return retVal.Body.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.updUsuarioResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.updUsuarioAsync(AppWeb_FrutosFrescos.wsFrutos.updUsuarioRequest request) {
+            return base.Channel.updUsuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.updUsuarioResponse> updUsuarioAsync(int rut, ushort dv, string nombre, string email, string getoData, string geoTipo, string pass, string img, bool @bool, int tipo) {
+            AppWeb_FrutosFrescos.wsFrutos.updUsuarioRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.updUsuarioRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.updUsuarioRequestBody();
+            inValue.Body.rut = rut;
+            inValue.Body.dv = dv;
+            inValue.Body.nombre = nombre;
+            inValue.Body.email = email;
+            inValue.Body.getoData = getoData;
+            inValue.Body.geoTipo = geoTipo;
+            inValue.Body.pass = pass;
+            inValue.Body.img = img;
+            inValue.Body.@bool = @bool;
+            inValue.Body.tipo = tipo;
+            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).updUsuarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWeb_FrutosFrescos.wsFrutos.updStockResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.updStock(AppWeb_FrutosFrescos.wsFrutos.updStockRequest request) {
+            return base.Channel.updStock(request);
+        }
+        
+        public bool updStock(int Kilos, int Precio, int idStock) {
+            AppWeb_FrutosFrescos.wsFrutos.updStockRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.updStockRequest();
+            inValue.Kilos = Kilos;
+            inValue.Precio = Precio;
+            inValue.idStock = idStock;
+            AppWeb_FrutosFrescos.wsFrutos.updStockResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).updStock(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.updStockResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.updStockAsync(AppWeb_FrutosFrescos.wsFrutos.updStockRequest request) {
+            return base.Channel.updStockAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.updStockResponse> updStockAsync(int Kilos, int Precio, int idStock) {
+            AppWeb_FrutosFrescos.wsFrutos.updStockRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.updStockRequest();
+            inValue.Kilos = Kilos;
+            inValue.Precio = Precio;
+            inValue.idStock = idStock;
+            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).updStockAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1955,169 +2506,57 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AppWeb_FrutosFrescos.wsFrutos.insProdResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.insProd(AppWeb_FrutosFrescos.wsFrutos.insProdRequest request) {
-            return base.Channel.insProd(request);
+        AppWeb_FrutosFrescos.wsFrutos.getStockByUsuResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getStockByUsu(AppWeb_FrutosFrescos.wsFrutos.getStockByUsuRequest request) {
+            return base.Channel.getStockByUsu(request);
         }
         
-        public bool insProd(int id, string nombre, int tipo) {
-            AppWeb_FrutosFrescos.wsFrutos.insProdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.insProdRequest();
-            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.insProdRequestBody();
-            inValue.Body.id = id;
-            inValue.Body.nombre = nombre;
-            inValue.Body.tipo = tipo;
-            AppWeb_FrutosFrescos.wsFrutos.insProdResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).insProd(inValue);
+        public string getStockByUsu(int RutVendedor) {
+            AppWeb_FrutosFrescos.wsFrutos.getStockByUsuRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.getStockByUsuRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.getStockByUsuRequestBody();
+            inValue.Body.RutVendedor = RutVendedor;
+            AppWeb_FrutosFrescos.wsFrutos.getStockByUsuResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).getStockByUsu(inValue);
             return retVal.Body.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.insProdResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.insProdAsync(AppWeb_FrutosFrescos.wsFrutos.insProdRequest request) {
-            return base.Channel.insProdAsync(request);
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getStockByUsuResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getStockByUsuAsync(AppWeb_FrutosFrescos.wsFrutos.getStockByUsuRequest request) {
+            return base.Channel.getStockByUsuAsync(request);
         }
         
-        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.insProdResponse> insProdAsync(int id, string nombre, int tipo) {
-            AppWeb_FrutosFrescos.wsFrutos.insProdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.insProdRequest();
-            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.insProdRequestBody();
-            inValue.Body.id = id;
-            inValue.Body.nombre = nombre;
-            inValue.Body.tipo = tipo;
-            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).insProdAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AppWeb_FrutosFrescos.wsFrutos.updUsuarioResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.updUsuario(AppWeb_FrutosFrescos.wsFrutos.updUsuarioRequest request) {
-            return base.Channel.updUsuario(request);
-        }
-        
-        public bool updUsuario(int rut, ushort dv, string nombre, string email, string getoData, string geoTipo, string pass, string img, bool @bool, int tipo) {
-            AppWeb_FrutosFrescos.wsFrutos.updUsuarioRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.updUsuarioRequest();
-            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.updUsuarioRequestBody();
-            inValue.Body.rut = rut;
-            inValue.Body.dv = dv;
-            inValue.Body.nombre = nombre;
-            inValue.Body.email = email;
-            inValue.Body.getoData = getoData;
-            inValue.Body.geoTipo = geoTipo;
-            inValue.Body.pass = pass;
-            inValue.Body.img = img;
-            inValue.Body.@bool = @bool;
-            inValue.Body.tipo = tipo;
-            AppWeb_FrutosFrescos.wsFrutos.updUsuarioResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).updUsuario(inValue);
-            return retVal.Body.@return;
+        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getStockByUsuResponse> getStockByUsuAsync(int RutVendedor) {
+            AppWeb_FrutosFrescos.wsFrutos.getStockByUsuRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.getStockByUsuRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.getStockByUsuRequestBody();
+            inValue.Body.RutVendedor = RutVendedor;
+            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).getStockByUsuAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.updUsuarioResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.updUsuarioAsync(AppWeb_FrutosFrescos.wsFrutos.updUsuarioRequest request) {
-            return base.Channel.updUsuarioAsync(request);
+        AppWeb_FrutosFrescos.wsFrutos.insVentaResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.insVenta(AppWeb_FrutosFrescos.wsFrutos.insVentaRequest request) {
+            return base.Channel.insVenta(request);
         }
         
-        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.updUsuarioResponse> updUsuarioAsync(int rut, ushort dv, string nombre, string email, string getoData, string geoTipo, string pass, string img, bool @bool, int tipo) {
-            AppWeb_FrutosFrescos.wsFrutos.updUsuarioRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.updUsuarioRequest();
-            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.updUsuarioRequestBody();
-            inValue.Body.rut = rut;
-            inValue.Body.dv = dv;
-            inValue.Body.nombre = nombre;
-            inValue.Body.email = email;
-            inValue.Body.getoData = getoData;
-            inValue.Body.geoTipo = geoTipo;
-            inValue.Body.pass = pass;
-            inValue.Body.img = img;
-            inValue.Body.@bool = @bool;
-            inValue.Body.tipo = tipo;
-            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).updUsuarioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getTipoProdById(AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdRequest request) {
-            return base.Channel.getTipoProdById(request);
-        }
-        
-        public string getTipoProdById(int idTipoProducto) {
-            AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdRequest();
-            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdRequestBody();
-            inValue.Body.idTipoProducto = idTipoProducto;
-            AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).getTipoProdById(inValue);
-            return retVal.Body.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getTipoProdByIdAsync(AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdRequest request) {
-            return base.Channel.getTipoProdByIdAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdResponse> getTipoProdByIdAsync(int idTipoProducto) {
-            AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdRequest();
-            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdRequestBody();
-            inValue.Body.idTipoProducto = idTipoProducto;
-            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).getTipoProdByIdAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AppWeb_FrutosFrescos.wsFrutos.delProdResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.delProd(AppWeb_FrutosFrescos.wsFrutos.delProdRequest request) {
-            return base.Channel.delProd(request);
-        }
-        
-        public bool delProd(int id) {
-            AppWeb_FrutosFrescos.wsFrutos.delProdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.delProdRequest();
-            inValue.id = id;
-            AppWeb_FrutosFrescos.wsFrutos.delProdResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).delProd(inValue);
+        public bool insVenta(int Total, int rutVende, int rutCompra, int Estado) {
+            AppWeb_FrutosFrescos.wsFrutos.insVentaRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.insVentaRequest();
+            inValue.Total = Total;
+            inValue.rutVende = rutVende;
+            inValue.rutCompra = rutCompra;
+            inValue.Estado = Estado;
+            AppWeb_FrutosFrescos.wsFrutos.insVentaResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).insVenta(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.delProdResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.delProdAsync(AppWeb_FrutosFrescos.wsFrutos.delProdRequest request) {
-            return base.Channel.delProdAsync(request);
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.insVentaResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.insVentaAsync(AppWeb_FrutosFrescos.wsFrutos.insVentaRequest request) {
+            return base.Channel.insVentaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.delProdResponse> delProdAsync(int id) {
-            AppWeb_FrutosFrescos.wsFrutos.delProdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.delProdRequest();
-            inValue.id = id;
-            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).delProdAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AppWeb_FrutosFrescos.wsFrutos.delTipoProdResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.delTipoProd(AppWeb_FrutosFrescos.wsFrutos.delTipoProdRequest request) {
-            return base.Channel.delTipoProd(request);
-        }
-        
-        public bool delTipoProd(int id) {
-            AppWeb_FrutosFrescos.wsFrutos.delTipoProdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.delTipoProdRequest();
-            inValue.id = id;
-            AppWeb_FrutosFrescos.wsFrutos.delTipoProdResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).delTipoProd(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.delTipoProdResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.delTipoProdAsync(AppWeb_FrutosFrescos.wsFrutos.delTipoProdRequest request) {
-            return base.Channel.delTipoProdAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.delTipoProdResponse> delTipoProdAsync(int id) {
-            AppWeb_FrutosFrescos.wsFrutos.delTipoProdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.delTipoProdRequest();
-            inValue.id = id;
-            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).delTipoProdAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AppWeb_FrutosFrescos.wsFrutos.getUsuariosResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getUsuarios(AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequest request) {
-            return base.Channel.getUsuarios(request);
-        }
-        
-        public string getUsuarios() {
-            AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequest();
-            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequestBody();
-            AppWeb_FrutosFrescos.wsFrutos.getUsuariosResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).getUsuarios(inValue);
-            return retVal.Body.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getUsuariosResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getUsuariosAsync(AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequest request) {
-            return base.Channel.getUsuariosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getUsuariosResponse> getUsuariosAsync() {
-            AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequest();
-            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequestBody();
-            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).getUsuariosAsync(inValue);
+        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.insVentaResponse> insVentaAsync(int Total, int rutVende, int rutCompra, int Estado) {
+            AppWeb_FrutosFrescos.wsFrutos.insVentaRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.insVentaRequest();
+            inValue.Total = Total;
+            inValue.rutVende = rutVende;
+            inValue.rutCompra = rutCompra;
+            inValue.Estado = Estado;
+            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).insVentaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2143,6 +2582,29 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
             inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.getProdByUsuRequestBody();
             inValue.Body.rut = rut;
             return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).getProdByUsuAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWeb_FrutosFrescos.wsFrutos.getUsuariosResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getUsuarios(AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequest request) {
+            return base.Channel.getUsuarios(request);
+        }
+        
+        public string getUsuarios() {
+            AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequestBody();
+            AppWeb_FrutosFrescos.wsFrutos.getUsuariosResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).getUsuarios(inValue);
+            return retVal.Body.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getUsuariosResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getUsuariosAsync(AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequest request) {
+            return base.Channel.getUsuariosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getUsuariosResponse> getUsuariosAsync() {
+            AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.getUsuariosRequestBody();
+            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).getUsuariosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2175,6 +2637,56 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getTipoProdById(AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdRequest request) {
+            return base.Channel.getTipoProdById(request);
+        }
+        
+        public string getTipoProdById(int idTipoProducto) {
+            AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdRequestBody();
+            inValue.Body.idTipoProducto = idTipoProducto;
+            AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).getTipoProdById(inValue);
+            return retVal.Body.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getTipoProdByIdAsync(AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdRequest request) {
+            return base.Channel.getTipoProdByIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdResponse> getTipoProdByIdAsync(int idTipoProducto) {
+            AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.getTipoProdByIdRequestBody();
+            inValue.Body.idTipoProducto = idTipoProducto;
+            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).getTipoProdByIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWeb_FrutosFrescos.wsFrutos.getProdByTipoResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getProdByTipo(AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequest request) {
+            return base.Channel.getProdByTipo(request);
+        }
+        
+        public string getProdByTipo(int tipoProducto) {
+            AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequestBody();
+            inValue.Body.tipoProducto = tipoProducto;
+            AppWeb_FrutosFrescos.wsFrutos.getProdByTipoResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).getProdByTipo(inValue);
+            return retVal.Body.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getProdByTipoResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getProdByTipoAsync(AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequest request) {
+            return base.Channel.getProdByTipoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getProdByTipoResponse> getProdByTipoAsync(int tipoProducto) {
+            AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.getProdByTipoRequestBody();
+            inValue.Body.tipoProducto = tipoProducto;
+            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).getProdByTipoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         AppWeb_FrutosFrescos.wsFrutos.getUsuarioByRutResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getUsuarioByRut(AppWeb_FrutosFrescos.wsFrutos.getUsuarioByRutRequest request) {
             return base.Channel.getUsuarioByRut(request);
         }
@@ -2200,53 +2712,232 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getTipoUsuarioByTipo(AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoRequest request) {
-            return base.Channel.getTipoUsuarioByTipo(request);
+        AppWeb_FrutosFrescos.wsFrutos.updTipoProdResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.updTipoProd(AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequest request) {
+            return base.Channel.updTipoProd(request);
         }
         
-        public string getTipoUsuarioByTipo(int tipoUsuario) {
-            AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoRequest();
-            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoRequestBody();
-            inValue.Body.tipoUsuario = tipoUsuario;
-            AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).getTipoUsuarioByTipo(inValue);
+        public bool updTipoProd(string nombre, int idTipoProducto) {
+            AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequestBody();
+            inValue.Body.nombre = nombre;
+            inValue.Body.idTipoProducto = idTipoProducto;
+            AppWeb_FrutosFrescos.wsFrutos.updTipoProdResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).updTipoProd(inValue);
             return retVal.Body.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getTipoUsuarioByTipoAsync(AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoRequest request) {
-            return base.Channel.getTipoUsuarioByTipoAsync(request);
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.updTipoProdResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.updTipoProdAsync(AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequest request) {
+            return base.Channel.updTipoProdAsync(request);
         }
         
-        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoResponse> getTipoUsuarioByTipoAsync(int tipoUsuario) {
-            AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoRequest();
-            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoRequestBody();
-            inValue.Body.tipoUsuario = tipoUsuario;
-            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).getTipoUsuarioByTipoAsync(inValue);
+        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.updTipoProdResponse> updTipoProdAsync(string nombre, int idTipoProducto) {
+            AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.updTipoProdRequestBody();
+            inValue.Body.nombre = nombre;
+            inValue.Body.idTipoProducto = idTipoProducto;
+            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).updTipoProdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.ListarVentasByVendedor(AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorRequest request) {
-            return base.Channel.ListarVentasByVendedor(request);
+        AppWeb_FrutosFrescos.wsFrutos.updVentaResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.updVenta(AppWeb_FrutosFrescos.wsFrutos.updVentaRequest request) {
+            return base.Channel.updVenta(request);
         }
         
-        public string ListarVentasByVendedor(int Rut) {
-            AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorRequest();
-            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorRequestBody();
-            inValue.Body.Rut = Rut;
-            AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).ListarVentasByVendedor(inValue);
+        public bool updVenta(int Id, int Total, int rutVende, int rutCompra, int Estado) {
+            AppWeb_FrutosFrescos.wsFrutos.updVentaRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.updVentaRequest();
+            inValue.Id = Id;
+            inValue.Total = Total;
+            inValue.rutVende = rutVende;
+            inValue.rutCompra = rutCompra;
+            inValue.Estado = Estado;
+            AppWeb_FrutosFrescos.wsFrutos.updVentaResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).updVenta(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.updVentaResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.updVentaAsync(AppWeb_FrutosFrescos.wsFrutos.updVentaRequest request) {
+            return base.Channel.updVentaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.updVentaResponse> updVentaAsync(int Id, int Total, int rutVende, int rutCompra, int Estado) {
+            AppWeb_FrutosFrescos.wsFrutos.updVentaRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.updVentaRequest();
+            inValue.Id = Id;
+            inValue.Total = Total;
+            inValue.rutVende = rutVende;
+            inValue.rutCompra = rutCompra;
+            inValue.Estado = Estado;
+            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).updVentaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWeb_FrutosFrescos.wsFrutos.delStockResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.delStock(AppWeb_FrutosFrescos.wsFrutos.delStockRequest request) {
+            return base.Channel.delStock(request);
+        }
+        
+        public bool delStock(int idStock) {
+            AppWeb_FrutosFrescos.wsFrutos.delStockRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.delStockRequest();
+            inValue.idStock = idStock;
+            AppWeb_FrutosFrescos.wsFrutos.delStockResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).delStock(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.delStockResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.delStockAsync(AppWeb_FrutosFrescos.wsFrutos.delStockRequest request) {
+            return base.Channel.delStockAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.delStockResponse> delStockAsync(int idStock) {
+            AppWeb_FrutosFrescos.wsFrutos.delStockRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.delStockRequest();
+            inValue.idStock = idStock;
+            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).delStockAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWeb_FrutosFrescos.wsFrutos.insTipoProdResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.insTipoProd(AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequest request) {
+            return base.Channel.insTipoProd(request);
+        }
+        
+        public bool insTipoProd(string nombre) {
+            AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequestBody();
+            inValue.Body.nombre = nombre;
+            AppWeb_FrutosFrescos.wsFrutos.insTipoProdResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).insTipoProd(inValue);
             return retVal.Body.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.ListarVentasByVendedorAsync(AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorRequest request) {
-            return base.Channel.ListarVentasByVendedorAsync(request);
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.insTipoProdResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.insTipoProdAsync(AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequest request) {
+            return base.Channel.insTipoProdAsync(request);
         }
         
-        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorResponse> ListarVentasByVendedorAsync(int Rut) {
-            AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorRequest();
-            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorRequestBody();
-            inValue.Body.Rut = Rut;
-            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).ListarVentasByVendedorAsync(inValue);
+        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.insTipoProdResponse> insTipoProdAsync(string nombre) {
+            AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.insTipoProdRequestBody();
+            inValue.Body.nombre = nombre;
+            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).insTipoProdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWeb_FrutosFrescos.wsFrutos.getVentaByIdResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getVentaById(AppWeb_FrutosFrescos.wsFrutos.getVentaByIdRequest request) {
+            return base.Channel.getVentaById(request);
+        }
+        
+        public string getVentaById(int id) {
+            AppWeb_FrutosFrescos.wsFrutos.getVentaByIdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.getVentaByIdRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.getVentaByIdRequestBody();
+            inValue.Body.id = id;
+            AppWeb_FrutosFrescos.wsFrutos.getVentaByIdResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).getVentaById(inValue);
+            return retVal.Body.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getVentaByIdResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getVentaByIdAsync(AppWeb_FrutosFrescos.wsFrutos.getVentaByIdRequest request) {
+            return base.Channel.getVentaByIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getVentaByIdResponse> getVentaByIdAsync(int id) {
+            AppWeb_FrutosFrescos.wsFrutos.getVentaByIdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.getVentaByIdRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.getVentaByIdRequestBody();
+            inValue.Body.id = id;
+            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).getVentaByIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWeb_FrutosFrescos.wsFrutos.delTipoProdResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.delTipoProd(AppWeb_FrutosFrescos.wsFrutos.delTipoProdRequest request) {
+            return base.Channel.delTipoProd(request);
+        }
+        
+        public bool delTipoProd(int id) {
+            AppWeb_FrutosFrescos.wsFrutos.delTipoProdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.delTipoProdRequest();
+            inValue.id = id;
+            AppWeb_FrutosFrescos.wsFrutos.delTipoProdResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).delTipoProd(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.delTipoProdResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.delTipoProdAsync(AppWeb_FrutosFrescos.wsFrutos.delTipoProdRequest request) {
+            return base.Channel.delTipoProdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.delTipoProdResponse> delTipoProdAsync(int id) {
+            AppWeb_FrutosFrescos.wsFrutos.delTipoProdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.delTipoProdRequest();
+            inValue.id = id;
+            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).delTipoProdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWeb_FrutosFrescos.wsFrutos.insStockResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.insStock(AppWeb_FrutosFrescos.wsFrutos.insStockRequest request) {
+            return base.Channel.insStock(request);
+        }
+        
+        public bool insStock(int Kilos, int Precio, int idProducto, int RutUsu) {
+            AppWeb_FrutosFrescos.wsFrutos.insStockRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.insStockRequest();
+            inValue.Kilos = Kilos;
+            inValue.Precio = Precio;
+            inValue.idProducto = idProducto;
+            inValue.RutUsu = RutUsu;
+            AppWeb_FrutosFrescos.wsFrutos.insStockResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).insStock(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.insStockResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.insStockAsync(AppWeb_FrutosFrescos.wsFrutos.insStockRequest request) {
+            return base.Channel.insStockAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.insStockResponse> insStockAsync(int Kilos, int Precio, int idProducto, int RutUsu) {
+            AppWeb_FrutosFrescos.wsFrutos.insStockRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.insStockRequest();
+            inValue.Kilos = Kilos;
+            inValue.Precio = Precio;
+            inValue.idProducto = idProducto;
+            inValue.RutUsu = RutUsu;
+            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).insStockAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWeb_FrutosFrescos.wsFrutos.delProdResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.delProd(AppWeb_FrutosFrescos.wsFrutos.delProdRequest request) {
+            return base.Channel.delProd(request);
+        }
+        
+        public bool delProd(int id) {
+            AppWeb_FrutosFrescos.wsFrutos.delProdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.delProdRequest();
+            inValue.id = id;
+            AppWeb_FrutosFrescos.wsFrutos.delProdResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).delProd(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.delProdResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.delProdAsync(AppWeb_FrutosFrescos.wsFrutos.delProdRequest request) {
+            return base.Channel.delProdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.delProdResponse> delProdAsync(int id) {
+            AppWeb_FrutosFrescos.wsFrutos.delProdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.delProdRequest();
+            inValue.id = id;
+            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).delProdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWeb_FrutosFrescos.wsFrutos.delUsuarioResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.delUsuario(AppWeb_FrutosFrescos.wsFrutos.delUsuarioRequest request) {
+            return base.Channel.delUsuario(request);
+        }
+        
+        public bool delUsuario(int rut) {
+            AppWeb_FrutosFrescos.wsFrutos.delUsuarioRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.delUsuarioRequest();
+            inValue.rut = rut;
+            AppWeb_FrutosFrescos.wsFrutos.delUsuarioResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).delUsuario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.delUsuarioResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.delUsuarioAsync(AppWeb_FrutosFrescos.wsFrutos.delUsuarioRequest request) {
+            return base.Channel.delUsuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.delUsuarioResponse> delUsuarioAsync(int rut) {
+            AppWeb_FrutosFrescos.wsFrutos.delUsuarioRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.delUsuarioRequest();
+            inValue.rut = rut;
+            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).delUsuarioAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2270,6 +2961,31 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
             AppWeb_FrutosFrescos.wsFrutos.ListarTipoUsuarioRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.ListarTipoUsuarioRequest();
             inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.ListarTipoUsuarioRequestBody();
             return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).ListarTipoUsuarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoProdResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getUsuariosByTipoProd(AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoProdRequest request) {
+            return base.Channel.getUsuariosByTipoProd(request);
+        }
+        
+        public string getUsuariosByTipoProd(int tipoProducto) {
+            AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoProdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoProdRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoProdRequestBody();
+            inValue.Body.tipoProducto = tipoProducto;
+            AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoProdResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).getUsuariosByTipoProd(inValue);
+            return retVal.Body.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoProdResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getUsuariosByTipoProdAsync(AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoProdRequest request) {
+            return base.Channel.getUsuariosByTipoProdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoProdResponse> getUsuariosByTipoProdAsync(int tipoProducto) {
+            AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoProdRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoProdRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.getUsuariosByTipoProdRequestBody();
+            inValue.Body.tipoProducto = tipoProducto;
+            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).getUsuariosByTipoProdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2298,6 +3014,31 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getTipoUsuarioByTipo(AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoRequest request) {
+            return base.Channel.getTipoUsuarioByTipo(request);
+        }
+        
+        public string getTipoUsuarioByTipo(int tipoUsuario) {
+            AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoRequestBody();
+            inValue.Body.tipoUsuario = tipoUsuario;
+            AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).getTipoUsuarioByTipo(inValue);
+            return retVal.Body.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.getTipoUsuarioByTipoAsync(AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoRequest request) {
+            return base.Channel.getTipoUsuarioByTipoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoResponse> getTipoUsuarioByTipoAsync(int tipoUsuario) {
+            AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.getTipoUsuarioByTipoRequestBody();
+            inValue.Body.tipoUsuario = tipoUsuario;
+            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).getTipoUsuarioByTipoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         AppWeb_FrutosFrescos.wsFrutos.RecuperarContrasenaResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.RecuperarContrasena(AppWeb_FrutosFrescos.wsFrutos.RecuperarContrasenaRequest request) {
             return base.Channel.RecuperarContrasena(request);
         }
@@ -2318,6 +3059,56 @@ namespace AppWeb_FrutosFrescos.wsFrutos {
             AppWeb_FrutosFrescos.wsFrutos.RecuperarContrasenaRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.RecuperarContrasenaRequest();
             inValue.Rut = Rut;
             return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).RecuperarContrasenaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.ListarVentasByVendedor(AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorRequest request) {
+            return base.Channel.ListarVentasByVendedor(request);
+        }
+        
+        public string ListarVentasByVendedor(int Rut) {
+            AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorRequestBody();
+            inValue.Body.Rut = Rut;
+            AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).ListarVentasByVendedor(inValue);
+            return retVal.Body.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.ListarVentasByVendedorAsync(AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorRequest request) {
+            return base.Channel.ListarVentasByVendedorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorResponse> ListarVentasByVendedorAsync(int Rut) {
+            AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.ListarVentasByVendedorRequestBody();
+            inValue.Body.Rut = Rut;
+            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).ListarVentasByVendedorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        AppWeb_FrutosFrescos.wsFrutos.ListarVentasByCompradorResponse AppWeb_FrutosFrescos.wsFrutos.wsFrutos.ListarVentasByComprador(AppWeb_FrutosFrescos.wsFrutos.ListarVentasByCompradorRequest request) {
+            return base.Channel.ListarVentasByComprador(request);
+        }
+        
+        public string ListarVentasByComprador(int Rut) {
+            AppWeb_FrutosFrescos.wsFrutos.ListarVentasByCompradorRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.ListarVentasByCompradorRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.ListarVentasByCompradorRequestBody();
+            inValue.Body.Rut = Rut;
+            AppWeb_FrutosFrescos.wsFrutos.ListarVentasByCompradorResponse retVal = ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).ListarVentasByComprador(inValue);
+            return retVal.Body.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.ListarVentasByCompradorResponse> AppWeb_FrutosFrescos.wsFrutos.wsFrutos.ListarVentasByCompradorAsync(AppWeb_FrutosFrescos.wsFrutos.ListarVentasByCompradorRequest request) {
+            return base.Channel.ListarVentasByCompradorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<AppWeb_FrutosFrescos.wsFrutos.ListarVentasByCompradorResponse> ListarVentasByCompradorAsync(int Rut) {
+            AppWeb_FrutosFrescos.wsFrutos.ListarVentasByCompradorRequest inValue = new AppWeb_FrutosFrescos.wsFrutos.ListarVentasByCompradorRequest();
+            inValue.Body = new AppWeb_FrutosFrescos.wsFrutos.ListarVentasByCompradorRequestBody();
+            inValue.Body.Rut = Rut;
+            return ((AppWeb_FrutosFrescos.wsFrutos.wsFrutos)(this)).ListarVentasByCompradorAsync(inValue);
         }
     }
 }
